@@ -1,0 +1,86 @@
+
+/***  BUTTONS ***/
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  font-size: rem(16px);
+  margin: 10px 5px;
+  padding: 8px 20px;
+  border-radius: 4px;
+  border: 1px solid $text-default;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    color: $gray-300;
+    border-color: 1px solid $gray-300;
+  }
+
+
+  &--profile {
+    padding: 8px;
+    background-color: transparent;
+    font-size: rem(22px);
+    border: 0;
+    color: $text-default;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__primary {
+    background-color: $primary;
+    color: #e3e1e4;
+    transition: 0.2s linear;
+  }
+
+  &__primary:hover {
+    background-color: #605b83;
+    color: $text-default;
+    transition: 0.2s linear;
+  }
+
+  &__second {
+    background-color: $gray-300;
+    color: $gray-100;
+    transition: 0.2s linear;
+  }
+
+  &__second:hover {
+    background-color: $second-hover;
+    color: #000;
+  }
+
+  &__success {
+    background-color: $red;
+    color: #f1f1f1;
+    transition: 0.2s linear;
+  }
+
+  &__success:hover {
+    background-color: $red-hover;
+    color: $text-default;
+  }
+
+  &__icon {
+    padding: 5px;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    background: none;
+  }
+}
+//------------
+//BUTTONS ICON
+//------------
+
+
+
+.btn__user {
+  display: flex;
+  flex-direction: row;
+}

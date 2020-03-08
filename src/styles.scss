@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+// GLOBAL
+
+@import "global/variables";
+@import "global/reset";
+@import "mixins/mixins";
+@import "global/basic";
+
+
+
+// COMPONENTS
+// ----------
+
+@import "components/form";
+@import "components/ui_kit";
+@import "components/btn";
+@import "components/icons";
+@import "components/header";
+@import "components/cover";
+@import "components/search";
+@import "components/category";
+@import "components/backgroundLogin";
+@import "components/avatars";
+
+
+
+
+// ANGULAR
+//--------
+
+

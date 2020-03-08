@@ -1,0 +1,145 @@
+/*** UI-KIT ***/
+
+.section {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color {
+  margin: 20px 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.color__primary {
+  width: 6.25rem;
+  height: 3.125rem;
+  margin: 30px 5px;
+  background-color: #34333b;
+  border-radius: 4px;
+}
+
+.color__secondary {
+  width: 6.25rem;
+  height: 3.125rem;
+  margin: 30px 20px;
+  background-color: #666;
+  border-radius: 4px;
+}
+
+.color__third {
+  width: 6.25rem;
+  height: 3.125rem;
+  margin: 30px 20px;
+  background-color: #e3e1e4;
+  border-radius: 4px;
+}
+
+.color__fourth {
+  width: 6.25rem;
+  height: 3.125rem;
+  margin: 30px 20px;
+  background-color: #faf9fe;
+  border-radius: 4px;
+}
+
+.color__fifty {
+  width: 6.25rem;
+  height: 3.125rem;
+  margin: 30px 20px;
+  background-color: #c4f2ee;
+  border-radius: 4px;
+}
+
+.color__red { 
+  width: 6.25rem;
+  height: 3.125rem;
+  margin: 30px 20px;
+  background-color: #ef3e34;
+  border-radius: 4px;
+}
+
+
+/*** ICONS ***/
+/*------------*/
+
+.icons {
+  display: flex;
+  align-items: center;
+  margin: 0px 20px;
+}
+
+.icons__color1, .icons__color2 {
+  width: 4.375rem;
+  height: 3.125rem;
+  margin: 30px 20px;
+  border-radius: 4px;
+}
+
+
+/*** COLOR TEXT ***/
+/*----------------*/
+
+.text {
+  width: 4.375rem;
+  height: 3.125rem;
+  margin: 30px 20px;
+  background-color: #111;
+  border-radius: 4px;
+}
+
+.textSecondary {
+  width: 4.375rem;
+  height: 3.125rem;
+  margin: 30px 20px;
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.gray1 {
+  width: 6.25rem;
+  height: 3.125rem;
+  margin: 30px 20px;
+  background-color: #666;
+  border-radius: 4px;
+}
+
+.gray2 {
+  width: 6.25rem;
+  height: 3.125rem;
+  margin: 30px 20px;
+  background-color: #e3e1e4;
+  border-radius: 4px;
+}
+/*  color :#343239*/
+
+
+
+/*** AVATAR ***/
+/*-------------*/
+
+
+.avatar__user {
+ color: $gray-300;
+}
+
+
+.avatar__container {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: $fourth;
+}
+
+.avatar__hover {
+  color: #f2f2f2;
+  background-color: #333;
+  font-size: 16px;
+ }

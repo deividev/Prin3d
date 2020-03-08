@@ -1,0 +1,13 @@
+//-------
+//BACKGROUND LOGIN, REGISTER, FORGOT
+    
+
+.background {
+  position: fixed;
+  z-index: 1;       
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: rem(400px);
+  background:rgba(0,0,0,0.8);
+}
