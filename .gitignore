@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
+assets/css/
+.vscode*/
+node_modules
+package-lock.json
+sass/sourcemap/
 # compiled output
 /dist
 /tmp

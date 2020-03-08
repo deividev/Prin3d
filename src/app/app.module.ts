@@ -11,6 +11,7 @@ import { FormRegisterComponent } from './shared/components/form-register/form-re
 import { FormForgotComponent } from './shared/components/form-forgot/form-forgot.component';
 import { InfoUserComponent } from './shared/components/info-user/info-user.component';
 import { CategoriesBtnComponent } from './shared/components/categories-btn/categories-btn.component';
+import { HeaderLoginComponent } from './shared/components/header-login/header-login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CategoriesBtnComponent } from './shared/components/categories-btn/categ
     FormRegisterComponent,
     FormForgotComponent,
     InfoUserComponent,
-    CategoriesBtnComponent
+    CategoriesBtnComponent,
+    HeaderLoginComponent
   ],
   imports: [
     BrowserModule
