@@ -12,6 +12,7 @@ import { FormForgotComponent } from './shared/components/form-forgot/form-forgot
 import { InfoUserComponent } from './shared/components/info-user/info-user.component';
 import { CategoriesBtnComponent } from './shared/components/categories-btn/categories-btn.component';
 import { HeaderLoginComponent } from './shared/components/header-login/header-login.component';
+import { FormEditUserComponent } from './shared/components/form-edit-user/form-edit-user.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HeaderLoginComponent } from './shared/components/header-login/header-lo
     FormForgotComponent,
     InfoUserComponent,
     CategoriesBtnComponent,
-    HeaderLoginComponent
+    HeaderLoginComponent,
+    FormEditUserComponent
   ],
   imports: [
     BrowserModule
