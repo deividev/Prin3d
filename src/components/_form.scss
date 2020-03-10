@@ -25,6 +25,7 @@
     flex-grow: 1;
     justify-content: center;
     flex-direction: column;
+    text-align: left;
     margin: 10px 0px;
   }
 
@@ -37,11 +38,16 @@
     flex-grow: 1;
     justify-content: center;
     align-items: center;
-    height: rem(200px);
+    height: rem(300px);
+    width: rem(200px);
     font-size: rem(20px);
     border: 1px solid $text-default;
     border-radius: 4px;
     background-color: $gray-100;
+  }
+
+  &__group--area {
+    margin: 0px 20px;
   }
 
   &__group--img {
@@ -49,7 +55,7 @@
     flex-grow: 1;
     justify-content: center;
     align-items: center;
-    height: rem(400px);
+    height: rem(300px);
     font-size: rem(20px);
     border: 1px solid $text-default;
     border-radius: 4px;
