@@ -13,7 +13,6 @@
 
 
 .form {
-  padding: 20px 40px;
 
   &__avatar {
     display: flex;
@@ -22,18 +21,39 @@
   }
 
   &__group {
-    margin-bottom: 10px;
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     flex-direction: column;
+    margin: 10px 0px;
   }
 
   &__group--ml {
-    margin-left: 20px;
+    margin-left: 30px;
   }
 
-  &__group--area {
-    margin: 0px 60px;
+  &__group--file {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: rem(200px);
+    font-size: rem(20px);
+    border: 1px solid $text-default;
+    border-radius: 4px;
+    background-color: $gray-100;
+  }
+
+  &__group--img {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: rem(400px);
+    font-size: rem(20px);
+    border: 1px solid $text-default;
+    border-radius: 4px;
+    background-color: $gray-100;
   }
 
   &__control--large {
@@ -41,7 +61,9 @@
   }
 
   &__row {
+    width: 100%;
     display: flex;
+    align-items: center;
   }
 
   &__label {
@@ -71,8 +93,8 @@
 
   &__control--area {
     width: 100%;
+    height: rem(220px);
     font-size: rem(20px);
-    padding: 0px 40px 0px 5px;
     font-family: 'Roboto', sans-serif;
     border: 1px solid $text-default;
     border-radius: 4px;
