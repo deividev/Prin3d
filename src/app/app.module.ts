@@ -14,6 +14,7 @@ import { HeaderLoginComponent } from './shared/components/header-login/header-lo
 import { FormEditUserComponent } from './shared/components/form-edit-user/form-edit-user.component';
 import { FormUploadDetailsComponent } from './shared/components/form-upload-details/form-upload-details.component';
 import { CardComponent } from './shared/components/card/card.component';
+import { InfoModelComponent } from './shared/components/info-model/info-model.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { CardComponent } from './shared/components/card/card.component';
     HeaderLoginComponent,
     FormEditUserComponent,
     FormUploadDetailsComponent,
-    CardComponent
+    CardComponent,
+    InfoModelComponent
   ],
   imports: [
     BrowserModule

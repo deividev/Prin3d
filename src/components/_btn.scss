@@ -3,12 +3,15 @@
 .logo {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
 }
 
 .btn {
+  height: 2.5rem;
   font-size: rem(16px);
-  margin: 10px 5px;
-  padding: 8px 20px;
+  padding: 10px 20px;
+  margin-right: 10px;
   border-radius: 4px;
   border: 1px solid $text-default;
   background-color: transparent;
@@ -40,7 +43,7 @@
 
   &__primary:hover {
     background-color: #605b83;
-    color: $text-default;
+    color: #fff;
     transition: 0.2s linear;
   }
 

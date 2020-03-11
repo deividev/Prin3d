@@ -13,7 +13,7 @@
 
 
 .form {
-
+  margin: 10px;
   &__avatar {
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@
   }
 
   &__group--area {
-    margin: 0px 20px;
+    margin: 10px 0px;
   }
 
   &__group--img {
