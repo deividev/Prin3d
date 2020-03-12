@@ -18,16 +18,16 @@
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: flex-start;  
+  justify-content: flex-start;
   background-color: $primary;
-    
-  &__profile {      
+
+  &__profile {
     border-bottom: 2px solid $text-second;
   }
 
-  &__categories {        
-    display: flex;   
-    align-items: center;    
+  &__categories {
+    display: flex;
+    align-items: center;
   }
 
   &__link {
@@ -43,7 +43,7 @@
     color: $third;
     background-color: $gray-300;
   }
-}    
+}
 
 //-----
 // BTNS RIGTH

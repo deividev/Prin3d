@@ -1,8 +1,14 @@
 @import "../../../../global/variables";
 .form-upload {
+  display: flex;
+  justify-content: center;
   width: 60%;
   margin: 40px 0px;
   text-align: center;
 }
 
 
+.form__half {
+  padding: 0px 20px ;
+  border-right: 1px solid $gray-100;
+}
