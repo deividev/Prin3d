@@ -1,0 +1,90 @@
+// CATEGORYS
+//---------
+
+.category {
+
+
+  &__head {
+    height: rem(280px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: $text-default;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: 2px solid $gray-200;
+    margin-bottom: 40px;
+    padding: 0px 180px;
+  }
+
+  &__line {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  &__container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 375px 375px 375px 375px;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+  }
+}
+
+//------
+// IMG MODEL 3D
+//------
+
+
+.card {
+  position: relative;
+  width: rem(375px);
+  height: rem(350px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  transition: 0.3s linear;
+
+  //  BTN ICONS
+  //-----------
+
+  &__hover {
+    width: 100%;
+    display: inline-block;
+    justify-content: flex-end;
+  }
+
+  &__model {
+    height: rem(250px);
+    margin: 20px 0px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 50;
+    width: rem(335px);
+    height: rem(250px);
+    opacity: 0;
+    transition: 0.7s linear;
+  }
+
+  &:hover > .card__btn {
+    opacity: 1;
+  }
+}
+
+
+

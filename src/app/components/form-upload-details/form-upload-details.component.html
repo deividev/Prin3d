@@ -1,0 +1,41 @@
+
+<div class="container">
+  <form class="form-upload" action="...">
+    <h1>Upload 3d</h1>
+    <fieldset>
+    <div class="form__group">
+      <label class="form__label" for="title" >Title</label>
+      <input class="form__control" type="text"  id="title">
+    </div>
+    <div class="form__group">
+      <select class="form__control" name="categories" id="categories">
+        <option value="">Select categorie</option>
+        <option value="">Fan art</option>
+      </select>
+    </div>
+    <div class="form__group form__group--area">
+      <label class="form__label" for="bio" >Description</label>
+      <textarea class="form__control--area" id="bio" cols="10" rows="5"></textarea>
+    </div>
+    <div class="form__group">
+      <label class="form__label" for="portfolio" >Personal web site</label>
+      <input class="form__control" type="url"  id="portfolio">
+    </div>
+    <div class="form__row">
+      <div class="form__group form__group--file">
+        <button class="btn">
+          <label class="avatar__label" for="file">Upload 3d file</label>
+          <input class="avatar__control--file" id="file" type="file">
+        </button>
+      </div>
+      <div class="form__group form__group--file">
+        <button class="btn">
+          <label class="avatar__label" for="file">Upload 3d images</label>
+          <input class="avatar__control--file" id="file" type="file">
+        </button>
+      </div>
+    </div>
+    <button class="btn btn__second" type="submit">Upload</button>
+  </fieldset>
+  </form>
+</div>

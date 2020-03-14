@@ -1,31 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 // GLOBAL
 
-@import "global/variables";
-@import "global/reset";
-@import "mixins/mixins";
-@import "global/basic";
-
-
+@import "sass/global/variables";
+@import "sass/global/reset";
+@import "sass/mixins/mixins";
+@import "sass/global/basic";
 
 // COMPONENTS
 // ----------
 
-@import "components/form";
-@import "components/ui_kit";
-@import "components/btn";
-@import "components/icons";
-@import "components/header";
-@import "components/cover";
-@import "components/search";
-@import "components/category";
-@import "components/backgroundLogin";
-@import "components/avatars";
+@import "sass/components/form";
+@import "sass/components/ui_kit";
+@import "sass/components/btn";
+@import "sass/components/icons";
+@import "sass/components/header";
+@import "sass/components/cover";
+@import "sass/components/search";
+@import "sass/components/category";
+@import "sass/components/backgroundLogin";
+@import "sass/components/avatars";
 
 
 
 
-// ANGULAR
-//--------
 
 

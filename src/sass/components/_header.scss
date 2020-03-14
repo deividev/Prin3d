@@ -1,0 +1,63 @@
+/*** HEADER  ***/
+/*------------*/
+.header {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.header__container {
+  width: 100%;
+  height: rem(60px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+}
+
+
+
+/*** NAVBAR ***/
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  background-color: $primary;
+
+  &__profile {
+    border-bottom: 2px solid $text-second;
+  }
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__link {
+    padding: 25px 15px;
+    font-size: rem(20px);
+    text-transform: uppercase;
+    color: $third;
+    cursor: pointer;
+    transition: 0.25s linear;
+  }
+
+  &__link:hover {
+    color: $third;
+    background-color: $gray-300;
+    border-radius: 4px;
+  }
+}
+
+//-----
+// BTNS RIGTH
+
+.btnHeader {
+  height: rem(60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+

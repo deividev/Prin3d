@@ -1,0 +1,90 @@
+
+/***  BUTTONS ***/
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.btn {
+  height: 2.5rem;
+  font-size: rem(16px);
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid $text-default;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    color: $gray-300;
+    border-color: 1px solid $gray-300;
+  }
+
+
+  &--profile {
+    padding: 8px;
+    background-color: transparent;
+    font-size: rem(22px);
+    border: 0;
+    color: $text-default;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__primary {
+    background-color: $primary;
+    color: #e3e1e4;
+    transition: 0.2s linear;
+  }
+
+  &__primary:hover {
+    background-color: #605b83;
+    color: #fff;
+    transition: 0.2s linear;
+  }
+
+  &__second {
+    background-color: $second;
+    color: $gray-100;
+    transition: 0.2s linear;
+    border: 1px solid $gray-100;
+  }
+
+  &__second:hover {
+    background-color: $second-hover;
+    color: $gray-100;
+  }
+
+  &__success {
+    background-color: $red;
+    color: #f1f1f1;
+    transition: 0.2s linear;
+  }
+
+  &__success:hover {
+    background-color: $red-hover;
+    color: $text-default;
+  }
+
+  &__icon {
+    padding: 5px;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    background: none;
+  }
+}
+//------------
+//BUTTONS ICON
+//------------
+
+
+
+.btn__user {
+  display: flex;
+  flex-direction: row;
+}

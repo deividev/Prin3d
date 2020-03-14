@@ -1,0 +1,11 @@
+<div class="form__group" *ngIf="model3d">
+  <img [src]="model3d.img" width="400" height="400" />
+  <h1>{{model3d.title}}</h1>
+  <p>{{model3d.description}}</p>
+</div>
+<div *ngIf="user">
+  <img [src]="user.img"/>
+  <p>{{user.name}}</p>
+  <p>{{user.description}}</p>
+  <p>{{user.email}}</p>
+</div>

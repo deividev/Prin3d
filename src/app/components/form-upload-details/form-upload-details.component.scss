@@ -1,0 +1,21 @@
+
+.form-upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin: 40px 0px;
+  text-align: center;
+}
+
+
+.form__half {
+  width: 50%;
+  height: 100%;
+}
+
+fieldset {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

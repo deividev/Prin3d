@@ -1,0 +1,25 @@
+  <!-- **** -->
+  <!-- CATEGORIE -->
+<section  class="category">
+  <h2 class="category__title">{{title}}</h2>
+  <div id="categorie" class="category__container">
+    <a *ngFor="let item of listModels" class="card" href="">
+      <div class="card__btn">
+          <button type="button" class="btn btn__icon">
+            <svg>
+              <use xlink:href="../assets/svg/sprite.svg#like-hover"></use>
+            </svg>
+          </button>
+          <button type="button" class="btn btn__icon">
+            <svg>
+              <use xlink:href="../assets/svg/sprite.svg#download-hover"></use>
+            </svg>
+          </button>
+      </div>
+      <img class=" card__model" [src]="item.img" alt="">
+      <h4>{{item.title}}</h4>
+    </a>
+  </div>
+</section>
+  <!-- CATEGORIE -->
+  <!-- **** -->
