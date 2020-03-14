@@ -27,11 +27,7 @@
     <nav class="navbar">
       <a class="navbar__link" href="home.html">Home</a>
       <div class="navbar__categories">
-        <a class="navbar__link" href="fan-art.html">Fan art</a>
-        <a class="navbar__link" href="toys.html">Toy and Games</a>
-        <a class="navbar__link" href="gadgets.html">Gadgets</a>
-        <a class="navbar__link" href="education.html">Education</a>
-        <a class="navbar__link" href="utility.html">Utility</a>
+        <a *ngFor="let item of categories" class="navbar__link" href="fan-art.html">{{item.title}}</a>
       </div>
     </nav>
     <!-- NAV -->
