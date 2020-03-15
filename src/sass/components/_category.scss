@@ -49,36 +49,31 @@
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  transition: 0.3s linear;
+  transition: 0.2s linear;
 
   //  BTN ICONS
   //-----------
-
-  &__hover {
-    width: 100%;
-    display: inline-block;
-    justify-content: flex-end;
-  }
 
   &__model {
     height: rem(250px);
     margin: 20px 0px;
   }
 
+
   &:hover {
-    transform: scale(1.1);
+    transform: scale(0.95);
   }
 
   &__btn {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
     position: absolute;
     z-index: 50;
     width: rem(335px);
     height: rem(250px);
     opacity: 0;
-    transition: 0.7s linear;
+    transition: 0.2s linear;
+    // background-color: rgba($color: #000000, $alpha: 0.1);
   }
 
   &:hover > .card__btn {

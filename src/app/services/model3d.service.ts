@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 })
 export class Model3dService {
 
-  private resource: string = 'upload';
+  private resource: string = 'models';
   constructor(private httpClient: HttpClient) { }
 
   getModels(): Observable <any> {
