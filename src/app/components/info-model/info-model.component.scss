@@ -1,5 +1,29 @@
 .container-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 40px;
+}
+
+
+.img {
+  position: relative;
+}
+
+.card-slider {
+
+  z-index: 10;
+  margin-right: 5px;
+}
+
+
+.control__slider--left {
+  position: absolute;
+  z-index: 50;
+  top: 50;
+}
+
+.control__slider--right {
+  position: absolute;
+  z-index: 50;
+  top: 100;
 }
