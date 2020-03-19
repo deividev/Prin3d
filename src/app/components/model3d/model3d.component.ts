@@ -24,20 +24,13 @@ export class Model3dComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
-      this.model3dService.getModelById(params.uploadId).subscribe((result) => {
+      this.model3dService.getModels().subscribe((result) => {
         this.model3d = result;
         // this.userService.getUserByIdMock(userId).subscribe((result) => {
         //   this.user = result;
         // });
 
       });
-      /* this.activatedRoute.params.subscribe((params) => {
-        debugger
-        this.userService.getUserById(this.upload.userId).subscribe((result) => {
-          debugger
-        this.user = result;
-        })
-      }); */
 
     });
 

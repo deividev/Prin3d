@@ -8,7 +8,7 @@ import { Model3dComponent } from './components/model3d/model3d.component';
 const appRoutes: Routes = [
   {path: 'login', component: FormLoginComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'upload-detail/:uploadId', component: Model3dComponent},
+  {path: 'model/:modelId', component: Model3dComponent},
   {path: '404', component: Error404Component},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', redirectTo: '404'}

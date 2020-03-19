@@ -32,8 +32,8 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(325px,1fr));
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(auto-fit,minmax(375px,1fr));
+    grid-template-rows: auto;
     grid-gap: 20px;
 
   }

@@ -10,6 +10,7 @@ export class ListModelComponent implements OnInit {
   @Input() listModels: any;
   @Input() title: string;
 
+
   constructor() {
 
    }

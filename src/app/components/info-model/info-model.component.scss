@@ -1,19 +1,38 @@
+@import "../../../sass/global/variables";
+
+
 .container-row {
   display: flex;
+  width: 60%;
   justify-content: flex-start;
-  padding: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 20px;
 }
 
-
-.img {
-  position: relative;
+.container-user {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 0px;
 }
+
+//IMG BUTTONSt
 
 .card-slider {
-
+  position: relative;
   z-index: 10;
   margin-right: 5px;
 }
+
+
+.card-user {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid $gray-200;
+  background-color: #fff;
+  margin: 20px 0px;
+}
+
 
 
 .control__slider--left {
@@ -26,4 +45,48 @@
   position: absolute;
   z-index: 50;
   top: 100;
+}
+
+//AVATAR
+
+.avatar--info {
+  margin: 10px 10px 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: $fourth;
+}
+
+
+//TOOLS
+
+.card-tools {
+  width: 20%;
+  padding: 20px;
+}
+
+.tools {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.btn--info {
+  width: 100%;
+}
+
+
+//COMMENTS
+
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $gray-200;
+  padding: 10px;
+  background-color: #fff;
 }

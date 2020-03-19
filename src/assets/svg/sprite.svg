@@ -54,7 +54,7 @@
   <!-- Si necesita  <desc></desc> -->
   <path d="M3 3h18v18H3zm9 5v8m-4-4h8"
     fill="none"
-    stroke="#666"
+    stroke="#b4b4b4"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"

@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
       //Ordena el resultado de los mas votados de mayor a menor y coge los 8 primeros;
       this.featuredModels = result.sort((a, b) => b.likes - a.likes).slice(0, 4);
       //Ordena el resultado de los ultimos 8 que se han subido a la base de datos;
-      this.newModels = result.sort((a, b)  => b.createDate - a.createDate).slice(0, 4);
+      this.newModels = result.sort((a, b)  => b.createDate - a.createDate).slice(0, 8);
     });
   }
 
