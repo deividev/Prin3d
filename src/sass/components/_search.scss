@@ -7,8 +7,8 @@
   align-items: center;
   z-index: 10;
   width: 50rem;
-  height: 2rem;
-  font-size: rem(20px);
+  height: rem(30px);
+  font-size: rem(16px);
   border: 1px solid $gray-200;
   border-radius: 15px;
   color: $text-default;
@@ -22,12 +22,13 @@
 
   &__control {
     width: 100%;
-    font-size: rem(20px);
+    height: rem(50px);
+    font-size: rem(16px);
     background-color: transparent;
     color: $text-default;
     border-radius: 15px;
     border: 0;
-    padding: 0px 7px;
+    padding: 10px;
     outline: none;
     transition: 0.1s linear;
   }

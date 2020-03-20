@@ -9,7 +9,7 @@
 
 .btn {
   font-size: rem(20px);
-  padding: 10px;
+  padding: 7px 10px;
   margin-right: 10px;
   border-radius: 4px;
   border: 1px solid $text-default;
@@ -34,39 +34,28 @@
     font-weight: 700;
   }
 
-  &__primary {
+  &-primary {
     background-color: $primary;
     color: #e3e1e4;
     transition: 0.2s linear;
   }
 
-  &__primary:hover {
+  &-primary:hover {
     background-color: #605b83;
     color: #fff;
     transition: 0.2s linear;
   }
 
-  &__second {
+  &-success {
     background-color: $second;
-    color: $gray-100;
-    transition: 0.2s linear;
+    color: #fff;
     border: 1px solid $gray-100;
-  }
-
-  &__second:hover {
-    background-color: $second-hover;
-    color: $gray-100;
-  }
-
-  &__success {
-    background-color: $red;
-    color: #f1f1f1;
     transition: 0.2s linear;
   }
 
-  &__success:hover {
-    background-color: $red-hover;
-    color: $text-default;
+  &-success:hover {
+    background-color: $second-hover;
+    color: $gray-300;
   }
 
   &__icon {
@@ -81,6 +70,7 @@
     border: 1px solid $text-default;
     padding: 6px;
   }
+
 }
 //------------
 //BUTTONS ICON

@@ -109,28 +109,28 @@
 </symbol>
 
 <!-- CHECK-RIGHT -->
-<symbol id="right" viewBox="0 0 24 24" width="30px" heigth="30px">
+<symbol id="right" viewBox="0 0 24 24" width="40" heigth="40">
   <title>Icon rght</title>
   <!-- Si necesita  <desc></desc> -->
 
   <path d="M9 18l6-6-6-6"
-    fill="#fff"
-    stroke="#555"
-    stroke-width="2"
+    fill="none"
+    stroke="#fff"
+    stroke-width="5"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
 </symbol>
 
 <!-- CHECK-LEFT -->
-<symbol id="left" viewBox="0 0 24 24" width="30px" heigth="30px">
+<symbol id="left" viewBox="0 0 24 24" width="40" heigth="40">
   <title>Icon left</title>
   <!-- Si necesita  <desc></desc> -->
 
   <path d="M15 18l-6-6 6-6"
-    fill="#fff"
-    stroke="#555"
-    stroke-width="2"
+    fill="none"
+    stroke="#fff"
+    stroke-width="5"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
