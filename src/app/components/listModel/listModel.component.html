@@ -4,21 +4,30 @@
   <h2 class="category__title">{{title}}</h2>
   <div id="categorie" class="category__container">
     <a *ngFor="let item of listModels" class="card" href="">
-      <p>Deividev</p>
+
       <img class=" card__model" [src]="item.img" alt="">
-      <h4>{{item.title}}</h4>
-      <div class="card__btn">
-        <button type="button" class="btn btn__icon btn__icon--model">
-          <svg>
-            <use xlink:href="../assets/svg/sprite.svg#like"></use>
-          </svg>
-        </button>
-        <button type="button" class="btn btn__icon btn__icon--model">
-          <svg>
-            <use xlink:href="../assets/svg/sprite.svg#download"></use>
-          </svg>
-        </button>
-    </div>
+      <div class="card__content">
+        <div class="card__title">
+          <h4>{{item.title}}</h4>
+          <p>Deividev</p>
+        </div>
+        <div class="card__btn">
+          <span class="card__btn--info">
+          <button type="button" class="btn btn__icon btn__icon--model">
+            <svg>
+              <use xlink:href="../assets/svg/sprite.svg#like"></use>
+            </svg>
+          </button>
+          15</span>
+          <span class="card__btn--info">
+          <button type="button" class="btn btn__icon btn__icon--model">
+            <svg>
+              <use xlink:href="../assets/svg/sprite.svg#download"></use>
+            </svg>
+          </button>
+          150</span>
+        </div>
+      </div>
     </a>
   </div>
 </section>
