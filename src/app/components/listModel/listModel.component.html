@@ -4,20 +4,21 @@
   <h2 class="category__title">{{title}}</h2>
   <div id="categorie" class="category__container">
     <a *ngFor="let item of listModels" class="card" href="">
-      <!-- <div class="card__btn">
-          <button type="button" class="btn btn__icon">
-            <svg>
-              <use xlink:href="../assets/svg/sprite.svg#like-hover"></use>
-            </svg>
-          </button>
-          <button type="button" class="btn btn__icon">
-            <svg>
-              <use xlink:href="../assets/svg/sprite.svg#download-hover"></use>
-            </svg>
-          </button>
-      </div> -->
+      <p>Deividev</p>
       <img class=" card__model" [src]="item.img" alt="">
       <h4>{{item.title}}</h4>
+      <div class="card__btn">
+        <button type="button" class="btn btn__icon btn__icon--model">
+          <svg>
+            <use xlink:href="../assets/svg/sprite.svg#like"></use>
+          </svg>
+        </button>
+        <button type="button" class="btn btn__icon btn__icon--model">
+          <svg>
+            <use xlink:href="../assets/svg/sprite.svg#download"></use>
+          </svg>
+        </button>
+    </div>
     </a>
   </div>
 </section>

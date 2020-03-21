@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 20px;
+  margin: 100px;
 
 
   &__head {
@@ -32,9 +32,9 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(375px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     grid-template-rows: auto;
-    grid-gap: 20px;
+    grid-gap: 40px;
 
   }
 }
@@ -46,12 +46,16 @@
 
 .card {
   position: relative;
-  width: rem(375px);
-  height: rem(325px);
+  width: 100%;
+  height: rem(375px);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
   transition: 0.3s linear;
+  border: 1px solid $gray-100;
+  background-color: #fff;
+  box-shadow: 0 0 2rem -1rem rgba(0,0,0,0.5);
 
   //  BTN ICONS
   //-----------
@@ -62,24 +66,27 @@
   }
 
   &__model {
+    width: 100%;
     height: rem(250px);
     margin: 20px 0px;
-    border-radius: 6px;
+
   }
 
 
   &:hover {
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
 
   &__btn {
     display: flex;
     justify-content: flex-end;
+    align-items: flex-end;
     position: absolute;
     z-index: 50;
-
-    width: rem(335px);
-    height: rem(250px);
+    bottom: 0;
+    width: rem(340px);
+    height: rem(375px);
+    padding: 5px 0px;
     opacity: 0;
     transition: 0.2s linear;
     // background-color: rgba($color: #000000, $alpha: 0.1);
