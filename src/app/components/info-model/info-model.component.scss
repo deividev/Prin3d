@@ -23,7 +23,7 @@
 //IMG BUTTONSt
 
 .container--model {
-  width: 70%;
+  width: 60%;
   margin: 20px;
 }
 
@@ -38,6 +38,14 @@
 .card-model {
   border: 1px solid $gray-100;
   margin: 20px 0px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.card__suggestion {
+  width: 37%;
+  margin: 40px 0px;
+  border: 1px solid $gray-100;
   background-color: #fff;
   padding: 30px;
 }
@@ -100,6 +108,8 @@ canvas {
 }
 
 .model-title {
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 20px;
 }
 
@@ -108,7 +118,7 @@ canvas {
 
 .tools {
   display: flex;
-  justify-content: space-between;
+
   padding: 20px;
 }
 
