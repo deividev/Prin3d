@@ -1,9 +1,20 @@
-<div class="container-row">
+<div class="container__info--model">
+
+<!-- CARD MODEL -->
 <div class="container--model">
   <div class="card-model">
+    <h2>Stormtrooper</h2>
+        <div class="container-flex">
+          <a class="container-flex" href="">
+            <img class="avatar--info" src="" alt="">
+            by Deividev
+          </a>
+          <p> Marzo 23, 2020</p>
+        </div>
     <div class="container-row">
       <div class="card-slider">
-        <img class="img" src="../assets/images/stormtrooper-helmet.jpg" alt="" width="400" height="400">
+
+        <img class="card__gallery" src="../assets/images/stormtrooper-helmet.jpg" alt="">
 
         <button type="button" class="btn__icon control__slider--left">
           <svg >
@@ -17,54 +28,62 @@
         </button>
           <!-- <img class="model" src="../assets/images/stormtrooper-helmet.jpg" alt="" width="400" height="400"> -->
       </div>
-      <model-viewer class="model" src="./assets/images/dart-model.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer>
-    </div>
-      <div class="model-title">
-          <h1>Stormtrooper</h1>
-          <span>
-            120
-            <svg>
-              <use xlink:href="../assets/svg/sprite.svg#like"></use>
-            </svg>
-          </span>
-          <span>
-            1455
-            <svg >
-              <use xlink:href="../assets/svg/sprite.svg#download"></use>
-            </svg>
-          </span>
-      <p>Casco de las guerras de las galaxias con un soporte para poder dejarlo
-        en una estanteria como decoracion.
-      </p>
-    </div>
+  </div>
 
-    <!-- BUTTONS -->
-    <div class="tools">
-      <div class="btn-tools">
-        <button type="button" class="btn  btn__icon">
-          Collection
-          <svg >
-            <use xlink:href="../assets/svg/sprite.svg#collection"></use>
-          </svg>
-        </button>
-        <button type="button" class="btn  btn__icon">
-          Download
-          <svg >
-            <use xlink:href="../assets/svg/sprite.svg#download"></use>
-          </svg>
-        </button>
-        <button type="button" class="btn  btn__icon">
-          Like
-          <svg >
-            <use xlink:href="../assets/svg/sprite.svg#like"></use>
-          </svg>
-        </button>
-      </div>
+  <h4>Fan art</h4>
+   <!-- BUTTONS -->
+   <div class="tools">
+    <button type="button" class="btn  btn__icon btn__icon--primary">
+      Collection
+      <svg >
+        <use xlink:href="../assets/svg/sprite.svg#collection"></use>
+      </svg>
+    </button>
+    <button type="button" class="btn  btn__icon btn__icon--primary">
+      Download
+      <svg >
+        <use xlink:href="../assets/svg/sprite.svg#download"></use>
+      </svg>
+    </button>
+    <button type="button" class="btn  btn__icon btn__icon--primary">
+      Like
+      <svg >
+        <use xlink:href="../assets/svg/sprite.svg#like"></use>
+      </svg>
+    </button>
+</div>
+
+       <!-- <model-viewer class="model" src="assets/images/dart-model.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer> -->
+    <div>
+    <div>
+      <span>
+        120
+        <svg>
+          <use xlink:href="../assets/svg/sprite.svg#like"></use>
+        </svg>
+      </span>
+      <span>
+        1455
+        <svg >
+          <use xlink:href="../assets/svg/sprite.svg#download"></use>
+        </svg>
+      </span>
     </div>
   </div>
 
+   </div>
 
-  <div class="card-model">
+<!-- CARD MODEL -->
+<div class="card-model">
+  <h4>Description:</h4>
+  <p>Casco de las guerras de las galaxias con un soporte para poder dejarlo
+  en una estanteria como decoracion.
+  Hola no sabia que escribir para ver si fuese mas larga la descripcion como
+  podria ir quedando.
+  </p>
+</div>
+
+  <!-- <div class="card-model">
     <h4 class="">Created by</h4>
       <div class="container-user">
         <a class="avatar--info" href="">Dd</a>
@@ -77,11 +96,10 @@
       asdawawddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
       adwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
     </p>
-  </div>
+  </div> -->
 
-
+<!-- COMMENTS -->
   <p class="category__title">Comment</p>
-  <div class="container-row">
     <form class="form-comments" action="">
       <textarea class="form__control--area" name="" id="" cols="30" rows="10" ></textarea>
       <button class="btn btn-success">Comment</button>
@@ -95,34 +113,39 @@
         la hora de imprimir el casco.
       </p>
     </div>
+</div>
+<!-- COMMENTS -->
+
+
+<!-- SUGGESTIONS -->
+  <div class="card__suggestion">
+    <h4>Tu abuela</h4>
+    <a  class="card" href="">
+      <img class=" card__model" width="200" height="250" src="../assets/images/logo.jpg" alt="">
+      <div class="card__content">
+        <div class="card__title">
+          <h4>Halcon milenary</h4>
+          <p>Deividev</p>
+        </div>
+        <div class="card__btn">
+          <span class="card__btn--info">
+          <button type="button" class="btn btn__icon btn__icon--model">
+            <svg>
+              <use xlink:href="../assets/svg/sprite.svg#like"></use>
+            </svg>
+          </button>
+          15</span>
+          <span class="card__btn--info">
+          <button type="button" class="btn btn__icon btn__icon--model">
+            <svg>
+              <use xlink:href="../assets/svg/sprite.svg#download"></use>
+            </svg>
+          </button>
+          150</span>
+        </div>
+      </div>
+    </a>
   </div>
-</div>
-<div class="card__suggestion">
-  <h4>Suggestion is your</h4>
-  <a  class="card" href="">
-    <img class=" card__model" width="200" height="250" src="../assets/images/logo.jpg" alt="">
-    <div class="card__content">
-      <div class="card__title">
-        <h4>Halcon milenary</h4>
-        <p>Deividev</p>
-      </div>
-      <div class="card__btn">
-        <span class="card__btn--info">
-        <button type="button" class="btn btn__icon btn__icon--model">
-          <svg>
-            <use xlink:href="../assets/svg/sprite.svg#like"></use>
-          </svg>
-        </button>
-        15</span>
-        <span class="card__btn--info">
-        <button type="button" class="btn btn__icon btn__icon--model">
-          <svg>
-            <use xlink:href="../assets/svg/sprite.svg#download"></use>
-          </svg>
-        </button>
-        150</span>
-      </div>
-    </div>
-  </a>
-</div>
+
+<!-- SUGGESTIONS -->
 </div>

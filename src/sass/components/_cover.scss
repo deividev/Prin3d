@@ -2,12 +2,11 @@
 
 .cover {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   height: 20.313rem;
-  margin: 20px;
+  margin: 20px 100px;
 
   &__container {
-    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,7 +15,7 @@
 
   &__title {
     margin-bottom: 10px;
-    padding: 20px;
+    padding: 0px 20px;
   }
 }
 
