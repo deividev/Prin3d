@@ -3,23 +3,46 @@
   <form class="form-upload" action="...">
     <h1>Upload 3d</h1>
     <fieldset>
-    <div class="form__group">
-      <label class="form__label" for="title" >Title</label>
-      <input class="form__control" type="text"  id="title">
-    </div>
-    <div class="form__group">
-      <select class="form__control" name="categories" id="categories">
-        <option value="">Select categorie</option>
-        <option value="">Fan art</option>
-      </select>
+    <div class="form__row ">
+      <div class="form__group">
+        <label class="form__label" for="title" >Title</label>
+        <input class="form__control" type="text"  id="title">
+      </div>
+      <div class="form__group form__group--ml">
+        <select class="form__control" name="categories" id="categories">
+          <option value="">Categories</option>
+          <option value="">Fan art</option>
+          <option value="">Toy and games</option>
+          <option value="">Gadgets</option>
+          <option value="">Utility</option>
+          <option value="">Education</option>
+          <option value="">Others</option>
+        </select>
+      </div>
     </div>
     <div class="form__group form__group--area">
       <label class="form__label" for="bio" >Description</label>
       <textarea class="form__control--area" id="bio" cols="10" rows="5"></textarea>
     </div>
-    <div class="form__group">
-      <label class="form__label" for="portfolio" >Personal web site</label>
-      <input class="form__control" type="url"  id="portfolio">
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label" for="print" >Print settings</label>
+        <input class="form__control" type="text"  id="print">
+      </div>
+      <div class="form__group form__group--ml">
+        <label class="form__label" for="custom" >Custom section</label>
+        <input class="form__control" type="text"  id="custom">
+      </div>
+    </div>
+    <div class="form__row">
+      <div class="form__group">
+        <label class="form__label" for="license" >License</label>
+        <input class="form__control" type="text"  id="license">
+      </div>
+      <div class="form__group form__group--ml">
+        <label class="form__label" for="tags" >Tags</label>
+        <input class="form__control" type="text"  id="tags">
+      </div>
     </div>
     <div class="form__row">
       <div class="form__group form__group--file">

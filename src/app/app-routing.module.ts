@@ -5,12 +5,14 @@ import { Error404Component } from './components/error404/error404.component';
 import { FormLoginComponent } from './components/form-login/form-login.component';
 import { InfoModelComponent } from './components/info-model/info-model.component';
 import { FormRegisterComponent } from './components/form-register/form-register.component';
+import { FormUploadDetailsComponent } from './components/form-upload-details/form-upload-details.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: FormLoginComponent},
   {path: 'register', component: FormRegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'model/:modelId', component: InfoModelComponent},
+  {path: 'model/upload', component: FormUploadDetailsComponent},
   {path: '404', component: Error404Component},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', redirectTo: '404'}
