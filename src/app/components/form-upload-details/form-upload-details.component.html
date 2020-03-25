@@ -9,8 +9,8 @@
         <input class="form__control" type="text"  id="title">
       </div>
       <div class="form__group form__group--ml">
+        <label class="form__label" for="">Categories</label>
         <select class="form__control" name="categories" id="categories">
-          <option value="">Categories</option>
           <option value="">Fan art</option>
           <option value="">Toy and games</option>
           <option value="">Gadgets</option>
@@ -37,27 +37,37 @@
     <div class="form__row">
       <div class="form__group">
         <label class="form__label" for="license" >License</label>
-        <input class="form__control" type="text"  id="license">
+        <select class="form__control" name="categories" id="categories">
+          <option value="">CC</option>
+          <option value="">CC</option>
+          <option value="">CC</option>
+        </select>
       </div>
-      <div class="form__group form__group--ml">
-        <label class="form__label" for="tags" >Tags</label>
-        <input class="form__control" type="text"  id="tags">
-      </div>
+      <div></div>
+    </div>
+    <div class="form__group">
+      <label class="form__label" for="tags" >Tags</label>
+      <input class="form__control" type="text"  id="tags">
+      <div></div>
     </div>
     <div class="form__row">
-      <div class="form__group form__group--file">
-        <button class="btn">
-          <label class="avatar__label" for="file">Upload 3d file</label>
+        <div class="form__label--files">
+          <label for="file">Model 3d <i class="icon-upload"></i></label>
           <input class="avatar__control--file" id="file" type="file">
-        </button>
-      </div>
-      <div class="form__group form__group--file">
-        <button class="btn">
-          <label class="avatar__label" for="file">Upload 3d images</label>
+          <p>fsefesfsefse</p>
+
+        </div>
+        <div class="form__label--files">
+          <label for="file">Images <i class="icon-upload"></i></label>
           <input class="avatar__control--file" id="file" type="file">
-        </button>
+          <a>fsefesfsefse</a>
+          <a>fsefesfsefse</a>
+          <a>fsefesfsefse</a>
+          <a>fsefesfsefse</a>
+          <a>fsefesfsefse</a>
+          <a>fsefesfsefse</a>
+        </div>
       </div>
-    </div>
     <button class="btn btn__success" type="submit">Upload</button>
   </fieldset>
   </form>

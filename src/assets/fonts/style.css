@@ -1,0 +1,2137 @@
+@font-face {
+    font-family: 'print3d';
+    src: url('./print3d.eot?bavn4z');
+    src: url('./print3d.eot?bavn4z#iefix') format('embedded-opentype'), url('./print3d.ttf?bavn4z') format('truetype'), url('./print3d.woff?bavn4z') format('woff'), url('./print3d.svg?bavn4z#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'print3d' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.display-block {
+    display: block;
+}
+.right {
+    float: right;
+}
+.gly-rotate-90 {
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: inline-block;
+}
+.gly-rotate-270 {
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+    display: inline-block;
+}
+.gly-rotate-180 {
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    display: inline-block;
+}
+.gly-rotate-45 {
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+.icon-bin:before {
+    content: "\e900";
+    color: #fff;
+  }
+  .icon-bin-grey:before {
+    content: "\e900";
+    color: grey;
+  }
+  .icon-warning-2:before {
+    content: "\e9c1";
+    color: #ffa617;
+  }
+  .smart-city:before {
+    content: "\e9be";
+    color: #fff;
+  }
+  .icon-arrow-left:before {
+    content: "\e901";
+    color: #fff;
+  }
+  .icon-arrow-right:before {
+    content: "\e902";
+    color: #fff;
+  }
+  .icon-art-tools:before {
+    content: "\e903";
+    color: #fff;
+  }
+  .icon-chart-bar:before {
+    content: "\e904";
+    color: #fff;
+  }
+  .icon-checkmark-2:before {
+    content: "\e905";
+    color:#757d6e;
+  }
+  .icon-checkmark-2-green:before {
+    content: "\e905";
+    color:#1de120;
+  }
+
+  .icon-copy:before {
+    content: "\e906";
+    color: #fff;
+  }
+  .icon-copy1:before {
+    content: "\e90a";
+    color: #fff;
+  }
+  .icon-dashboard:before {
+    content: "\e907";
+    color: #fff;
+  }
+  .icon-double-left:before {
+    content: "\e908";
+    color: #fff;
+  }
+  .icon-drag:before {
+    content: "\e909";
+    color: #fff;
+  }
+  .icon-geolocation:before {
+    content: "\e910";
+    color: #fff;
+  }
+  .icon-hand:before {
+    content: "\e911";
+    color: #fff;
+  }
+  .icon-help:before {
+    content: "\e912";
+    color: #fff;
+  }
+  .icon-home:before {
+    content: "\e913";
+    color: #fff;
+  }
+  .icon-horizontal-white:before {
+    content: "\e914";
+    color: #fff;
+  }
+  .icon-info:before {
+    content: "\e911";
+    color: #fff;
+  }
+  .icon-list:before {
+    content: "\e916";
+    color: #fff;
+  }
+  .icon-map-3-d:before {
+    content: "\e917";
+    color: #fff;
+  }
+  .icon-map:before {
+    content: "\e918";
+    color: #fff;
+  }
+  .icon-minus:before {
+    content: "\e919";
+    color: #fff;
+  }
+  .icon-minus-grey:before {
+    content: "\e919";
+    color: grey;
+  }
+  .icon-move:before {
+    content: "\e916";
+    color: #fff;
+  }
+  .icon-multiple:before {
+    content: "\e91b";
+    color: #fff;
+  }
+  .icon-photo:before {
+    content: "\e91c";
+    color: #fff;
+  }
+  .icon-plus:before {
+    content: "\e91d";
+    color: #fff;
+  }
+.icon-plus-red:before {
+    content: "\e91d";
+    color: red;
+  }
+  .icon-plus-grey:before {
+    content: "\e91d";
+    color: grey;
+  }
+  .icon-scan:before {
+    content: "\e9bb";
+    color: #fff;
+  }
+  .icon-search:before {
+    content: "\e9bc";
+    color: #fff;
+  }
+  .icon-setting:before {
+    content: "\e9bd";
+    color: #fff;
+  }
+  .icon-upload:before {
+    content: "\e9bf";
+    color: #666;
+  }
+  .icon-user:before {
+    content: "\e9c0";
+    color: #fff;
+  }
+
+    .icon-art-tools-grey:before {
+        content: "\e903";
+        color: grey;
+    }
+    .icon-user-grey:before {
+        content: "\e9c0";
+        color: grey;
+    }
+    .icon-upload-red:before {
+        content: "\e9bf";
+        color: #cc0033;
+    }
+    .icon-funnel:before {
+        content: "\e90d";
+        color: #fff;
+    }
+    .icon-interface-information:before {
+      content: "\eaa8";
+      color:  #fff;
+    }
+    .icon-streetview:before {
+      content: "\eaa9";
+      color: #fff;
+    }
+    .icon-pie-chart:before {
+      content: "\eaaa";
+      color: #fff;
+    }
+  /* Icon EUROPEAN UNION */
+.icon-europe-union .path1:before {
+  content: "\e9d7";
+  color: #fff;
+}
+.icon-europe-union .path2:before {
+  content: "\e9d8";
+  color: #fff;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path3:before {
+  content: "\e9d9";
+  color: #fff;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path4:before {
+  content: "\e9da";
+  color: #154194;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path5:before {
+  content: "\e9db";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path6:before {
+  content: "\e9dc";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path7:before {
+  content: "\e9dd";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path8:before {
+  content: "\e9de";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path9:before {
+  content: "\e9df";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path10:before {
+  content: "\e9e0";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path11:before {
+  content: "\e9e1";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path12:before {
+  content: "\e9e2";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path13:before {
+  content: "\e9e3";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path14:before {
+  content: "\e9e4";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path15:before {
+  content: "\e9e5";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+.icon-europe-union .path16:before {
+  content: "\e9e6";
+  color: #faea27;
+  margin-left: -4.771484375em;
+}
+/*////////////////////////////////////////////////// Icon RED.ES //////////////////////////////////////*/
+
+.icon-red-es .path1:before {
+    content: "\e91e";
+    color: #feea10;
+  }
+  .icon-red-es .path2:before {
+    content: "\e91f";
+    color: #feea10;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path3:before {
+    content: "\e920";
+    color: #feea10;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path4:before {
+    content: "\e921";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path5:before {
+    content: "\e922";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path6:before {
+    content: "\e923";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path7:before {
+    content: "\e924";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path8:before {
+    content: "\e925";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path9:before {
+    content: "\e926";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path10:before {
+    content: "\e927";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path11:before {
+    content: "\e928";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path12:before {
+    content: "\e929";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path13:before {
+    content: "\e92a";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path14:before {
+    content: "\e92b";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path15:before {
+    content: "\e92c";
+    color: #008054;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path16:before {
+    content: "\e92d";
+    color: #008054;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path17:before {
+    content: "\e92e";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path18:before {
+    content: "\e92f";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path19:before {
+    content: "\e930";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path20:before {
+    content: "\e931";
+    color: #006eb8;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path21:before {
+    content: "\e932";
+    color: #c7c2c1;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path22:before {
+    content: "\e933";
+    color: #006eb8;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path23:before {
+    content: "\e934";
+    color: #c7c2c1;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path24:before {
+    content: "\e935";
+    color: #006eb8;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path25:before {
+    content: "\e936";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path26:before {
+    content: "\e937";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path27:before {
+    content: "\e938";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path28:before {
+    content: "\e939";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path29:before {
+    content: "\e93a";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path30:before {
+    content: "\e93b";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path31:before {
+    content: "\e93c";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path32:before {
+    content: "\e93d";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path33:before {
+    content: "\e93e";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path34:before {
+    content: "\e93f";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path35:before {
+    content: "\e940";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path36:before {
+    content: "\e941";
+    color: #008054;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path37:before {
+    content: "\e942";
+    color: #008054;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path38:before {
+    content: "\e943";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path39:before {
+    content: "\e944";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path40:before {
+    content: "\e945";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path41:before {
+    content: "\e946";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path42:before {
+    content: "\e947";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path43:before {
+    content: "\e948";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path44:before {
+    content: "\e949";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path45:before {
+    content: "\e94a";
+    color: #006eb8;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path46:before {
+    content: "\e94b";
+    color: #c7c2c1;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path47:before {
+    content: "\e94c";
+    color: #006eb8;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path48:before {
+    content: "\e94d";
+    color: #c7c2c1;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path49:before {
+    content: "\e94e";
+    color: #006eb8;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path50:before {
+    content: "\e94f";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path51:before {
+    content: "\e950";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path52:before {
+    content: "\e951";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path53:before {
+    content: "\e952";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path54:before {
+    content: "\e953";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path55:before {
+    content: "\e954";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path56:before {
+    content: "\e955";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path57:before {
+    content: "\e956";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path58:before {
+    content: "\e957";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path59:before {
+    content: "\e958";
+    color: #008054;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path60:before {
+    content: "\e959";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path61:before {
+    content: "\e95a";
+    color: #008054;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path62:before {
+    content: "\e95b";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path63:before {
+    content: "\e95c";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path64:before {
+    content: "\e95d";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path65:before {
+    content: "\e95e";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path66:before {
+    content: "\e95f";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path67:before {
+    content: "\e960";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path68:before {
+    content: "\e961";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path69:before {
+    content: "\e962";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path70:before {
+    content: "\e963";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path71:before {
+    content: "\e964";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path72:before {
+    content: "\e965";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path73:before {
+    content: "\e966";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path74:before {
+    content: "\e967";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path75:before {
+    content: "\e968";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path76:before {
+    content: "\e969";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path77:before {
+    content: "\e96a";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path78:before {
+    content: "\e96b";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path79:before {
+    content: "\e96c";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path80:before {
+    content: "\e96d";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path81:before {
+    content: "\e96e";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path82:before {
+    content: "\e96f";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path83:before {
+    content: "\e970";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path84:before {
+    content: "\e971";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path85:before {
+    content: "\e972";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path86:before {
+    content: "\e973";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path87:before {
+    content: "\e974";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path88:before {
+    content: "\e975";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path89:before {
+    content: "\e976";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path90:before {
+    content: "\e977";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path91:before {
+    content: "\e978";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path92:before {
+    content: "\e979";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path93:before {
+    content: "\e97a";
+    color: #006eb8;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path94:before {
+    content: "\e97b";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path95:before {
+    content: "\e97c";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path96:before {
+    content: "\e97d";
+    color: #c7c2c1;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path97:before {
+    content: "\e97e";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path98:before {
+    content: "\e97f";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path99:before {
+    content: "\e980";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path100:before {
+    content: "\e981";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path101:before {
+    content: "\e982";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path102:before {
+    content: "\e983";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path103:before {
+    content: "\e984";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path104:before {
+    content: "\e985";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path105:before {
+    content: "\e986";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path106:before {
+    content: "\e987";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path107:before {
+    content: "\e988";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path108:before {
+    content: "\e989";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path109:before {
+    content: "\e98a";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path110:before {
+    content: "\e98b";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path111:before {
+    content: "\e98c";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path112:before {
+    content: "\e98d";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path113:before {
+    content: "\e98e";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path114:before {
+    content: "\e98f";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path115:before {
+    content: "\e990";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path116:before {
+    content: "\e991";
+    color: #ec84b4;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path117:before {
+    content: "\e992";
+    color: #2a201a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path118:before {
+    content: "\e993";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path119:before {
+    content: "\e994";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path120:before {
+    content: "\e995";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path121:before {
+    content: "\e996";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path122:before {
+    content: "\e997";
+    color: #dd052a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path123:before {
+    content: "\e998";
+    color: #ffde9a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path124:before {
+    content: "\e999";
+    color: #008054;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path125:before {
+    content: "\e99a";
+    color: #008054;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path126:before {
+    content: "\e99b";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path127:before {
+    content: "\e99c";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path128:before {
+    content: "\e99d";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path129:before {
+    content: "\e99e";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path130:before {
+    content: "\e99f";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path131:before {
+    content: "\e9a0";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path132:before {
+    content: "\e9a1";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path133:before {
+    content: "\e9a2";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path134:before {
+    content: "\e9a3";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path135:before {
+    content: "\e9a4";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path136:before {
+    content: "\e9a5";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path137:before {
+    content: "\e9a6";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path138:before {
+    content: "\e9a7";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path139:before {
+    content: "\e9a8";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path140:before {
+    content: "\e9a9";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path141:before {
+    content: "\e9aa";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path142:before {
+    content: "\e9ab";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path143:before {
+    content: "\e9ac";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path144:before {
+    content: "\e9ad";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path145:before {
+    content: "\e9ae";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path146:before {
+    content: "\e9af";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path147:before {
+    content: "\e9b0";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path148:before {
+    content: "\e9b1";
+    color: #006eb8;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path149:before {
+    content: "\e9b2";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path150:before {
+    content: "\e9b3";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path151:before {
+    content: "\e9b4";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path152:before {
+    content: "\e9b5";
+    color: #c9a600;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path153:before {
+    content: "\e9b6";
+    color: #2a201a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path154:before {
+    content: "\e9b7";
+    color: #2a201a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path155:before {
+    content: "\e9b8";
+    color: #2a201a;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path156:before {
+    content: "\e9b9";
+    color: #fff;
+    margin-left: -3.919921875em;
+  }
+  .icon-red-es .path157:before {
+    content: "\e9ba";
+    color: #2a201a;
+    margin-left: -3.919921875em;
+  }
+
+  /* AYTO PALENCIA ICON */
+.icon-ayuntamiento-palencia .path1:before {
+  content: "\e90e";
+  color: #eac102;
+}
+.icon-ayuntamiento-palencia .path2:before {
+  content: "\e90f";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path3:before {
+  content: "\e9e7";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path4:before {
+  content: "\e9e8";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path5:before {
+  content: "\e9e9";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path6:before {
+  content: "\e9ea";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path7:before {
+  content: "\e9eb";
+  color: #e3e4e5;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path8:before {
+  content: "\e9ec";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path9:before {
+  content: "\e9ed";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path10:before {
+  content: "\e9ee";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path11:before {
+  content: "\e9ef";
+  color: #e3e4e5;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path12:before {
+  content: "\e9f0";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path13:before {
+  content: "\e9f1";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path14:before {
+  content: "\e9f2";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path15:before {
+  content: "\e9f3";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path16:before {
+  content: "\e9f4";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path17:before {
+  content: "\e9f5";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path18:before {
+  content: "\e9f6";
+  color: #e3e4e5;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path19:before {
+  content: "\e9f7";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path20:before {
+  content: "\e9f8";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path21:before {
+  content: "\e9f9";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path22:before {
+  content: "\e9fa";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path23:before {
+  content: "\e9fb";
+  color: #e3e4e5;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path24:before {
+  content: "\e9fc";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path25:before {
+  content: "\e9fd";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path26:before {
+  content: "\e9fe";
+  color: #e3e4e5;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path27:before {
+  content: "\e9ff";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path28:before {
+  content: "\ea00";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path29:before {
+  content: "\ea01";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path30:before {
+  content: "\ea02";
+  color: #008f4c;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path31:before {
+  content: "\ea03";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path32:before {
+  content: "\ea04";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path33:before {
+  content: "\ea05";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path34:before {
+  content: "\ea06";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path35:before {
+  content: "\ea07";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path36:before {
+  content: "\ea08";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path37:before {
+  content: "\ea09";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path38:before {
+  content: "\ea0a";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path39:before {
+  content: "\ea0b";
+  color: #008f4c;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path40:before {
+  content: "\ea0c";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path41:before {
+  content: "\ea0d";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path42:before {
+  content: "\ea0e";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path43:before {
+  content: "\ea0f";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path44:before {
+  content: "\ea10";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path45:before {
+  content: "\ea11";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path46:before {
+  content: "\ea12";
+  color: #ed1c24;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path47:before {
+  content: "\ea13";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path48:before {
+  content: "\ea14";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path49:before {
+  content: "\ea15";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path50:before {
+  content: "\ea16";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path51:before {
+  content: "\ea17";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path52:before {
+  content: "\ea18";
+  color: #e3e4e5;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path53:before {
+  content: "\ea19";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path54:before {
+  content: "\ea1a";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path55:before {
+  content: "\ea1b";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path56:before {
+  content: "\ea1c";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path57:before {
+  content: "\ea1d";
+  color: #e3e4e5;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path58:before {
+  content: "\ea1e";
+  color: #ed1c24;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path59:before {
+  content: "\ea1f";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path60:before {
+  content: "\ea20";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path61:before {
+  content: "\ea21";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path62:before {
+  content: "\ea22";
+  color: #e3e4e5;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path63:before {
+  content: "\ea23";
+  color: #ed1c24;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path64:before {
+  content: "\ea24";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path65:before {
+  content: "\ea25";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path66:before {
+  content: "\ea26";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path67:before {
+  content: "\ea27";
+  color: #e3e4e5;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path68:before {
+  content: "\ea28";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path69:before {
+  content: "\ea29";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path70:before {
+  content: "\ea2a";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path71:before {
+  content: "\ea2b";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path72:before {
+  content: "\ea2c";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path73:before {
+  content: "\ea2d";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path74:before {
+  content: "\ea2e";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path75:before {
+  content: "\ea2f";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path76:before {
+  content: "\ea30";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path77:before {
+  content: "\ea31";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path78:before {
+  content: "\ea32";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path79:before {
+  content: "\ea33";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path80:before {
+  content: "\ea34";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path81:before {
+  content: "\ea35";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path82:before {
+  content: "\ea36";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path83:before {
+  content: "\ea37";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path84:before {
+  content: "\ea38";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path85:before {
+  content: "\ea39";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path86:before {
+  content: "\ea3a";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path87:before {
+  content: "\ea3b";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path88:before {
+  content: "\ea3c";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path89:before {
+  content: "\ea3d";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path90:before {
+  content: "\ea3e";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path91:before {
+  content: "\ea3f";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path92:before {
+  content: "\ea40";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path93:before {
+  content: "\ea41";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path94:before {
+  content: "\ea42";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path95:before {
+  content: "\ea43";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path96:before {
+  content: "\ea44";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path97:before {
+  content: "\ea45";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path98:before {
+  content: "\ea46";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path99:before {
+  content: "\ea47";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path100:before {
+  content: "\ea48";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path101:before {
+  content: "\ea49";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path102:before {
+  content: "\ea4a";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path103:before {
+  content: "\ea4b";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path104:before {
+  content: "\ea4c";
+  color: #000;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path105:before {
+  content: "\ea4d";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path106:before {
+  content: "\ea4e";
+  color: #ed1c24;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path107:before {
+  content: "\ea4f";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path108:before {
+  content: "\ea50";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path109:before {
+  content: "\ea51";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path110:before {
+  content: "\ea52";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path111:before {
+  content: "\ea53";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path112:before {
+  content: "\ea54";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path113:before {
+  content: "\ea55";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path114:before {
+  content: "\ea56";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path115:before {
+  content: "\ea57";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path116:before {
+  content: "\ea58";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path117:before {
+  content: "\ea59";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path118:before {
+  content: "\ea5a";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path119:before {
+  content: "\ea5b";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path120:before {
+  content: "\ea5c";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path121:before {
+  content: "\ea5d";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path122:before {
+  content: "\ea5e";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path123:before {
+  content: "\ea5f";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path124:before {
+  content: "\ea60";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path125:before {
+  content: "\ea61";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path126:before {
+  content: "\ea62";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path127:before {
+  content: "\ea63";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path128:before {
+  content: "\ea64";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path129:before {
+  content: "\ea65";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path130:before {
+  content: "\ea66";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path131:before {
+  content: "\ea67";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path132:before {
+  content: "\ea68";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path133:before {
+  content: "\ea69";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path134:before {
+  content: "\ea6a";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path135:before {
+  content: "\ea6b";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path136:before {
+  content: "\ea6c";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path137:before {
+  content: "\ea6d";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path138:before {
+  content: "\ea6e";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path139:before {
+  content: "\ea6f";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path140:before {
+  content: "\ea70";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path141:before {
+  content: "\ea71";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path142:before {
+  content: "\ea72";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path143:before {
+  content: "\ea73";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path144:before {
+  content: "\ea74";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path145:before {
+  content: "\ea75";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path146:before {
+  content: "\ea76";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path147:before {
+  content: "\ea77";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path148:before {
+  content: "\ea78";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path149:before {
+  content: "\ea79";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path150:before {
+  content: "\ea7a";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path151:before {
+  content: "\ea7b";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path152:before {
+  content: "\ea7c";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path153:before {
+  content: "\ea7d";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path154:before {
+  content: "\ea7e";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path155:before {
+  content: "\ea7f";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path156:before {
+  content: "\ea80";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path157:before {
+  content: "\ea81";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path158:before {
+  content: "\ea82";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path159:before {
+  content: "\ea83";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path160:before {
+  content: "\ea84";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path161:before {
+  content: "\ea85";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path162:before {
+  content: "\ea86";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path163:before {
+  content: "\ea87";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path164:before {
+  content: "\ea88";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path165:before {
+  content: "\ea89";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path166:before {
+  content: "\ea8a";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path167:before {
+  content: "\ea8b";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path168:before {
+  content: "\ea8c";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path169:before {
+  content: "\ea8d";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path170:before {
+  content: "\ea8e";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path171:before {
+  content: "\ea8f";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path172:before {
+  content: "\ea90";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path173:before {
+  content: "\ea91";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path174:before {
+  content: "\ea92";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path175:before {
+  content: "\ea93";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path176:before {
+  content: "\ea94";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path177:before {
+  content: "\ea95";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path178:before {
+  content: "\ea96";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path179:before {
+  content: "\ea97";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path180:before {
+  content: "\ea98";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path181:before {
+  content: "\ea99";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path182:before {
+  content: "\ea9a";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path183:before {
+  content: "\ea9b";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path184:before {
+  content: "\ea9c";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path185:before {
+  content: "\ea9d";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path186:before {
+  content: "\ea9e";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path187:before {
+  content: "\ea9f";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path188:before {
+  content: "\eaa0";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path189:before {
+  content: "\eaa1";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path190:before {
+  content: "\eaa2";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path191:before {
+  content: "\eaa3";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path192:before {
+  content: "\eaa4";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path193:before {
+  content: "\eaa5";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path194:before {
+  content: "\eaa6";
+  color: #eac102;
+  margin-left: -0.7890625em;
+}
+.icon-ayuntamiento-palencia .path195:before {
+  content: "\eaa7";
+  color: #0071bc;
+  margin-left: -0.7890625em;
+}
+
+/* CITIES ISLAS */
+
+.icon-cities-islas .path1:before {
+  content: "\e90a";
+  color: #0fb5c8;
+}
+.icon-cities-islas .path2:before {
+  content: "\e90b";
+  color: #fff;
+  margin-left: -2.2900390625em;
+}
+.icon-cities-islas .path3:before {
+  content: "\e90c";
+  color: #fff;
+  margin-left: -2.2900390625em;
+}
+.icon-cities-islas .path4:before {
+  content: "\e91e";
+  color: #fff;
+  margin-left: -2.2900390625em;
+}
+.icon-cities-islas .path5:before {
+  content: "\e91f";
+  color: #0fb5c8;
+  margin-left: -2.2900390625em;
+}
+.icon-cities-islas .path6:before {
+  content: "\e920";
+  color: #0fb5c8;
+  margin-left: -2.2900390625em;
+}
+.icon-cities-islas .path7:before {
+  content: "\e921";
+  color: #0fb5c8;
+  margin-left: -2.2900390625em;
+}
+.icon-cities-islas .path8:before {
+  content: "\e922";
+  color: #0fb5c8;
+  margin-left: -2.2900390625em;
+}
+.icon-cities-islas .path9:before {
+  content: "\e923";
+  color: #0fb5c8;
+  margin-left: -2.2900390625em;
+}
+.icon-cities-islas .path10:before {
+  content: "\e924";
+  color: #0fb5c8;
+  margin-left: -2.2900390625em;
+}

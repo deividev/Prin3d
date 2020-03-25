@@ -12,7 +12,7 @@
   font-size: rem(20px);
   border-radius: 7px;
   border: 1px solid $text-default;
-  padding: 8px 17px;
+  padding: 8px 15px;
   background-color: transparent;
   text-align: center;
   cursor: pointer;
@@ -54,16 +54,14 @@
   &__second {
     min-width: 120px;
     margin: 10px;
-    border: 1px solid $gray-200;
-    color: #fff;
-    background-color: $gray-200;
+    border: 1px solid $gray-300;
+    color: $gray-300;
     transition: 0.2s linear;
   }
 
   &__second:hover {
-    border: 1px solid $gray-300;
-    background-color: $gray-300;
-    color: #fff;
+    border: 1px solid $gray-200;
+    color: $gray-200;
   }
 
 

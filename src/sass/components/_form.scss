@@ -81,6 +81,13 @@
     color: $gray-300;
   }
 
+  &__label--files {
+    width: 50%;
+    text-align: left;
+    padding: 20px 0px;
+    cursor: pointer;
+  }
+
   &__control {
     width: 100%;
     height: rem(45px);
