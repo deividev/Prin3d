@@ -8,10 +8,11 @@
 }
 
 .btn {
+  display: inline-block;
   font-size: rem(20px);
-  border-radius: 4px;
+  border-radius: 7px;
   border: 1px solid $text-default;
-  padding: 7px 10px;
+  padding: 8px 17px;
   background-color: transparent;
   text-align: center;
   cursor: pointer;
@@ -34,21 +35,24 @@
   }
 
   &__primary {
-    border: 1px solid $second;
-    background-color: $second;
+    min-width: 120px;
+    margin: 10px;
+    border: 1px solid $second-hover;
+    background-color: $second-hover;
     color: #fff;
     transition: 0.2s linear;
   }
 
   &__primary:hover {
-    border: 1px solid $second-hover;
-    background-color: $second-hover;
+    border: 1px solid $second;
+    background-color: $second;
     color: #fff;
     color: #fff;
   }
 
 
   &__second {
+    min-width: 120px;
     margin: 10px;
     border: 1px solid $gray-200;
     color: #fff;
@@ -92,7 +96,7 @@
     border: 1px solid $gray-300;
     color: $gray-300;
     transition: 0.2s linear;
-    margin-right: 10px;
+    margin: 10px 10px 10px 0px;
   }
 
   &__icon--success:hover {

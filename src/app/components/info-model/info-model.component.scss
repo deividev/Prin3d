@@ -27,6 +27,7 @@
 .container-flex {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   p {
     padding-left: 40px;
@@ -172,6 +173,7 @@ canvas {
 .tools {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
