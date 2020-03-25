@@ -16,27 +16,27 @@ body {
 h1 {
   font-size: rem(40px);
   font-weight: 500;
-  color: $text-default;
+  color: $gray-400;
 }
 
 h2 {
   font-size: rem(30px);
-  color: $text-default;
+  color: $gray-400;
 }
 
 h3 {
   font-size: rem(26px);
-  color: $text-default;
+  color: $gray-400;
 }
 
 h4 {
   font-size: rem(22px);
-  color: $text-default;
+  color: $gray-400;
 }
 
 h5 {
   font-size: rem(20px);
-  color: $text-default;
+  color: $gray-400;
 }
 
 .light {
@@ -53,8 +53,7 @@ h5 {
 
 p {
   font-size: rem(18px);
-  color: $text-default;
-
+  color: $gray-300;
 }
 
 .text__sm {
@@ -70,17 +69,21 @@ section {
 /*------------*/
 
 a {
-  color: $gray-300;
+  color: $gray-200;
   text-decoration: none;
   cursor: pointer;
 }
 
 
 input::placeholder {
-  color: #c4c4c4;
+  color: $gray-200;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 300;
+}
+
+label {
+  color: $gray-300;
 }
 
 svg {

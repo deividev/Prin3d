@@ -34,29 +34,46 @@
   }
 
   &__primary {
-    background-color: $primary;
-    color: #e3e1e4;
+    border: 1px solid $second;
+    background-color: $second;
+    color: #fff;
     transition: 0.2s linear;
   }
 
   &__primary:hover {
-    background-color: #605b83;
+    border: 1px solid $second-hover;
+    background-color: $second-hover;
     color: #fff;
-    transition: 0.2s linear;
+    color: #fff;
   }
 
 
+  &__second {
+    margin: 10px;
+    border: 1px solid $gray-200;
+    color: #fff;
+    background-color: $gray-200;
+    transition: 0.2s linear;
+  }
 
-  &-success {
+  &__second:hover {
+    border: 1px solid $gray-300;
+    background-color: $gray-300;
+    color: #fff;
+  }
+
+
+  &__success {
     background-color: $second;
     color: #fff;
-    border: 1px solid $gray-100;
+    border: 1px solid $second;
     transition: 0.2s linear;
   }
 
-  &-success:hover {
+  &__success:hover {
     background-color: $second-hover;
-    color: $gray-300;
+    border: 1px solid $second-hover;
+    color: #444;
   }
 
   &__icon {
@@ -71,17 +88,16 @@
     border: 1px solid $text-default;
   }
 
-  &__icon--primary {
-    background-color: $primary;
-    color: #e3e1e4;
+  &__icon--success {
+    border: 1px solid $gray-300;
+    color: $gray-300;
     transition: 0.2s linear;
     margin-right: 10px;
   }
 
-  &__icon--primary:hover {
-    background-color: #605b83;
-    color: #fff;
-    transition: 0.2s linear;
+  &__icon--success:hover {
+    border: 1px solid $second-hover;
+    color: $second;
   }
 
   &__icon--model {

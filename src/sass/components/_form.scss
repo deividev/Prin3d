@@ -78,7 +78,7 @@
   &__label {
     display: block;
     margin: 10px 0px;
-    color: $text-default;
+    color: $gray-300;
   }
 
   &__control {
@@ -89,7 +89,7 @@
     border: 1px solid $gray-100;
     border-radius: 4px;
     background-color: #fff;
-    color: $text-default;
+    color: $gray-300;
   }
 
   &__control--large {
