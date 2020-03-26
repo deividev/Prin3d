@@ -1,4 +1,6 @@
 
+@import "../../../sass/global/variables";
+
 .form-upload {
   display: flex;
   flex-direction: column;
@@ -6,6 +8,11 @@
   width: 60%;
   margin: 40px 0px;
   text-align: center;
+  border: 1px solid $gray-100;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 2rem -1rem rgba(0,0,0,0.5);
 }
 
 
