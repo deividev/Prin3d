@@ -1,13 +1,21 @@
 /*** HEADER  ***/
 /*------------*/
 .header {
-  width: 100%;
-  height: rem(60px);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 20px;
+  padding: 5px 20px;
 }
+
+
+//CONTAINER SEARCH
+
+.container-search {
+  width: 50%;
+}
+
+
 
 
 

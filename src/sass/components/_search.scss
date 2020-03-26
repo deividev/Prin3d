@@ -6,12 +6,10 @@
   display: flex;
   align-items: center;
   z-index: 10;
-  width: 50rem;
   font-size: rem(16px);
   border: 1px solid $gray-200;
   border-radius: 7px;
   color: $text-default;
-  margin-right: 20px;
   background-color: #fff;
 
   .search__control:focus  {

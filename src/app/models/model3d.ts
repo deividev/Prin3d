@@ -1,13 +1,18 @@
 export interface Model3d {
   id?: string;
   title?: string;
-  img?: string;
-  url?: string;
   userId?: string;
-  description?: string;
-  categoryId?: string;
-  createDate: Date;
+  img?: string;
+  model?: string;
   likes?: number;
+  downloads?: number;
+  categoryId?: string;
+  description?: string;
+  settings?: string;
+  custom?: string;
+  license?: string;
+  tags?: string;
+  createDate: Date;
 }
 
 
