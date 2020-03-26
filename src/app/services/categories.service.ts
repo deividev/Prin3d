@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/internal/Observable';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CategoriesService {
 
 
@@ -13,7 +14,7 @@ export class CategoriesService {
   constructor(private httpClient: HttpClient) { }
 
   getCategories(): Observable <any> {
-    const endpoint = this.httpClient.get(`${environment.apiUrl}/${this.resource}`);
+    const endpoint = this.httpClient.get(`${environment.apiBack}/${this.resource}`);
     console.log(endpoint);
     return  endpoint;
 
