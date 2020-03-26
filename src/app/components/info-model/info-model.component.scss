@@ -80,8 +80,10 @@
 
 
 .card-model {
+  display: flex;
+  flex-direction: column;
   border: 1px solid $gray-100;
-  margin-bottom: 20px;
+  margin: 0px 20px 20px 0px;
   background-color: #fff;
   padding: 30px;
   box-shadow: 0 0 2rem -1rem rgba(0,0,0,0.5);
