@@ -14,7 +14,11 @@
 
 .form-comments{
   width: 100%;
-  margin-bottom: 20px;
+  margin: 20px 0px;
+  border: 1px solid $gray-100;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 2rem -1rem rgba(0,0,0,0.5);
 }
 
 
@@ -122,6 +126,32 @@ canvas {
 }
 //**COMPONENT VIEWER**
 
+.btn__3d {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 50;
+  bottom: 5%;
+  left: 3%;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 7px;
+  border: 1px solid $second;
+  outline: none;
+  padding: 10px 25px;
+  color: $second;
+  background: none;
+  background-color: rgba(70, 70, 70, 0.753);
+  cursor: pointer;
+}
+
+.btn__3d:hover {
+  border: 1px solid $second-hover;
+  color: $second-hover;
+  background-color: rgba(70, 70, 70, 0.753);
+  cursor: pointer;
+}
+
 .control__slider--left {
   position: absolute;
   display: flex;
@@ -132,7 +162,7 @@ canvas {
   background: none;
   border: 0;
   outline: none;
-  padding: 20px;
+  padding: 10px;
 }
 
 .control__slider--right {
@@ -143,7 +173,7 @@ canvas {
   background: none;
   border: 0;
   outline: none;
-  padding: 20px;
+  padding: 10px;
 }
 
 //AVATAR
