@@ -9,7 +9,6 @@ import { Observable } from 'rxjs/internal/Observable';
 
 export class CategoriesService {
 
-
   private resource: string = 'categories';
   constructor(private httpClient: HttpClient) { }
 

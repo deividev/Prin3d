@@ -2,6 +2,7 @@
 //---------
 
 .search {
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -21,7 +22,7 @@
     font-size: rem(16px);
     background-color: transparent;
     color: $text-default;
-    border-radius: 15px;
+    border-radius: 7px;
     border: 0;
     padding: 10px 5px 10px 40px;
     outline: none;

@@ -114,6 +114,7 @@ canvas {
   height: rem(400px);
 }
 
+
 // :host {
 //   width: 400px;
 //   height: 400px;
@@ -141,8 +142,9 @@ canvas {
   padding: 10px 25px;
   color: $second;
   background: none;
-  background-color: rgba(70, 70, 70, 0.753);
+
   cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 .btn__3d:hover {
