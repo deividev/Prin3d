@@ -14,9 +14,9 @@ export class CategoriesService {
 
   getCategories(): Observable <any> {
     const endpoint = this.httpClient.get(`${environment.apiBack}/${this.resource}`);
+    debugger
     console.log(endpoint);
     return  endpoint;
-
   }
 
 }
