@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CategoriesService } from 'src/app/services/categories.service';
+import { Model3dService } from 'src/app/services/model3d.service';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private categoriesService: CategoriesService,
+    private model3dService: Model3dService
   ) {
 
    }
@@ -20,7 +22,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.categoriesService.getCategories().subscribe((result) => {
       this.categories = result;
-      debugger
+    }, error => {
+      console.error(error)
     });
   }
 

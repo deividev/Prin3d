@@ -13,10 +13,7 @@ export class CategoriesService {
   constructor(private httpClient: HttpClient) { }
 
   getCategories(): Observable <any> {
-    const endpoint = this.httpClient.get(`${environment.apiBack}/${this.resource}`);
-    debugger
-    console.log(endpoint);
-    return  endpoint;
+    return this.httpClient.get(`${environment.apiBack}/${this.resource}`);
   }
 
 }
