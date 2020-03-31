@@ -1,0 +1,43 @@
+@import "../../../sass/global/variables";
+@import "../../../sass/mixins/mixins";
+
+//MODAL
+
+.modal {
+  height: rem(400px);
+  width: rem(375px);
+  position: fixed;
+  z-index: 999;
+  top: 27%;
+  right: 0;
+  margin: 0px 100px;
+  border: 1px solid $gray-100;
+  padding: 20px;
+  background-color: #fff;
+  transform: translate3d(0%, 0, 0);
+  transition: transform 0.25s ease-in-out;
+  box-shadow: 0 0 2rem -1rem rgba(0,0,0,0.5);
+
+  &-show {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px;
+  }
+
+  &__img {
+    width: rem(100px);
+    height: rem(100px);
+    margin: 0px 10px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+}

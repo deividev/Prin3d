@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Model3dComponent } from './components/model3d/model3d.component';
 import { ListModelComponent } from './components/listModel/listModel.component';
 import { ListBtnComponent } from './components/listBtn/listBtn.component';
+import { ModalCollectionComponent } from './components/modal-collection/modal-collection.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ListBtnComponent } from './components/listBtn/listBtn.component';
     Model3dComponent,
     Error404Component,
     ListModelComponent,
+    ModalCollectionComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
