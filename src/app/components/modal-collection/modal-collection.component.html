@@ -1,25 +1,25 @@
 
 
-  <button class="btn btn__primary" type="button">Modal</button>
-  <div class="showModal" >
-    <div>
-      <h3>Collections:</h3>
-      <p>Star wars</p>
-    </div>
-    <div class="modal__card">
-      <h4 class="modal__title" >Stormtrooper</h4>
-      <img class="modal__img" src="../../../assets/images/stormtrooper-helmet.jpg" alt="">
-      <span>&times;</span>
-    </div>
-    <div class="modal__card">
-      <h4 class="modal__title" >Stormtrooper</h4>
-      <img class="modal__img" src="../../../assets/images/stormtrooper-helmet.jpg" alt="">
-      <span>&times;</span>
-    </div>
-    <div class="modal__btn">
-      <button ng-click="Modal = true" class=" btn btn__icon0" type="button">Back</button>
-    </div>
+<button (click)="showModal()" id="modal" class="btn btn__primary" type="button">Modal</button>
+<div [ngClass]="{modal: isEven, showModal: !isEven}" class="modal">
+  <div>
+    <h3>Collections:</h3>
+    <p>Star wars</p>
   </div>
+  <div class="modal__card">
+    <h4 class="modal__title" >Stormtrooper</h4>
+    <img class="modal__img" src="../../../assets/images/stormtrooper-helmet.jpg" alt="">
+    <span>&times;</span>
+  </div>
+  <div class="modal__card">
+    <h4 class="modal__title" >Stormtrooper</h4>
+    <img class="modal__img" src="../../../assets/images/stormtrooper-helmet.jpg" alt="">
+    <span>&times;</span>
+  </div>
+  <div class="modal__btn">
+    <button (click)="closeModal()" class=" btn btn__icon0" type="button">Back</button>
+  </div>
+</div>
 
 
 

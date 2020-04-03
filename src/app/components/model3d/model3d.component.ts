@@ -29,7 +29,6 @@ export class Model3dComponent implements OnInit {
         // this.userService.getUserByIdMock(userId).subscribe((result) => {
         //   this.user = result;
         // });
-
       });
 
     });

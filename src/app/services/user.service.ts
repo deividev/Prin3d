@@ -17,12 +17,5 @@ export class UserService {
   }
 
   getUserByIdMock(userId: string) {
-    return {
-      id: "",
-      name: "deividev",
-      img: "",
-      description: "Modelador 3d",
-      email: "deivid.develop@gmail.com"
-    };
   }
 }

@@ -16,7 +16,6 @@ export class ListModelComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    console.log(this.listModels);
   }
 
 }

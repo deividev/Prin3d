@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from '@angular/core';
+import { ModalService } from 'src/app/services/modal.service';
+
 
 @Component({
   selector: 'app-modal-collection',
@@ -7,13 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalCollectionComponent implements OnInit {
 
-  modalIsVisible = false;
 
-  constructor() { }
+  @Input() isEven: boolean;
+
+  public class: string;
+
+  constructor(private modalService: ModalService) { }
 
   ngOnInit(): void {
 
   }
 
+  showModal() {
+    this.isEven = true;
+    this.class = 'showModal';
+  }
+  closeModal() {
+    this.isEven = false;
+    if (this.isEven) {
+      this.class = 'modal';
+    }
+  }
 
 }

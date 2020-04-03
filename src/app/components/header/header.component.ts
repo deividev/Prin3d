@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CategoriesService } from 'src/app/services/categories.service';
-import { Model3dService } from 'src/app/services/model3d.service';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-header',
@@ -11,10 +11,14 @@ export class HeaderComponent implements OnInit {
 
 
   @Input() categories: any;
+  @Input() isEven: boolean;
+
+  public class: string;
+
 
   constructor(
     private categoriesService: CategoriesService,
-    private model3dService: Model3dService
+    private modalService: ModalService
   ) {
 
    }
