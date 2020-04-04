@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostBinding, HostListener } from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 
 
@@ -9,32 +9,26 @@ import { ModalService } from 'src/app/services/modal.service';
 })
 export class ModalCollectionComponent implements OnInit {
 
+
+  @Output() change: EventEmitter<boolean> = new EventEmitter();
+
   @Input() listCollections: any;
 
-  @Input()
-  private _isEven: boolean;
-  public get isEven(): boolean {
-    return this._isEven;
-  }
-  public set isEven(value: boolean) {
-    this._isEven = value;
-  }
-
-  public class: string;
-
-  @HostBinding('class.showModal')
   isOpen = false;
-  constructor(
-    private modalService: ModalService
-  ) {
+
+  constructor() {
 
    }
 
+   toggle() {
+    console.log("oleeee");
+    this.isOpen = !this.isOpen;
+    this.change.emit(this.isOpen);
+  }
 
   ngOnInit() {
-    this.modalService.change.subscribe(isOpen => {
-      this.isOpen = isOpen;
-    });
+    console.log("pajaro");
+
   }
 
   // showModal() {

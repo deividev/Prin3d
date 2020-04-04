@@ -18,15 +18,9 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private categoriesService: CategoriesService,
-    private modalService: ModalService,
   ) {
 
    }
-   @HostListener('click')
-      click() {
-        debugger
-        this.modalService.toggle();
-    }
 
   ngOnInit(): void {
     this.categoriesService.getCategories().subscribe((result) => {

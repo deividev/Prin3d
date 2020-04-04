@@ -1,7 +1,7 @@
 
-
+<button (click)="toggle()" class="btn btn__primary" type="button">Modal</button>
 <!-- *ngFor="let item of listCollections"  -->
-<div [ngClass]="{modal: isEven, showModal: !isEven}" class="modal">
+<div *ngIf="isOpen" [ngClass]="isOpen ? 'showModal' : 'modal'" class="modal">
   <div>
     <h3>Collections:</h3>
     <p>Star wars</p>
