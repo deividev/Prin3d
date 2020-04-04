@@ -1,6 +1,6 @@
 
 
-<button (click)="showModal()" id="modal" class="btn btn__primary" type="button">Modal</button>
+<!-- *ngFor="let item of listCollections"  -->
 <div [ngClass]="{modal: isEven, showModal: !isEven}" class="modal">
   <div>
     <h3>Collections:</h3>
@@ -17,7 +17,7 @@
     <span>&times;</span>
   </div>
   <div class="modal__btn">
-    <button (click)="closeModal()" class=" btn btn__icon0" type="button">Back</button>
+    <!-- <button (click)="closeModal()" class=" btn btn__icon0" type="button">Back</button> -->
   </div>
 </div>
 

@@ -9,26 +9,44 @@ import { ModalService } from 'src/app/services/modal.service';
 })
 export class ModalCollectionComponent implements OnInit {
 
+  @Input() listCollections: any;
 
-  @Input() isEven: boolean;
+  @Input()
+  private _isEven: boolean;
+  public get isEven(): boolean {
+    return this._isEven;
+  }
+  public set isEven(value: boolean) {
+    this._isEven = value;
+  }
 
   public class: string;
 
-  constructor(private modalService: ModalService) { }
+  @HostBinding('class.showModal')
+  isOpen = false;
+  constructor(
+    private modalService: ModalService
+  ) {
 
-  ngOnInit(): void {
+   }
 
+
+  ngOnInit() {
+    this.modalService.change.subscribe(isOpen => {
+      this.isOpen = isOpen;
+    });
   }
 
-  showModal() {
-    this.isEven = true;
-    this.class = 'showModal';
-  }
-  closeModal() {
-    this.isEven = false;
-    if (this.isEven) {
-      this.class = 'modal';
-    }
-  }
+  // showModal() {
+  //   debugger
+  //   this.isEven = true;
+  //   this.class = 'showModal';
+  // }
+  // closeModal() {
+  //   this.isEven = false;
+  //   if (this.isEven) {
+  //     this.class = 'modal';
+  //   }
+  // }
 
 }

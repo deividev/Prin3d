@@ -1,20 +1,17 @@
-import { Injectable, Input } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ModalService {
+  isOpen = false;
 
-  @Input() isEven: boolean;
+  @Output() change: EventEmitter<boolean> = new EventEmitter();
 
-  public class: string;
-
-  constructor() { }
-
-  ngOnInit(): void {
-
+  toggle() {
+    debugger
+    this.isOpen = !this.isOpen;
+    this.change.emit(this.isOpen);
+    debugger
   }
-
-
-
 }

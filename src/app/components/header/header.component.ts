@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import { CategoriesService } from 'src/app/services/categories.service';
 import { ModalService } from 'src/app/services/modal.service';
 
@@ -18,10 +18,15 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private categoriesService: CategoriesService,
-    private modalService: ModalService
+    private modalService: ModalService,
   ) {
 
    }
+   @HostListener('click')
+      click() {
+        debugger
+        this.modalService.toggle();
+    }
 
   ngOnInit(): void {
     this.categoriesService.getCategories().subscribe((result) => {
@@ -29,6 +34,7 @@ export class HeaderComponent implements OnInit {
     }, error => {
       console.error(error)
     });
-  }
 
+
+  }
 }
