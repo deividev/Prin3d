@@ -7,6 +7,7 @@ import { InfoModelComponent } from './components/info-model/info-model.component
 import { FormRegisterComponent } from './components/form-register/form-register.component';
 import { FormUploadDetailsComponent } from './components/form-upload-details/form-upload-details.component';
 import { FormEditUserComponent } from './components/form-edit-user/form-edit-user.component';
+import { InfoUserComponent } from './components/info-user/info-user.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: FormLoginComponent},
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
   {path: 'model/:modelId', component: InfoModelComponent},
   {path: 'upload', component: FormUploadDetailsComponent},
   {path: 'editUser', component: FormEditUserComponent},
+  {path: 'user/:id', component: InfoUserComponent},
   {path: '404', component: Error404Component},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', redirectTo: '404'}

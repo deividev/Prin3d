@@ -96,6 +96,7 @@
 .card__suggestion {
   display: flex;
   flex-direction: column;
+  height: 100%;
   width: 35%;
   border: 1px solid $gray-100;
   background-color: #fff;
