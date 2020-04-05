@@ -2,8 +2,8 @@
   <!-- CATEGORIE -->
 <section  class="category">
   <h2 class="category__title">{{title}}</h2>
-  <div id="categorie" class="category__container">
-    <a *ngFor="let item of listModels" class="card" href="">
+  <div id="categorie" class="category__container" routerLinkActive="active">
+    <a *ngFor="let item of listModels" routerLink="/model/:id" class="card" href="">
 
       <img class=" card__model" [src]="item.img" alt="">
       <div class="card__content">

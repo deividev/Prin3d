@@ -16,7 +16,7 @@
   margin: 0px 100px;
   padding: 20px;
   background-color: #fff;
-  transform: translate3d(100%, 0, 0);
+  transform: translate3d(130%, 0, 0);
   transition: transform 0.25s ease-in-out;
   box-shadow: 0 0 2rem -1rem rgba(0,0,0,0.5);
   overflow-y: scroll;
@@ -27,17 +27,19 @@
 }
 
 
-modal__card {
+.modal__card {
   display: flex;
   justify-content: space-between;
   margin: 15px 0px;
 }
 
-modal__img {
+.modal__img {
+  width: rem(100px);
+  height: rem(100px);
   margin: 0px 10px;
 }
 
-modal__btn {
+.modal__btn {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
