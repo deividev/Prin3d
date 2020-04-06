@@ -8,15 +8,21 @@ import { FormRegisterComponent } from './components/form-register/form-register.
 import { FormUploadDetailsComponent } from './components/form-upload-details/form-upload-details.component';
 import { FormEditUserComponent } from './components/form-edit-user/form-edit-user.component';
 import { InfoUserComponent } from './components/info-user/info-user.component';
+import { InfoModel3dComponent } from './components/info-model3d/info-model3d.component';
+import { CategoryComponent } from './components/category/category.component';
+import { FormForgotComponent } from './components/form-forgot/form-forgot.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: FormLoginComponent},
+  {path: 'forgot', component: FormForgotComponent},
   {path: 'register', component: FormRegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'model/:modelId', component: InfoModelComponent},
+  {path: 'model3d/:modelId', component: InfoModel3dComponent},
+  {path: 'category/:categoryId', component: CategoryComponent},
   {path: 'upload', component: FormUploadDetailsComponent},
   {path: 'editUser', component: FormEditUserComponent},
-  {path: 'user/:id', component: InfoUserComponent},
+  {path: 'user/:userId', component: InfoUserComponent},
   {path: '404', component: Error404Component},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', redirectTo: '404'}

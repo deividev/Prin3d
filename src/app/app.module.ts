@@ -11,7 +11,6 @@ import { InfoUserComponent } from './components/info-user/info-user.component';
 import { HeaderLoginComponent } from './components/header-login/header-login.component';
 import { FormEditUserComponent } from './components/form-edit-user/form-edit-user.component';
 import { FormUploadDetailsComponent } from './components/form-upload-details/form-upload-details.component';
-import { CardComponent } from './components/card/card.component';
 import { InfoModelComponent } from './components/info-model/info-model.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
@@ -21,6 +20,8 @@ import { Model3dComponent } from './components/model3d/model3d.component';
 import { ListModelComponent } from './components/listModel/listModel.component';
 import { ListBtnComponent } from './components/listBtn/listBtn.component';
 import { ModalCollectionComponent } from './components/modal-collection/modal-collection.component';
+import { InfoModel3dComponent } from './components/info-model3d/info-model3d.component';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,6 @@ import { ModalCollectionComponent } from './components/modal-collection/modal-co
     HeaderLoginComponent,
     FormEditUserComponent,
     FormUploadDetailsComponent,
-    CardComponent,
     InfoModelComponent,
     FormLoginComponent,
     HomeComponent,
@@ -43,6 +43,8 @@ import { ModalCollectionComponent } from './components/modal-collection/modal-co
     Error404Component,
     ListModelComponent,
     ModalCollectionComponent,
+    InfoModel3dComponent,
+    CategoryComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

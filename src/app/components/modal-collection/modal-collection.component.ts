@@ -10,10 +10,6 @@ import { ModalService } from 'src/app/services/modal.service';
 export class ModalCollectionComponent implements OnInit {
 
 
-  @Output() change: EventEmitter<boolean> = new EventEmitter();
-
-  @Input() listCollections: any;
-
   isOpen = false;
 
   constructor() {
@@ -21,13 +17,10 @@ export class ModalCollectionComponent implements OnInit {
    }
 
    toggle() {
-    console.log("oleeee");
     this.isOpen = !this.isOpen;
-    this.change.emit(this.isOpen);
   }
 
   ngOnInit() {
-    console.log("pajaro");
 
   }
 

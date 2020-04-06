@@ -33,7 +33,7 @@
   <nav class="navbar" routerLinkActive="active">
     <a class="navbar__link" routerLink="/home">Home</a>
     <div class="navbar__categories">
-      <a *ngFor="let item of categories" class="navbar__link" href="fan-art.html">{{item.title}}</a>
+      <a *ngFor="let item of categories" class="navbar__link" routerLink="/category/:categoryId">{{item.title}}</a>
     </div>
   </nav>
     <!-- HEADER -->

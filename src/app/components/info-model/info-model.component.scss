@@ -6,7 +6,6 @@
 .container__info--model {
   display: flex;
   justify-content: space-between;
-  // flex-wrap: wrap;
   margin: 50px 100px;
 }
 
@@ -24,7 +23,6 @@
 
 .container-row {
   display: flex;
-  // flex-wrap: wrap;
   margin: 10px 0px;
 }
 
@@ -49,7 +47,7 @@
   padding: 10px 0px;
 }
 
-//IMG BUTTONSt
+//IMG BUTTONS
 
 .container-model {
   width: 50%;
@@ -120,34 +118,6 @@
   opacity: 0;
   border: 1px solid $gray-200;
   background-color: #fff;
-}
-//**COMPONENT VIEWER**
-
-.btn__3d {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  z-index: 50;
-  bottom: 5%;
-  left: 3%;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 7px;
-  border: 1px solid $second;
-  outline: none;
-  padding: 10px 25px;
-  color: $second;
-  background: none;
-
-  cursor: pointer;
-  transition: all 0.2s linear;
-}
-
-.btn__3d:hover {
-  border: 1px solid $second-hover;
-  color: $second-hover;
-  background-color: rgba(70, 70, 70, 0.753);
-  cursor: pointer;
 }
 
 .control__slider--left {

@@ -30,7 +30,6 @@ export class Model3dComponent implements OnInit {
         //   this.user = result;
         // });
       });
-
     });
 
   }
