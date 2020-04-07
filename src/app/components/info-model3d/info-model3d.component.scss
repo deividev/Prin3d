@@ -3,7 +3,6 @@
 //**COMPONENT VIEWER**
 
 .btn__3d {
-  position: absolute;
   display: flex;
   justify-content: center;
   z-index: 50;
@@ -27,3 +26,18 @@
   background-color: rgba(70, 70, 70, 0.753);
   cursor: pointer;
 }
+
+
+.model:host {
+  width: rem(400px);
+  height: rem(600px);
+  border: 1px solid $gray-200;
+  background-color: #fff;
+}
+
+.container {
+  width: rem(400px);
+  height: rem(600px);
+}
+
+

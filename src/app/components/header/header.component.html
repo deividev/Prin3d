@@ -1,6 +1,6 @@
 <!-- **** -->
-  <!-- HEADER -->
-  <header class="header" routerLinkActive="active">
+<!-- HEADER -->
+<header class="header" routerLinkActive="active">
         <a class="logo" aria-label="Factory print3d" routerLink="/home">
           <img  src="../assets/images/logo.png" alt="" width="40px" height="43px">
         </a>
@@ -22,21 +22,21 @@
           <a class="btn btn__second" routerLink="/register">Register</a>
           <a class="btn btn__primary" routerLink="/login">Login</a>
         </div>
-    <!-- </div> -->
+</header>
 
-    <!-- **** -->
-    <!-- NAV -->
+<!-- HEADER -->
+<!-- **** -->
 
-    <!-- NAV -->
-    <!-- **** -->
-  </header>
-  <nav class="navbar" routerLinkActive="active">
-    <a class="navbar__link" routerLink="/home">Home</a>
-    <div class="navbar__categories">
-      <a *ngFor="let item of categories" class="navbar__link" routerLink="/category/:categoryId">{{item.title}}</a>
-    </div>
-  </nav>
-    <!-- HEADER -->
-    <!-- **** -->
+<!-- **** -->
+<!-- NAV -->
+<nav class="navbar" routerLinkActive="active">
+  <a class="navbar__link" routerLink="/home">Home</a>
+  <div class="navbar__categories">
+    <a *ngFor="let item of categories" class="navbar__link" routerLink="/category/:categoryId">{{item.title}}</a>
+  </div>
+</nav>
+<!-- NAV -->
+
+
 
 
