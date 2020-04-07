@@ -1,8 +1,10 @@
-
 @import "../../../sass/global/variables";
+@import "../../../sass/mixins/mixins";
+
 //**COMPONENT VIEWER**
 
 .btn__3d {
+  position: absolute;
   display: flex;
   justify-content: center;
   z-index: 50;
@@ -28,15 +30,26 @@
 }
 
 
-.model:host {
-  width: rem(400px);
+.model{
+  display: none;
+  width: 100%;
   height: rem(600px);
   border: 1px solid $gray-200;
   background-color: #fff;
+  transition: all 0.1s linear;
 }
 
-.container {
-  width: rem(400px);
+.modelShow{
+  display: block;
+  width: 100%;
+  height: rem(400px);
+  border: 1px solid $gray-200;
+  background-color: #fff;
+  transition: all 0.1s linear;
+}
+
+model-viewer canvas {
+  width: 100%;
   height: rem(600px);
 }
 
