@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class UserService {
-  private resource: string = 'user';
+  private resource: string = 'users';
   constructor(private httpClient: HttpClient) { }
 
 

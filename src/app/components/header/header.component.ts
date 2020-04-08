@@ -11,10 +11,6 @@ export class HeaderComponent implements OnInit {
 
 
   @Input() categories: any;
-  @Input() isEven: boolean;
-
-  public class: string;
-
 
   constructor(
     private categoriesService: CategoriesService,

@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Model3dService } from 'src/app/services/model3d.service';
 import { Model3d } from 'src/app/models/model3d';
 import { CategoriesService } from 'src/app/services/categories.service';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-category',
@@ -17,8 +19,12 @@ export class CategoryComponent implements OnInit {
   public featuredTitle: string = "featured";
   public featuredModels: Array<Model3d> = [];
 
+  private resource: any = 'users';
+
+
   constructor(private model3dService: Model3dService,
-              private categoriesService: CategoriesService)
+              private categoriesService: CategoriesService,
+              private httpClient: HttpClient)
               {
 
 

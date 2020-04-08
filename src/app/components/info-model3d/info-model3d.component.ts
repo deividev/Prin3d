@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class InfoModel3dComponent implements OnInit {
 
   isVisible3d = false;
-  isVisible = false;
+  isVisible = true;
 
   constructor() {
 
