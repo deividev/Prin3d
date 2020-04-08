@@ -8,10 +8,11 @@
   display: flex;
   justify-content: center;
   z-index: 50;
-  bottom: 5%;
+  bottom: 4%;
   left: 3%;
   font-size: 18px;
   font-weight: 700;
+  margin: 10px 0px;
   border-radius: 7px;
   border: 1px solid $second;
   outline: none;
@@ -33,18 +34,13 @@
 .model{
   display: none;
   width: 100%;
-  height: rem(600px);
+  height: rem(400px);
   border: 1px solid $gray-200;
-  background-color: #fff;
-  transition: all 0.1s linear;
+  transition: all 0.8s linear;
 }
 
 .modelShow{
   display: block;
-  width: 100%;
-  height: rem(400px);
-  border: 1px solid $gray-200;
-  background-color: #fff;
   transition: all 0.1s linear;
 }
 

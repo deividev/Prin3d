@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoModel3dComponent implements OnInit {
 
-  constructor() { }
+  isVisible3d = false;
+  isVisible = false;
+
+  constructor() {
+
+  }
+
+  changeView() {
+    this.isVisible3d = !this.isVisible3d;
+    this.isVisible = !this.isVisible;
+  }
 
   ngOnInit(): void {
+
   }
 
 }

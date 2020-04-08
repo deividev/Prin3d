@@ -23,17 +23,4 @@ export class ModalCollectionComponent implements OnInit {
   ngOnInit() {
 
   }
-
-  // showModal() {
-  //   debugger
-  //   this.isEven = true;
-  //   this.class = 'showModal';
-  // }
-  // closeModal() {
-  //   this.isEven = false;
-  //   if (this.isEven) {
-  //     this.class = 'modal';
-  //   }
-  // }
-
 }
