@@ -1,22 +1,38 @@
-<!-- <p>CATEGORY</p>
-
-<div>
-  <!-- <h1>{{title}}</h1>
-  <p>{{description}}</p> -->
-  <!-- <app-listModel [listModels]="featuredModels" [title]="featuredTitle">
-  </app-listModel>
-</div> -->
 
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <input type="file" id="file" accept="image/*"/>
-  <button id="submit">Submission</button>
-</body>
-<script src="jquery-3.4.1.min.js" type="text/javascript"></script>
+<section *ngFor="let item of categories"  class="category">
+  <h2 class="category__title">{{item.title}}</h2>
+  <p>{{item.description}}</p>
+  <div id="categorie" class="category__container" routerLinkActive="active">
+    <a *ngFor="let item of listModels" routerLink="/model/:id" class="card" href="">
+
+      <img class=" card__model" [src]="item.img" alt="">
+      <div class="card__content">
+        <div class="card__title">
+          <h4>{{item.title}}</h4>
+          <a routerLink="/user/:userId">Deividev</a>
+        </div>
+        <div class="card__btn">
+          <span class="card__btn--info">
+          <button type="button" class="btn btn__icon btn__icon--model">
+            <svg>
+              <use xlink:href="../assets/svg/sprite.svg#like"></use>
+            </svg>
+          </button>
+          {{item.likes}}
+          </span>
+          <span class="card__btn--info">
+          <button type="button" class="btn btn__icon btn__icon--model">
+            <svg>
+              <use xlink:href="../assets/svg/sprite.svg#download"></use>
+            </svg>
+          </button>
+          {{item.downloads}}</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+  <!-- CATEGORIE -->
+  <!-- **** -->
 

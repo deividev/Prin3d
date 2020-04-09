@@ -12,16 +12,17 @@ export class InfoModelComponent implements OnInit {
   isVisible = true;
 
   @ViewChild(InfoModel3dComponent) InfoModel3d: InfoModel3dComponent;
-  changeComponent() {
-    debugger
-    this.InfoModel3d.changeView();
-    this.isVisible = !this.isVisible;
-  }
+
+
 
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+  changeComponent() {
+    this.InfoModel3d.changeView();
+    this.isVisible = !this.isVisible;
   }
 
 }

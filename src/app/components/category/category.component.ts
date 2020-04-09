@@ -19,7 +19,7 @@ export class CategoryComponent implements OnInit {
   public featuredTitle: string = "featured";
   public featuredModels: Array<Model3d> = [];
 
-  private resource: any = 'users';
+
 
 
   constructor(private model3dService: Model3dService,
