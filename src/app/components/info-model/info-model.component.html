@@ -16,7 +16,7 @@
       <div class="container-row">
         <div class="card-slider">
 
-          <img  class="card__gallery" src="../assets/images/stormtrooper-helmet.jpg" alt="">
+          <img *ngIf="isVisible" [ngClass]="isVisible ? 'card__gallery' : 'card__galleryClose'" class="card__gallery" src="../assets/images/stormtrooper-helmet.jpg" alt="">
           <button type="button" class="btn__icon control__slider--left">
             <svg >
               <use xlink:href="../assets/svg/sprite.svg#left"></use>
@@ -27,7 +27,9 @@
               <use xlink:href="../assets/svg/sprite.svg#right"></use>
             </svg>
           </button>
-
+          <button (click)="changeComponent()" id="changeView" type="button" class="btn__3d">
+            3D
+          </button>
           <!-- MODEL VIEWER -->
           <app-info-model3d></app-info-model3d>
 

@@ -3,34 +3,6 @@
 
 //**COMPONENT VIEWER**
 
-.btn__3d {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  z-index: 50;
-  bottom: 4%;
-  left: 3%;
-  font-size: 18px;
-  font-weight: 700;
-  margin: 10px 0px;
-  border-radius: 7px;
-  border: 1px solid $second;
-  outline: none;
-  padding: 10px 25px;
-  color: $second;
-  background: none;
-  cursor: pointer;
-  transition: all 0.2s linear;
-}
-
-.btn__3d:hover {
-  border: 1px solid $second-hover;
-  color: $second-hover;
-  background-color: rgba(70, 70, 70, 0.753);
-  cursor: pointer;
-}
-
-
 .model{
   display: none;
   width: 100%;

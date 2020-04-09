@@ -1,6 +1,4 @@
 
-<button (click)="changeView()" id="changeView" type="button" class="btn__3d">
-  3D
-</button>
+
 
 <model-viewer *ngIf="isVisible3d" [ngClass]="isVisible3d ? 'modelShow' : 'model'"  class="model" src="../../assets/images/dart-model.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls ></model-viewer>
