@@ -17,7 +17,7 @@ const appRoutes: Routes = [
   {path: 'register', component: FormRegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'model/:modelId', component: InfoModelComponent},
-  {path: 'category/:categoryId', component: CategoryComponent},
+  {path: 'category/:categoryId', component: HomeComponent},
   {path: 'upload', component: FormUploadDetailsComponent},
   {path: 'editUser', component: FormEditUserComponent},
   {path: 'user/:userId', component: InfoUserComponent},
