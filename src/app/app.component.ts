@@ -15,8 +15,10 @@ export class AppComponent {
     router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      debugger
       console.log(event.url);
+      if (event.url === 'category/5e81d4f2114174471450a4c9') {
+        debugger
+      }
     });
     // this.router.events.subscribe(event => {
     //   if(event.constructor.name === "NavigationEnd") {

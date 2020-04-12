@@ -10,6 +10,7 @@ import { FormEditUserComponent } from './components/form-edit-user/form-edit-use
 import { InfoUserComponent } from './components/info-user/info-user.component';
 import { CategoryComponent } from './components/category/category.component';
 import { FormForgotComponent } from './components/form-forgot/form-forgot.component';
+import { ListModelComponent } from './components/listModel/listModel.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: FormLoginComponent},
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
   {path: 'register', component: FormRegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'model/:modelId', component: InfoModelComponent},
-  {path: 'category/:categoryId', component: HomeComponent},
+  {path: 'category/_id', component: ListModelComponent},
   {path: 'upload', component: FormUploadDetailsComponent},
   {path: 'editUser', component: FormEditUserComponent},
   {path: 'user/:userId', component: InfoUserComponent},
