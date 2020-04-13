@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
     this.categoriesService.getCategories().subscribe((result) => {
       this.categories = result;
     }, error => {
-      console.error(error)
+      console.error(error);
     });
   }
 }
