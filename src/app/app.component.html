@@ -2,9 +2,9 @@
 <!-- HOME -->
 
 <!-- header -->
-<app-header routerLinkActive="active"></app-header>
-
-<base href="/">
+<app-header *ngIf="load" routerLinkActive="active"></app-header>
+<app-header-login *ngIf="loadLogin" routerLinkActive="active"></app-header-login>
+<!-- <base href="/"> -->
 <router-outlet></router-outlet>
 <!-- header login -->
 <!-- <app-header-login></app-header-login> -->

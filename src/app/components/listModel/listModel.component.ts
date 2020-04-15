@@ -20,12 +20,8 @@ export class ListModelComponent implements OnInit {
 
   constructor(private categoriesService: CategoriesService) {
     this.categoriesService.getCategories().subscribe((result) => {
-      debugger
       //Me traigo todas las categorias de la DB
-      // const id = result.paramMap('id');
-      // console.log(id);
-      debugger
-      // debugger"5e81d4f2114174471450a4c9".class
+      // this.categoriesId = result.filter(result._id);
     });
    }
 

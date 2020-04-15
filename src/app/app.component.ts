@@ -11,13 +11,18 @@ export class AppComponent {
   title = 'print3d';
   routedName = "";
 
+  load: Boolean = true;
+  loadLogin: Boolean = false;
+
   constructor (private router: Router) {
     router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       console.log(event.url);
-      if (event.url === 'category/5e81d4f2114174471450a4c9') {
-        debugger
+      if (event.url === '/login' || event.url === '/register') {
+        this.load = false;
+      } else {
+        this.load = true;
       }
     });
     // this.router.events.subscribe(event => {
