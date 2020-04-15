@@ -1,5 +1,9 @@
 
-<button (click)="toggle()" class="btn btn__primary" type="button">Modal</button>
+<button (click)="toggle()" class="btn btn__icon btn__icon--info" type="button">
+    <svg>
+      <use xlink:href="../assets/svg/sprite.svg#collection"></use>
+    </svg>
+</button>
 <!-- *ngFor="let item of listCollections"  -->
 <div *ngIf="isOpen" [ngClass]="isOpen ? 'showModal' : 'modal'" class="modal">
   <div>

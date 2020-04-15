@@ -90,6 +90,10 @@
     border: 1px solid $text-default;
   }
 
+  &__icon--info {
+    border: none;
+  }
+
   &__icon--success {
     border: 1px solid $gray-300;
     color: $gray-300;

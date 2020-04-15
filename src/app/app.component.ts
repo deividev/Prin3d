@@ -21,7 +21,9 @@ export class AppComponent {
       console.log(event.url);
       if (event.url === '/login' || event.url === '/register') {
         this.load = false;
-      } else {
+        debugger
+      }  else {
+        debugger
         this.load = true;
       }
     });
@@ -32,5 +34,9 @@ export class AppComponent {
     // });
   }
   ngOnInit(): void {
+  }
+
+  login(){
+
   }
 }

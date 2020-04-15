@@ -1,53 +1,48 @@
 <!-- **** -->
-    <!-- HEADER -->
-    <header class="header" routerLinkActive="active">
-      <!-- <div class="header__container"> -->
-        <a class="logo" href="home.html">
-          <img  src="../assets/images/logo.png" alt="" width="40px" height="43px">
-        </a>
-        <form  action="...">
-          <div class="search" id="search">
-              <label class="search__label" for="search"></label>
-              <input class="search__control" id="search" name="search" type="search">
-              <button type="button" class="btn__icon search__control--icon">
-                <svg >
-                  <use xlink:href="../assets/svg/sprite.svg#search"></use>
-                </svg>
-              </button>
-          </div>
-        </form>
-        <div>
-          <a class="btn btn__primary" type="button">Upload</a>
-          <button class="btn btn__icon" type="button">
-            <svg>
-              <use xlink:href="../assets/svg/sprite.svg#collection"></use>
-            </svg>
-          </button>
-          <button class="btn btn__icon" type="button">
-            <svg>
-              <use xlink:href="../assets/svg/sprite.svg#bell"></use>
-            </svg>
-          </button>
-          <a class="avatar--sm" routerLink="/user/:id">Dd</a>
-        </div>
-      <!-- </div> -->
+<!-- HEADER -->
+<header class="header" routerLinkActive="active">
+  <a class="logo" aria-label="Factory print3d" routerLink="/home">
+    <img  src="../assets/images/logo.png" alt="" width="40px" height="43px">
+  </a>
+  <div class="container-search">
+  <form  action="...">
+    <div class="search" id="search">
+        <label class="search__label" for="search" aria-label="search"></label>
+        <input class="search__control" id="search" type="search">
+        <button type="button" class="btn__icon search__control--icon">
+          <svg >
+            <use xlink:href="../assets/svg/sprite.svg#search"></use>
+          </svg>
+        </button>
+    </div>
+  </form>
+  </div>
+  <div class="container-flex">
+    <app-modal-collection></app-modal-collection>
 
-      <!-- **** -->
-      <!-- NAV -->
+    <button class="btn btn__icon btn__icon--info" type="button">
+      <svg>
+        <use xlink:href="../assets/svg/sprite.svg#bell"></use>
+      </svg>
+    </button>
+    <a class="avatar--sm" routerLink="/user/:id">Dd</a>
 
-      <!-- NAV -->
-      <!-- **** -->
-    </header>
 
-    <nav class="navbar">
-      <a class="navbar__link" href="home.html">Home</a>
-      <div class="navbar__categories">
-        <a class="navbar__link" href="fan-art.html">Fan art</a>
-        <a class="navbar__link" href="toys.html">Toy and Games</a>
-        <a class="navbar__link" href="gadgets.html">Gadgets</a>
-        <a class="navbar__link" href="education.html">Education</a>
-        <a class="navbar__link" href="utility.html">Utility</a>
-      </div>
-    </nav>
-      <!-- HEADER -->
-      <!-- **** -->
+
+  </div>
+</header>
+
+<!-- HEADER -->
+<!-- **** -->
+
+<!-- **** -->
+<!-- NAV -->
+<nav class="navbar" routerLinkActive="active">
+<a class="navbar__link" routerLink="/home">Home</a>
+<div class="navbar__categories">
+<a *ngFor="let item of categories" class="navbar__link" routerLink="/category/_id">{{item.title}}</a>
+</div>
+</nav>
+<!-- NAV -->
+
+

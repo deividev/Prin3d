@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormLoginComponent implements OnInit {
 
+  loadLogin: Boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
 
   }
-
+  login() {
+    this.loadLogin = true;
+  }
 }
