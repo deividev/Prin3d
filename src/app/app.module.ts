@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CoverComponent } from './components/cover/cover.component';
@@ -13,7 +14,7 @@ import { FormEditUserComponent } from './components/form-edit-user/form-edit-use
 import { FormUploadDetailsComponent } from './components/form-upload-details/form-upload-details.component';
 import { InfoModelComponent } from './components/info-model/info-model.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { Error404Component } from './components/error404/error404.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Model3dComponent } from './components/model3d/model3d.component';
@@ -22,6 +23,7 @@ import { ListBtnComponent } from './components/listBtn/listBtn.component';
 import { ModalCollectionComponent } from './components/modal-collection/modal-collection.component';
 import { InfoModel3dComponent } from './components/info-model3d/info-model3d.component';
 import { CategoryComponent } from './components/category/category.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { CategoryComponent } from './components/category/category.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

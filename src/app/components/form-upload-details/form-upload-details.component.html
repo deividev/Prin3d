@@ -1,12 +1,12 @@
 
 <div class="container">
-  <form class="form-upload" action="...">
+  <form [formGroup]="formUpload" class="form-upload" novalidate>
     <h1>Upload 3d</h1>
     <fieldset>
     <div class="form__row ">
       <div class="form__group">
-        <label class="form__label" for="title" >Title</label>
-        <input class="form__control" type="text"  id="title">
+        <label class="form__label" for="title">Title</label>
+        <input class="form__control" type="text"  id="title" formControlName="title">
       </div>
       <div class="form__group form__group--ml">
         <label class="form__label" for="categories">Categories</label>
@@ -59,7 +59,7 @@
         </div>
         <div class="form__label--files">
           <label for="file">Images <i class="icon-upload"></i></label>
-          <input class="avatar__control--file" id="file" type="file">
+          <input  type="file" (change)="changeFile($event)">
           <a>fsefesfsefse</a>
           <a>fsefesfsefse</a>
           <a>fsefesfsefse</a>
@@ -68,7 +68,7 @@
           <a>fsefesfsefse</a>
         </div>
       </div>
-    <button class="btn btn__success" type="submit">Upload</button>
+    <button  class="btn btn__success" type="button" (click)="upload($event)" >Upload</button>
   </fieldset>
   </form>
 </div>
