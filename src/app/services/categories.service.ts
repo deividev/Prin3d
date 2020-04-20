@@ -14,6 +14,7 @@ export class CategoriesService {
 
   getCategories(): Observable <any> {
     return this.httpClient.get(`${environment.apiBack}/${this.resource}`);
+    debugger
   }
 
 }

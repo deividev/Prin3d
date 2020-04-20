@@ -21,9 +21,7 @@ export class AppComponent {
       console.log(event.url);
       if (event.url === '/login' || event.url === '/register') {
         this.load = false;
-        debugger
       }  else {
-        debugger
         this.load = true;
       }
     });

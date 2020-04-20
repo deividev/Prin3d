@@ -12,7 +12,7 @@ export class FormUploadDetailsComponent implements OnInit {
   fileUpload = new FormData();
   formUpload : FormGroup;
   uploadModel: FormGroup;
-
+  images: any;
   constructor(private httpClient : HttpClient) { }
 
   ngOnInit(): void {
@@ -30,13 +30,34 @@ export class FormUploadDetailsComponent implements OnInit {
     });
   }
 
+  // upload(event){
+  //   this.fileUpload.append('form', JSON.stringify(this.formUpload.value));
+  //   this.httpClient.post(`${environment.apiBack}/users/images`, this.fileUpload).subscribe();
+  // }
+
+  // changeFile(event) {
+  //   this.fileUpload.append('file', event.target.files[0]);
+  //   // this.formUpload.controls['file'].setValue(event.target.files[0]);
+  // }
+
+
   upload(event){
-    this.fileUpload.append('form', JSON.stringify(this.formUpload.value));
-    this.httpClient.post(`${environment.apiBack}/users/images`, this.fileUpload).subscribe();
+    const formData = new FormData;
+    formData.append('file', this.images);
+
+    debugger
+    this.httpClient.post<any>(`${environment.apiBack}/users/images`, formData).subscribe(
+      (res) => console.log(res),
+      (err) => console.log(err),
+     );
+      debugger
   }
 
   changeFile(event) {
-    this.fileUpload.append('file', event.target.files[0]);
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.images = file;
+    }
     // this.formUpload.controls['file'].setValue(event.target.files[0]);
   }
 }

@@ -1,6 +1,6 @@
 
 <div class="container">
-  <form [formGroup]="formUpload" class="form-upload" novalidate>
+  <form action="" method="POST" enctype="multipart/form-data" [formGroup]="formUpload" class="form-upload" novalidate>
     <h1>Upload 3d</h1>
     <fieldset>
     <div class="form__row ">
@@ -59,16 +59,11 @@
         </div>
         <div class="form__label--files">
           <label for="file">Images <i class="icon-upload"></i></label>
-          <input  type="file" (change)="changeFile($event)">
-          <a>fsefesfsefse</a>
-          <a>fsefesfsefse</a>
-          <a>fsefesfsefse</a>
-          <a>fsefesfsefse</a>
-          <a>fsefesfsefse</a>
-          <a>fsefesfsefse</a>
+          <input name="image"  type="file" (change)="changeFile($event)">
+          <p>Stormtrooper-glb</p>
         </div>
       </div>
-    <button  class="btn btn__success" type="button" (click)="upload($event)" >Upload</button>
+    <button  class="btn btn__success" type="submit" (click)="upload($event)" >Upload</button>
   </fieldset>
   </form>
 </div>
