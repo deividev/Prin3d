@@ -14,7 +14,7 @@
       <div class="form__row">
         <div class="form__group ">
             <label class="form__label" for="name" >Name</label>
-            <input class="form__control" type="text" formControlName="name" id="name">
+            <input required class="form__control" type="text" formControlName="name" id="name">
             <div *ngIf="formGroup.controls.name.dirty" class="alert-danger">
               <div class="form-control-feedback" [hidden]="!formGroup.controls.name.errors?.required">
                 Campo obligatorio
@@ -26,22 +26,22 @@
         </div>
         <div class="form__group  form__group--ml">
             <label class="form__label" for="email" >Email</label>
-            <input class="form__control" type="text" formControlName="email"  id="email">
+            <input required class="form__control" type="text" formControlName="email"  id="email">
         </div>
       </div>
       <div class="form__group">
           <label class="form__label form__label--large" for="username" >Username</label>
-          <input class="form__control form__control--large" type="text" formControlName="userName" id="username">
+          <input required class="form__control form__control--large" type="text" formControlName="userName" id="username">
       </div>
       <div class="form__row">
         <div class="form__group ">
             <label class="form__label" for="password" >Password</label>
-            <input class="form__control" type="password" formControlName="password"  id="password">
+            <input required class="form__control" type="password" formControlName="password"  id="password">
         </div>
         <div class="form__group form__group--ml">
           <label class="form__label" for="confirmPassword" >Confirm password</label>
           <div class="form__item">
-            <input class="form__item--control" type="password" formControlName="passwordConfirm"  id="confirmPassword">
+            <input required class="form__item--control" type="password" formControlName="passwordConfirm"  id="confirmPassword">
             <button class="form__item--icon" type="button">
               <svg>
                 <use xlink:href="../assets/svg/sprite.svg#eye"></use>
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-      <button class="btn btn__primary" type="submit">Register</button>
+      <button class="btn btn__primary" type="submit" [disabled]="!formGroup.valid">Register</button>
     </form>
   <div class="background"></div>
 </div>

@@ -11,32 +11,41 @@ export class FormRegisterComponent implements OnInit {
 
 
 
-  formGroup: FormGroup;
   user: any;
 
-  constructor(private formBuilder: FormBuilder,) { }
+  constructor(private formBuilder: FormBuilder,
+    ) { }
 
   ngOnInit(): void {
 
   }
 
 
+  formGroup = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    userName: new FormControl(''),
+    password: new FormControl(''),
+    passwordConfirm: new FormControl(''),
+  });
+
 
   ngOnChanges(changes: SimpleChanges): void {
     // a la raul
     if (this.user) {
       this.formGroup = this.formBuilder.group({
-        name: [this.user.name, [Validators.required, Validators.minLength(4)]],
-        userName: [this.user.userName, [Validators.required, Validators.minLength(4)]],
-        password: [this.user.password, [Validators.required, ]],
-        passwordConfirm: [this.user.passwordConfirm, [Validators.required, ]],
+        name: [ this.user.name, [Validators.required, Validators.minLength(4)]],
+        email: [ this.user.email, [Validators.required, Validators.minLength(4)]],
+        userName: [ this.user.userName , [Validators.required, Validators.minLength(4)]],
+        password: [ this.user.password , [Validators.required, ]],
+        passwordConfirm: [ this.user.passwordConfirm, [Validators.required, ]],
         });
     } else {
       this.formGroup = this.formBuilder.group({
-        name: [ "", [Validators.required, Validators.minLength(4)]],
-        userName: [ "", [Validators.required, Validators.minLength(4)]],
-        password: [ "", [Validators.required, ]],
-        passwordConfirm: [ "", [Validators.required, ]],
+        name: [ '', [Validators.required, Validators.minLength(4)]],
+        userName: [ '', [Validators.required, Validators.minLength(4)]],
+        password: [ '', [Validators.required, ]],
+        passwordConfirm: [ '', [Validators.required, ]],
       });
     }
   }
