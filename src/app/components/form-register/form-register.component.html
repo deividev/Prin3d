@@ -12,7 +12,9 @@
         </svg>
     </button>
       <div class="form__row">
-        <div class="form__group ">
+
+        <!-- Name -->
+        <div class="form__group">
             <label class="form__label" for="name" >Name</label>
             <input required class="form__control" type="text" formControlName="name" id="name" minlength="4">
             <div *ngIf="formGroup.controls.name.dirty" class="alert-danger">
@@ -24,6 +26,20 @@
               </div>
             </div>
         </div>
+        <!-- ** Name ** -->
+        <div class="form-group ">
+          <label class="form-control-label" for="imdbUrl">IMDB Url</label>
+          <input type="text" class="form-control" id="imdbUrl" formControlName="imdbUrl">
+          <div *ngIf="formGroup.controls.imdbUrl.dirty">
+            <div [hidden]="!formGroup.controls.imdbUrl.errors?.required"
+              class="form-control-feedback alert-danger">
+              Campo obligatorio</div>
+            <div [hidden]="!formGroup.controls.imdbUrl.errors?.url"
+              class="form-control-feedback alert-danger">
+              La url es incorrecta</div>
+          </div>
+        </div>
+        <!-- Email -->
         <div class="form__group  form__group--ml">
             <label class="form__label" for="email" >Email</label>
             <input required class="form__control" type="text" formControlName="email"  id="email" minlength="4">
@@ -31,12 +47,15 @@
               <div class="form-control-feedback" [hidden]="!formGroup.controls.email.errors?.required">
                 Campo obligatorio
               </div>
-              <div class="form-control-feedback" [hidden]="!formGroup.controls.email.errors?.minlength">
-                Minimo 4 carácteres
+              <div class="form-control-feedback" [hidden]="!formGroup.controls.email.errors?.url">
+                Email incorrecto
               </div>
             </div>
         </div>
+        <!-- ** Email ** -->
       </div>
+
+      <!--  Username  -->
       <div class="form__group">
         <label class="form__label form__label--large" for="username" >Username</label>
         <input required class="form__control form__control--large" type="text" formControlName="username" id="username" minlength="4">
@@ -49,6 +68,9 @@
           </div>
         </div>
       </div>
+      <!-- ** Username ** -->
+
+      <!--  Password  -->
       <div class="form__row">
         <div class="form__group ">
           <div class="form__info">
@@ -64,6 +86,9 @@
             </div>
           </div>
         </div>
+        <!-- ** Password ** -->
+
+        <!--  PasswordConfirm  -->
         <div class="form__group form__group--ml">
           <label class="form__label" for="passwordConfirm">Confirm password</label>
           <div class="form__item">
@@ -83,8 +108,11 @@
             </div>
           </div>
         </div>
+        <!-- ** PasswordConfirm ** -->
+
       </div>
       <button class="btn btn__primary" type="submit" [disabled]="!formGroup.valid">Register</button>
     </form>
   <div class="background"></div>
 </div>
+
