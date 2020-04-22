@@ -3,7 +3,8 @@ import { FormBuilder, FormGroup, Validators, AbstractControl, FormControl } from
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const URL_VALID =
+const  EMAIL_VALID =
+
   /(https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,})/;
 @Component({
   selector: 'app-form-register',
@@ -17,14 +18,14 @@ export class FormRegisterComponent implements OnInit {
   ('/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/');
 
   user: any;
-  formGroup: FormGroup;
+  signupForm: FormGroup;
 
 
   constructor(private formBuilder: FormBuilder,
               private httpClient : HttpClient) { }
 
   ngOnInit(): void {
-      this.formGroup = new FormGroup({
+      this.signupForm = new FormGroup({
       name: new FormControl(''),
       email: new FormControl(''),
       username: new FormControl(''),
@@ -40,17 +41,17 @@ export class FormRegisterComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     debugger
     if (this.user) {
-      this.formGroup = this.formBuilder.group({
+      this.signupForm = this.formBuilder.group({
         name: [ this.user.name, [Validators.required, Validators.minLength(4)]],
-        email: [ this.user.email, [Validators.required, this.validateUrl ]],
+        email: [ this.user.email, [Validators.required, Validators.email]],
         username: [ this.user.userName , [Validators.required, Validators.minLength(4)]],
         password: [ this.user.password , [Validators.required, Validators.minLength(8)]],
         passwordConfirm: [ this.user.passwordConfirm, [Validators.required, Validators.minLength(8)]],
         });
     } else {
-      this.formGroup = this.formBuilder.group({
+      this.signupForm = this.formBuilder.group({
         name: [ '', [Validators.required, Validators.minLength(4)]],
-        email: [ '', [Validators.required, this.validateUrl ]],
+        email: [ '', [Validators.required, Validators.email]],
         username: [ '', [Validators.required, Validators.minLength(4)]],
         password: [ '', [Validators.required, Validators.minLength(8)]],
         passwordConfirm: [ '', [Validators.required, Validators.minLength(8)]],
@@ -62,8 +63,6 @@ export class FormRegisterComponent implements OnInit {
     debugger
     const update = Object.assign({}, this.user, form.value);
     const formData = new FormData;
-
-    // formData.append('file', this.images);
 
     debugger
     this.httpClient.post<any>(`${environment.apiBack}/users`, update).subscribe(
@@ -79,15 +78,8 @@ export class FormRegisterComponent implements OnInit {
     debugger
     const url = control.value;
     debugger
-    const correct = this.emailRegex.test(url);
+    const correct = EMAIL_VALID.test(url);
     debugger
     return !correct ? { url: true } : null;
   }
-  private validateUrl(control: AbstractControl): { [key: string]: any } {
-    const url = control.value;
-    debugger
-    const correct = URL_VALID.test(url);
-    return !correct ? { url: true } : null;
-  }
-
 }
