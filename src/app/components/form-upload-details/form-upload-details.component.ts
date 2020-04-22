@@ -13,6 +13,7 @@ export class FormUploadDetailsComponent implements OnInit {
   formUpload : FormGroup;
   uploadModel: FormGroup;
   images: any;
+
   constructor(private httpClient : HttpClient) { }
 
   ngOnInit(): void {
@@ -41,12 +42,14 @@ export class FormUploadDetailsComponent implements OnInit {
   // }
 
 
-  upload(event){
+  upload(form){
+    const details = Object.assign({}, this.formUpload, form.value);
+    debugger
     const formData = new FormData;
     formData.append('file', this.images);
-
     debugger
-    this.httpClient.post<any>(`${environment.apiBack}/users/images`, formData).subscribe(
+
+    this.httpClient.post<any>(`${environment.apiBack}/models`, details.value).subscribe(
       (res) => console.log(res),
       (err) => console.log(err),
      );

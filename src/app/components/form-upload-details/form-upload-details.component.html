@@ -10,7 +10,7 @@
       </div>
       <div class="form__group form__group--ml">
         <label class="form__label" for="categories">Categories</label>
-        <select class="form__control" name="categories" id="categories">
+        <select class="form__control" name="categories" id="categories" formControlName="categories">
           <option value="">Fan art</option>
           <option value="">Toy and games</option>
           <option value="">Gadgets</option>
@@ -22,16 +22,16 @@
     </div>
     <div class="form__group form__group--area">
       <label class="form__label" for="bio" >Description</label>
-      <textarea class="form__control--area" id="bio" cols="10" rows="5"></textarea>
+      <textarea class="form__control--area" id="bio" cols="10" rows="5" formControlName="description"></textarea>
     </div>
     <div class="form__row">
       <div class="form__group form__group--area">
         <label class="form__label" for="print" >Print settings</label>
-        <textarea class="form__control--area" id="print" cols="10" rows="5"></textarea>
+        <textarea class="form__control--area" id="print" cols="10" rows="5" formControlName="settings"></textarea>
       </div>
       <div class="form__group form__group--ml form__group--area">
         <label class="form__label" for="custom" >Custom section</label>
-        <textarea class="form__control--area" id="custom" cols="10" rows="5"></textarea>
+        <textarea class="form__control--area" id="custom" cols="10" rows="5" formControlName="custom"></textarea>
       </div>
     </div>
     <div class="form__row">
@@ -47,7 +47,7 @@
     </div>
     <div class="form__group">
       <label class="form__label" for="tags" >Tags</label>
-      <input class="form__control" type="text"  id="tags">
+      <input class="form__control" type="text"  id="tags" formControlName="tags">
       <div></div>
     </div>
     <div class="form__row">
@@ -59,7 +59,7 @@
         </div>
         <div class="form__label--files">
           <label for="file">Images <i class="icon-upload"></i></label>
-          <input name="image"  type="file" (change)="changeFile($event)">
+          <input name="image"  type="file" (change)="changeFile($event)" formControlName="img">
           <p>Stormtrooper-glb</p>
         </div>
       </div>
