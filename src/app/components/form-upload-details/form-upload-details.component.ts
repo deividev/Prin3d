@@ -42,18 +42,17 @@ export class FormUploadDetailsComponent implements OnInit {
   // }
 
 
-  upload(form){
-    const details = Object.assign({}, this.formUpload, form.value);
-    debugger
+  upload(event){
+    const upload = Object.assign({}, this.formUpload);
     const formData = new FormData;
-    formData.append('file', this.images);
+    formData.append('img', this.images);
     debugger
 
-    this.httpClient.post<any>(`${environment.apiBack}/models`, details.value).subscribe(
+    this.httpClient.post<any>(`${environment.apiBack}/files`, formData).subscribe(
       (res) => console.log(res),
       (err) => console.log(err),
      );
-      debugger
+    debugger
   }
 
   changeFile(event) {

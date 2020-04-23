@@ -1,5 +1,5 @@
 <div class="login" routerLinkActive="active">
-  <form class="form">
+  <form class="form" [formGroup]="formLogin" (ngSubmit)="login(formLogin)">
     <div class="logo">
       <a routerLink="/home">
         <img  src="../assets/images/logo.png" alt="" width="100" height="100">
@@ -13,7 +13,15 @@
     </button>
       <div class="form__group">
         <label class="form__label" for="email" >Email</label>
-        <input class="form__control" type="text"  id="email">
+        <input class="form__control" type="email"  id="email" formControlName="email">
+        <div *ngIf="formLogin.controls.email.dirty" class="alert-danger">
+          <div class="form-control-feedback" [hidden]="!formLogin.controls.email.errors?.required">
+            Campo obligatorio
+          </div>
+          <div class="form-control-feedback" [hidden]="!formLogin.controls.email.errors?.email">
+            Email incorrecto
+          </div>
+        </div>
       </div>
       <div class="form__group ">
         <div class="form__info">
@@ -21,6 +29,14 @@
           <a class="form__link" routerLink="/forgot">Forgot?</a>
         </div>
         <input class="form__control" type="password"  id="password">
+        <div *ngIf="formLogin.controls.password.dirty" class="alert-danger">
+          <div class="form-control-feedback" [hidden]="!formLogin.controls.password.errors?.required">
+            Campo obligatorio
+          </div>
+          <div class="form-control-feedback" [hidden]="!formLogin.controls.password.errors?.minlength">
+            Minimo 8 carácteres
+          </div>
+        </div>
       </div>
       <div class="form__group">
         <div class="form__info">
@@ -28,7 +44,7 @@
             <a class="form__link" routerLink="/register">Register</a>
         </div>
       </div>
-      <button class="btn btn__primary" >Login</button>
+      <button class="btn btn__primary" type="submit" [disabled]="!formLogin.valid">Login</button>
     </form>
   <div class="background"></div>
 </div>

@@ -14,8 +14,8 @@ const  EMAIL_VALID =
 export class FormRegisterComponent implements OnInit {
 
 
-  emailRegex  = new RegExp
-  ('/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/');
+  private emailPattern: any =
+  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   user: any;
   signupForm: FormGroup;
@@ -43,7 +43,7 @@ export class FormRegisterComponent implements OnInit {
     if (this.user) {
       this.signupForm = this.formBuilder.group({
         name: [ this.user.name, [Validators.required, Validators.minLength(4)]],
-        email: [ this.user.email, [Validators.required, Validators.email]],
+        email: [ this.user.email, [Validators.required, Validators.pattern(this.emailPattern)]],
         username: [ this.user.userName , [Validators.required, Validators.minLength(4)]],
         password: [ this.user.password , [Validators.required, Validators.minLength(8)]],
         passwordConfirm: [ this.user.passwordConfirm, [Validators.required, Validators.minLength(8)]],
@@ -51,7 +51,7 @@ export class FormRegisterComponent implements OnInit {
     } else {
       this.signupForm = this.formBuilder.group({
         name: [ '', [Validators.required, Validators.minLength(4)]],
-        email: [ '', [Validators.required, Validators.email]],
+        email: [ '', [Validators.required, Validators.pattern(this.emailPattern)]],
         username: [ '', [Validators.required, Validators.minLength(4)]],
         password: [ '', [Validators.required, Validators.minLength(8)]],
         passwordConfirm: [ '', [Validators.required, Validators.minLength(8)]],
@@ -61,17 +61,20 @@ export class FormRegisterComponent implements OnInit {
 
   onSave(form) {
     debugger
-    const update = Object.assign({}, this.user, form.value);
-    const formData = new FormData;
-    formData.append('file', update);
+    const register = Object.assign({}, this.user, form.value);
+    debugger
+    if (this.signupForm.valid) {
+        this.httpClient.post<any>(`${environment.apiBack}/users`, register).subscribe(
+        (res) => console.log(res),
+        (err) => console.log(err),);
+        form.reset();
+        debugger
+    } else {
+      console.log('Email no valido');
 
-    debugger
-    this.httpClient.post<any>(`${environment.apiBack}/users`, update).subscribe(
-      (res) => console.log(res),
-      (err) => console.log(err),
-    );
-    debugger
-    form.reset();
+    }
+
+
   }
 
   private validateEmail(control: AbstractControl): { [key: string]: any } {
