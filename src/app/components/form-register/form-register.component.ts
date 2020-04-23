@@ -63,6 +63,7 @@ export class FormRegisterComponent implements OnInit {
     debugger
     const update = Object.assign({}, this.user, form.value);
     const formData = new FormData;
+    formData.append('file', update);
 
     debugger
     this.httpClient.post<any>(`${environment.apiBack}/users`, update).subscribe(
@@ -71,7 +72,6 @@ export class FormRegisterComponent implements OnInit {
     );
     debugger
     form.reset();
-    debugger
   }
 
   private validateEmail(control: AbstractControl): { [key: string]: any } {
