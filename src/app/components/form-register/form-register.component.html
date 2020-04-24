@@ -17,12 +17,12 @@
         <div class="form__group">
             <label class="form__label" for="name" >Name</label>
             <input required class="form__control" type="text" formControlName="name" id="name" minlength="4">
-            <div *ngIf="signupForm.controls.name.dirty" class="alert-danger">
+            <div *ngIf="signupForm.controls.name.touched " class="alert-danger">
               <div class="form-control-feedback" [hidden]="!signupForm.controls.name.errors?.required">
-                Campo obligatorio
+                Input required
               </div>
               <div class="form-control-feedback" [hidden]="!signupForm.controls.name.errors?.minlength">
-                Minimo 4 carácteres
+                Min 4 characters
               </div>
             </div>
         </div>
@@ -31,12 +31,12 @@
         <div class="form__group  form__group--ml">
             <label class="form__label" for="email" >Email</label>
             <input required class="form__control" type="email" formControlName="email"  id="email" minlength="4">
-            <div *ngIf="signupForm.controls.email.dirty" class="alert-danger">
+            <div *ngIf="signupForm.controls.email.touched" class="alert-danger">
               <div class="form-control-feedback" [hidden]="!signupForm.controls.email.errors?.required">
-                Campo obligatorio
+                Input required
               </div>
               <div class="form-control-feedback" [hidden]="!signupForm.controls.email.errors?.email">
-                Email incorrecto
+                Email incorrect
               </div>
             </div>
         </div>
@@ -47,12 +47,12 @@
       <div class="form__group">
         <label class="form__label form__label--large" for="username" >Username</label>
         <input required class="form__control form__control--large" type="text" formControlName="username" id="username" minlength="4">
-        <div *ngIf="signupForm.controls.username.dirty" class="alert-danger">
+        <div *ngIf="signupForm.controls.username.touched" class="alert-danger">
           <div class="form-control-feedback" [hidden]="!signupForm.controls.username.errors?.required">
-            Campo obligatorio
+            Input required
           </div>
           <div class="form-control-feedback" [hidden]="!signupForm.controls.username.errors?.minlength">
-            Minimo 4 carácteres
+            Min 4 characters
           </div>
         </div>
       </div>
@@ -64,13 +64,13 @@
           <div class="form__info">
             <label class="form__label" for="password" >Password <span>(Min 8 characters)</span></label>
           </div>
-          <input required class="form__control" type="text" formControlName="password"  id="password" minlength="8">
-          <div *ngIf="signupForm.controls.password.dirty" class="alert-danger">
+          <input required class="form__control" type="password" formControlName="password"  id="password" minlength="8">
+          <div *ngIf="signupForm.controls.password.touched" class="alert-danger">
             <div class="form-control-feedback" [hidden]="!signupForm.controls.password.errors?.required">
-              Campo obligatorio
+              Input required
             </div>
             <div class="form-control-feedback" [hidden]="!signupForm.controls.password.errors?.minlength">
-              Minimo 8 carácteres
+              Min 8 characters
             </div>
           </div>
         </div>
@@ -80,19 +80,19 @@
         <div class="form__group form__group--ml">
           <label class="form__label" for="passwordConfirm">Confirm password</label>
           <div class="form__item">
-            <input required class="form__item--control" type="text" formControlName="passwordConfirm"  id="passwordConfirm" minlength="8">
+            <input required class="form__item--control" type="password" formControlName="passwordConfirm"  id="passwordConfirm" minlength="8">
             <button class="form__item--icon" type="button">
               <svg>
                 <use xlink:href="../assets/svg/sprite.svg#eye"></use>
               </svg>
             </button>
           </div>
-          <div *ngIf="signupForm.controls.passwordConfirm.dirty" class="alert-danger">
+          <div *ngIf="signupForm.controls.passwordConfirm.touched" class="alert-danger">
             <div class="form-control-feedback" [hidden]="!signupForm.controls.passwordConfirm.errors?.required">
-              Campo obligatorio
+              Input required
             </div>
             <div class="form-control-feedback" [hidden]="!signupForm.controls.passwordConfirm.errors?.minlength">
-              Minimo 8 carácteres
+              Min 8 characters
             </div>
           </div>
         </div>

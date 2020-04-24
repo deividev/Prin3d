@@ -13,8 +13,10 @@
   color: $text-default;
   background-color: #fff;
 
-  .search__control:focus  {
-    background-color: #fff;
+  &__control:focus {
+    width: 100%;
+    background-color: $gray-100;
+    outline: 1px solid $gray-100;
   }
 
   &__control {
@@ -27,11 +29,6 @@
     padding: 10px 5px 10px 40px;
     outline: none;
     transition: 0.1s linear;
-  }
-
-  &__control:focus {
-    width: 100%;
-    border-color: $gray-300;
   }
 
   &__label {
@@ -49,7 +46,6 @@
     outline: none;
     background: none;
   }
-
 }
 
 

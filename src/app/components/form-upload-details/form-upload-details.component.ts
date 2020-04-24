@@ -40,21 +40,6 @@ export class FormUploadDetailsComponent implements OnInit {
   //   this.fileUpload.append('file', event.target.files[0]);
   //   // this.formUpload.controls['file'].setValue(event.target.files[0]);
   // }
-
-
-  upload(event){
-    const upload = Object.assign({}, this.formUpload);
-    const formData = new FormData;
-    formData.append('img', this.images);
-    debugger
-
-    this.httpClient.post<any>(`${environment.apiBack}/paco`, formData).subscribe(
-      (res) => console.log(res),
-      (err) => console.log(err),
-     );
-    debugger
-  }
-
   changeFile(event) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
@@ -62,4 +47,19 @@ export class FormUploadDetailsComponent implements OnInit {
     }
     // this.formUpload.controls['file'].setValue(event.target.files[0]);
   }
+
+  upload(event){
+    const upload = Object.assign({}, this.formUpload);
+    const formData = new FormData;
+    formData.append('img', this.images);
+    debugger
+
+    this.httpClient.post<any>(`${environment.apiBack}/upload`, this.images).subscribe(
+      (res) => console.log(res),
+      (err) => console.log(err),
+     );
+    debugger
+  }
+
+
 }

@@ -17,6 +17,7 @@ export class FormRegisterComponent implements OnInit {
 
   user: any;
   signupForm: FormGroup;
+  router: any;
 
 
   constructor(private formBuilder: FormBuilder,
@@ -41,7 +42,7 @@ export class FormRegisterComponent implements OnInit {
     if (this.user) {
       this.signupForm = this.formBuilder.group({
         name: [ this.user.name, [Validators.required, Validators.minLength(4)]],
-        email: [ this.user.email, [Validators.required, ]],
+        email: [ this.user.email, [Validators.required, Validators.pattern(this.emailPattern)]],
         username: [ this.user.userName , [Validators.required, Validators.minLength(4)]],
         password: [ this.user.password , [Validators.required, Validators.minLength(8)]],
         passwordConfirm: [ this.user.passwordConfirm, [Validators.required, Validators.minLength(8)]],
@@ -49,7 +50,7 @@ export class FormRegisterComponent implements OnInit {
     } else {
       this.signupForm = this.formBuilder.group({
         name: [ '', [Validators.required, Validators.minLength(4)]],
-        email: [ '', [Validators.required, ]],
+        email: [ '', [Validators.required, Validators.pattern(this.emailPattern)]],
         username: [ '', [Validators.required, Validators.minLength(4)]],
         password: [ '', [Validators.required, Validators.minLength(8)]],
         passwordConfirm: [ '', [Validators.required, Validators.minLength(8)]],
@@ -59,7 +60,7 @@ export class FormRegisterComponent implements OnInit {
 
   onSave(form) {
     debugger
-    const register = Object.assign({}, this.signupForm);
+    const register = Object.assign({}, this.signupForm.value);
     debugger
     if (this.signupForm.valid) {
         this.httpClient.post<any>(`${environment.apiBack}/users`, register).subscribe(
