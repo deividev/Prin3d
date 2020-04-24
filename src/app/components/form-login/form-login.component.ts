@@ -21,7 +21,9 @@ export class FormLoginComponent implements OnInit {
   }
 
   login(form){
-    const login = Object.assign({}, this.formLogin, form.value);
+    this.formLogin.value.JSON.stringify();
+    debugger
+    const login = Object.assign({}, this.formLogin);
     debugger
 
     this.httpClient.post<any>(`${environment.apiBack}/users`, login).subscribe(
@@ -29,6 +31,11 @@ export class FormLoginComponent implements OnInit {
       (err) => console.log(err),
      );
       debugger
+  }
+
+
+  showPassword () {
+
   }
 
 }

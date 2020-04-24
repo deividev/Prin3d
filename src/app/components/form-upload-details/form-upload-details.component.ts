@@ -48,7 +48,7 @@ export class FormUploadDetailsComponent implements OnInit {
     formData.append('img', this.images);
     debugger
 
-    this.httpClient.post<any>(`${environment.apiBack}/files`, formData).subscribe(
+    this.httpClient.post<any>(`${environment.apiBack}/paco`, formData).subscribe(
       (res) => console.log(res),
       (err) => console.log(err),
      );

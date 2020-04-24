@@ -3,9 +3,7 @@ import { FormBuilder, FormGroup, Validators, AbstractControl, FormControl } from
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-const  EMAIL_VALID =
 
-  /(https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,})/;
 @Component({
   selector: 'app-form-register',
   templateUrl: './form-register.component.html',
@@ -43,7 +41,7 @@ export class FormRegisterComponent implements OnInit {
     if (this.user) {
       this.signupForm = this.formBuilder.group({
         name: [ this.user.name, [Validators.required, Validators.minLength(4)]],
-        email: [ this.user.email, [Validators.required, Validators.pattern(this.emailPattern)]],
+        email: [ this.user.email, [Validators.required, ]],
         username: [ this.user.userName , [Validators.required, Validators.minLength(4)]],
         password: [ this.user.password , [Validators.required, Validators.minLength(8)]],
         passwordConfirm: [ this.user.passwordConfirm, [Validators.required, Validators.minLength(8)]],
@@ -51,7 +49,7 @@ export class FormRegisterComponent implements OnInit {
     } else {
       this.signupForm = this.formBuilder.group({
         name: [ '', [Validators.required, Validators.minLength(4)]],
-        email: [ '', [Validators.required, Validators.pattern(this.emailPattern)]],
+        email: [ '', [Validators.required, ]],
         username: [ '', [Validators.required, Validators.minLength(4)]],
         password: [ '', [Validators.required, Validators.minLength(8)]],
         passwordConfirm: [ '', [Validators.required, Validators.minLength(8)]],
@@ -61,7 +59,7 @@ export class FormRegisterComponent implements OnInit {
 
   onSave(form) {
     debugger
-    const register = Object.assign({}, this.user, form.value);
+    const register = Object.assign({}, this.signupForm);
     debugger
     if (this.signupForm.valid) {
         this.httpClient.post<any>(`${environment.apiBack}/users`, register).subscribe(
@@ -71,18 +69,6 @@ export class FormRegisterComponent implements OnInit {
         debugger
     } else {
       console.log('Email no valido');
-
     }
-
-
-  }
-
-  private validateEmail(control: AbstractControl): { [key: string]: any } {
-    debugger
-    const url = control.value;
-    debugger
-    const correct = EMAIL_VALID.test(url);
-    debugger
-    return !correct ? { url: true } : null;
   }
 }
