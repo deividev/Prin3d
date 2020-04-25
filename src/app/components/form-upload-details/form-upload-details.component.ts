@@ -13,6 +13,7 @@ export class FormUploadDetailsComponent implements OnInit {
   formUpload : FormGroup;
   uploadModel: FormGroup;
   images: any;
+  model: any;
 
   constructor(private httpClient : HttpClient) { }
 
@@ -48,21 +49,37 @@ export class FormUploadDetailsComponent implements OnInit {
     // this.formUpload.cont rols['file'].setValue(event.target.files[0]);
   }
 
+  changeModel(event) {
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.model = file;
+    }
+    // this.formUpload.cont rols['file'].setValue(event.target.files[0]);
+  }
+
   upload(form){
     const upload = Object.assign({}, this.formUpload);
-    this.fileUpload.append('file', this.images);
+    const fdImg = new FormData();
+    const fdModel = new FormData();
+    fdImg.append('image', this.images);
+    fdModel.append('model', this.model);
     debugger
 
-    this.httpClient.post<any>(`${environment.apiBack}upload`, this.images).subscribe(
+    this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe(
       (res) => console.log(res),
       (err) => console.log(err),
-     );
+    );
     debugger
-    this.httpClient.post<any>(`${environment.apiBack}/models`, upload).subscribe(
+    this.httpClient.post<any>(`${environment.apiBack}/upload/models`, fdModel).subscribe(
       (res) => console.log(res),
       (err) => console.log(err),
-     );
+    );
     debugger
+    // this.httpClient.post<any>(`${environment.apiBack}/models`, upload).subscribe(
+    //   (res) => console.log(res),
+    //   (err) => console.log(err),
+    //  );
+    // debugger
   }
 
 

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'https://5e6602fb2aea440016afb739.mockapi.io',
-  apiBack: 'http://localhost:3009/'
+  apiBack: 'http://localhost:3009'
 };
 
 /*

@@ -53,7 +53,8 @@
     <div class="form__row">
         <div class="form__label--files">
           <label for="file">Model 3d <i class="icon-upload"></i></label>
-          <input class="avatar__control--file" id="file" type="file">
+          <input  (change)="changeModel($event)" formControlName="model" name="model" id="model" type="file">
+          <!-- class="avatar__control--file" -->
           <p>fsefesfsefse</p>
 
         </div>
