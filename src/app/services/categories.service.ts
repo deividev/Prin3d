@@ -10,10 +10,10 @@ import { Observable } from 'rxjs/internal/Observable';
 export class CategoriesService {
 
   private resource: string = 'categories';
-  constructor(private httpClient: HttpClient) { }
+
+  constructor(private http: HttpClient) { }
 
   getCategories(): Observable <any> {
-    return this.httpClient.get(`${environment.apiBack}/${this.resource}`);
+    return this.http.get(`${environment.apiBack}/${this.resource}`)
   }
-
 }

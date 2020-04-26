@@ -21,8 +21,8 @@ export class HeaderComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.categoriesService.getCategories().subscribe((result) => {
-      this.categories = result;
+    this.categoriesService.getCategories().subscribe((res) => {
+      this.categories = res;
       debugger
     }, error => {
       console.error(error);
