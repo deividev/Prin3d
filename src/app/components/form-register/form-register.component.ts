@@ -38,7 +38,6 @@ export class FormRegisterComponent implements OnInit {
 
 
   ngOnChanges(changes: SimpleChanges): void {
-    debugger
     if (this.user) {
       this.signupForm = this.formBuilder.group({
         name: [ this.user.name, [Validators.required, Validators.minLength(4)]],
@@ -59,15 +58,12 @@ export class FormRegisterComponent implements OnInit {
   }
 
   onSave(form) {
-    debugger
     const register = Object.assign({}, this.signupForm.value);
-    debugger
     if (this.signupForm.valid) {
         this.httpClient.post<any>(`${environment.apiBack}/users`, register).subscribe(
         (res) => console.log(res),
         (err) => console.log(err),);
         form.reset();
-        debugger
     } else {
       console.log('Email no valido');
     }

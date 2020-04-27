@@ -21,15 +21,12 @@ export class FormLoginComponent implements OnInit {
   }
 
   login(form){
-    debugger
     const login = Object.assign({}, this.formLogin.value);
-    debugger
 
     this.httpClient.post<any>(`${environment.apiBack}/users`, login).subscribe(
       (res) => console.log(res),
       (err) => console.log(err),
      );
-      debugger
   }
 
 
