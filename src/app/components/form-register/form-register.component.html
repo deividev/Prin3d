@@ -1,5 +1,5 @@
 <div class="login" routerLinkActive="active">
-  <form class="form" [formGroup]="signupForm" (ngSubmit)="register()">
+  <form class="form" [formGroup]="formRegister" (ngSubmit)="register()">
     <div class="logo">
       <a class="logo" routerLink="/home">
         <img  src="../assets/images/logo.png" alt="" width="100" height="100">
@@ -17,11 +17,11 @@
         <div class="form__group">
             <label class="form__label" for="name" >Name</label>
             <input required class="form__control" type="text" formControlName="name" id="name" minlength="4">
-            <div *ngIf="signupForm.controls.name.touched " class="alert-danger">
-              <div class="form-control-feedback" [hidden]="!signupForm.controls.name.errors?.required">
+            <div *ngIf="formRegister.controls.name.touched " class="alert-danger">
+              <div class="form-control-feedback" [hidden]="!formRegister.controls.name.errors?.required">
                 Input required
               </div>
-              <div class="form-control-feedback" [hidden]="!signupForm.controls.name.errors?.minlength">
+              <div class="form-control-feedback" [hidden]="!formRegister.controls.name.errors?.minlength">
                 Min 4 characters
               </div>
             </div>
@@ -31,11 +31,11 @@
         <div class="form__group  form__group--ml">
             <label class="form__label" for="email" >Email</label>
             <input required class="form__control" type="email" formControlName="email"  id="email" minlength="4">
-            <div *ngIf="signupForm.controls.email.touched" class="alert-danger">
-              <div class="form-control-feedback" [hidden]="!signupForm.controls.email.errors?.required">
+            <div *ngIf="formRegister.controls.email.touched" class="alert-danger">
+              <div class="form-control-feedback" [hidden]="!formRegister.controls.email.errors?.required">
                 Input required
               </div>
-              <div class="form-control-feedback" [hidden]="!signupForm.controls.email.errors?.email">
+              <div class="form-control-feedback" [hidden]="!formRegister.controls.email.errors?.email">
                 Email incorrect
               </div>
             </div>
@@ -47,11 +47,11 @@
       <div class="form__group">
         <label class="form__label form__label--large" for="username" >Username</label>
         <input required class="form__control form__control--large" type="text" formControlName="username" id="username" minlength="4">
-        <div *ngIf="signupForm.controls.username.touched" class="alert-danger">
-          <div class="form-control-feedback" [hidden]="!signupForm.controls.username.errors?.required">
+        <div *ngIf="formRegister.controls.username.touched" class="alert-danger">
+          <div class="form-control-feedback" [hidden]="!formRegister.controls.username.errors?.required">
             Input required
           </div>
-          <div class="form-control-feedback" [hidden]="!signupForm.controls.username.errors?.minlength">
+          <div class="form-control-feedback" [hidden]="!formRegister.controls.username.errors?.minlength">
             Min 4 characters
           </div>
         </div>
@@ -65,11 +65,11 @@
             <label class="form__label" for="password" >Password <span>(Min 8 characters)</span></label>
           </div>
           <input required class="form__control" type="password" formControlName="password"  id="password" minlength="8">
-          <div *ngIf="signupForm.controls.password.touched" class="alert-danger">
-            <div class="form-control-feedback" [hidden]="!signupForm.controls.password.errors?.required">
+          <div *ngIf="formRegister.controls.password.touched" class="alert-danger">
+            <div class="form-control-feedback" [hidden]="!formRegister.controls.password.errors?.required">
               Input required
             </div>
-            <div class="form-control-feedback" [hidden]="!signupForm.controls.password.errors?.minlength">
+            <div class="form-control-feedback" [hidden]="!formRegister.controls.password.errors?.minlength">
               Min 8 characters
             </div>
           </div>
@@ -87,11 +87,11 @@
               </svg>
             </button>
           </div>
-          <div *ngIf="signupForm.controls.passwordConfirm.touched" class="alert-danger">
-            <div class="form-control-feedback" [hidden]="!signupForm.controls.passwordConfirm.errors?.required">
+          <div *ngIf="formRegister.controls.passwordConfirm.touched" class="alert-danger">
+            <div class="form-control-feedback" [hidden]="!formRegister.controls.passwordConfirm.errors?.required">
               Input required
             </div>
-            <div class="form-control-feedback" [hidden]="!signupForm.controls.passwordConfirm.errors?.minlength">
+            <div class="form-control-feedback" [hidden]="!formRegister.controls.passwordConfirm.errors?.minlength">
               Min 8 characters
             </div>
           </div>
@@ -99,7 +99,7 @@
         <!-- ** PasswordConfirm ** -->
 
       </div>
-      <button class="btn btn__primary" type="submit" [disabled]="!signupForm.valid">Register</button>
+      <button class="btn btn__primary" type="submit" [disabled]="!formRegister.valid">Register</button>
     </form>
   <div class="background"></div>
 </div>

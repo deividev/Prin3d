@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import {environment} from '../../../environments/environment';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
+
+
+
 @Component({
   selector: 'app-form-login',
   templateUrl: './form-login.component.html',
@@ -11,7 +14,8 @@ export class FormLoginComponent implements OnInit {
 
   formLogin: FormGroup;
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private authService : AuthService,
+              private router : Router) { }
 
   ngOnInit(): void {
     this.formLogin = new FormGroup({
@@ -20,13 +24,20 @@ export class FormLoginComponent implements OnInit {
     });
   }
 
-  login(form){
-    const login = Object.assign({}, this.formLogin.value);
-
-    this.httpClient.post<any>(`${environment.apiBack}/signin`, login).subscribe(
-      (res) => console.log(res),
-      (err) => console.log(err),
-     );
+  login(){
+    const User = Object.assign({}, this.formLogin.value);
+    if (this.formLogin.valid) {
+        debugger
+        this.authService.signIn(User).subscribe(
+        (res) => {
+          console.log(res);
+          localStorage.setItem('token', res.token);
+          this.router.navigate(['/home']);
+          debugger
+        },
+        (err) => console.log(err),);
+        this.formLogin.reset();
+    }
   }
 
 

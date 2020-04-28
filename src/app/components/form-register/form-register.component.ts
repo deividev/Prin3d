@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter, Input, OnChanges, SimpleChanges, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router} from '@angular/router';
+
 
 import { AuthService } from '../../services/auth.service';
 import { environment } from 'src/environments/environment';
@@ -18,16 +20,15 @@ export class FormRegisterComponent implements OnInit {
   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   user: any;
-  signupForm: FormGroup;
-  router: any;
+  formRegister: FormGroup;
 
 
   constructor(private formBuilder: FormBuilder,
-              private httpClient : HttpClient,
-              private authService : AuthService) { }
+              private authService : AuthService,
+              private router : Router) { }
 
   ngOnInit(): void {
-      this.signupForm = new FormGroup({
+      this.formRegister = new FormGroup({
       name: new FormControl(''),
       email: new FormControl(''),
       username: new FormControl(''),
@@ -42,7 +43,7 @@ export class FormRegisterComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.user) {
-      this.signupForm = this.formBuilder.group({
+      this.formRegister = this.formBuilder.group({
         name: [ this.user.name, [Validators.required, Validators.minLength(4)]],
         email: [ this.user.email, [Validators.required, Validators.pattern(this.emailPattern)]],
         username: [ this.user.userName , [Validators.required, Validators.minLength(4)]],
@@ -50,7 +51,7 @@ export class FormRegisterComponent implements OnInit {
         passwordConfirm: [ this.user.passwordConfirm, [Validators.required, Validators.minLength(8)]],
         });
     } else {
-      this.signupForm = this.formBuilder.group({
+      this.formRegister = this.formBuilder.group({
         name: [ '', [Validators.required, Validators.minLength(4)]],
         email: [ '', [Validators.required, Validators.pattern(this.emailPattern)]],
         username: [ '', [Validators.required, Validators.minLength(4)]],
@@ -61,16 +62,17 @@ export class FormRegisterComponent implements OnInit {
   }
 
   register() {
-    debugger
-    const User = Object.assign({}, this.signupForm.value);
-    if (this.signupForm.valid) {
+    const User = Object.assign({}, this.formRegister.value);
+    if (this.formRegister.valid) {
         debugger
         this.authService.signUp(User).subscribe(
-        (res) => console.log(res),
+        (res) => {
+          console.log(res);
+          localStorage.setItem('token', res.token);
+          this.router.navigate(['/home']);
+        },
         (err) => console.log(err),);
-        this.signupForm.reset();
-    } else {
-      console.log('Email no valido');
+        this.formRegister.reset();
     }
   }
 }

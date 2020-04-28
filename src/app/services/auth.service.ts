@@ -20,4 +20,9 @@ export class AuthService {
     debugger
     return this.http.post(`${environment.apiBack}/signup`, User)
   }
+
+  signIn(User): Observable <any> {
+    debugger
+    return this.http.post(`${environment.apiBack}/signin`, User)
+  }
 }
