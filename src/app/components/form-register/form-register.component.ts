@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter, Input, OnChanges, SimpleChanges, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+
+import { AuthService } from '../../services/auth.service';
 import { environment } from 'src/environments/environment';
 
 
@@ -21,7 +23,8 @@ export class FormRegisterComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder,
-              private httpClient : HttpClient) { }
+              private httpClient : HttpClient,
+              private authService : AuthService) { }
 
   ngOnInit(): void {
       this.signupForm = new FormGroup({
@@ -57,13 +60,15 @@ export class FormRegisterComponent implements OnInit {
     }
   }
 
-  onSave(form) {
-    const register = Object.assign({}, this.signupForm.value);
+  register() {
+    debugger
+    const User = Object.assign({}, this.signupForm.value);
     if (this.signupForm.valid) {
-        this.httpClient.post<any>(`${environment.apiBack}/users`, register).subscribe(
+        debugger
+        this.authService.signUp(User).subscribe(
         (res) => console.log(res),
         (err) => console.log(err),);
-        form.reset();
+        this.signupForm.reset();
     } else {
       console.log('Email no valido');
     }
