@@ -12,10 +12,10 @@ export class Model3dService {
   constructor(private httpClient: HttpClient) { }
 
   getModels(): Observable <any> {
-    return this.httpClient.get(`${environment.apiUrl}/${this.resource}`);
+    return this.httpClient.get(`${environment.apiBack}/${this.resource}`);
   }
 
   getModelById(modelsId: string): Observable <any> {
-    return this.httpClient.get(`${environment.apiUrl}/${this.resource}/${modelsId}`)
+    return this.httpClient.get(`${environment.apiBack}/${this.resource}/${modelsId}`)
   }
 }

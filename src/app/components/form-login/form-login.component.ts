@@ -33,6 +33,7 @@ export class FormLoginComponent implements OnInit {
           console.log(res);
           localStorage.setItem('token', res.token);
           this.router.navigate(['/home']);
+          return res
           debugger
         },
         (err) => console.log(err),);

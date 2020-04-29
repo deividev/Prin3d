@@ -23,16 +23,17 @@ export class AppComponent {
     ).subscribe((event: NavigationEnd) => {
       console.log(event.url);
       if (event.url === '/login' || event.url === '/register') {
+        debugger
         this.load = false;
-      }  else {
-        this.load = true;
+      }
+      if (this.authServide.loggedIn()) {
+        debugger
+        this.load = false;
+        this.loadLogin = true;
+      } else {
+        this.loadLogin = false;
       }
     });
-    // this.router.events.subscribe(event => {
-    //   if(event.constructor.name === "NavigationEnd") {
-    //     this.routedName = event.url;
-    //   }
-    // });
   }
   ngOnInit(): void {
   }
