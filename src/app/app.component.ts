@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+
+import { AuthService  } from './services/auth.service'
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,8 @@ export class AppComponent {
   load: Boolean = true;
   loadLogin: Boolean = false;
 
-  constructor (private router: Router) {
+  constructor (private router: Router,
+               private authServide: AuthService) {
     router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
