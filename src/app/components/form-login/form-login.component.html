@@ -28,7 +28,7 @@
           <label class="form__label" for="password" >Password</label>
           <a class="form__link" routerLink="/forgot">Forgot?</a>
         </div>
-        <input class="form__control" type="password"  id="password">
+        <input class="form__control" type="text"  id="password" formControlName="password">
         <div *ngIf="formLogin.controls.password.dirty" class="alert-danger">
           <div class="form-control-feedback" [hidden]="!formLogin.controls.password.errors?.required">
             Campo obligatorio

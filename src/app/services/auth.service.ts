@@ -14,7 +14,8 @@ import { environment } from '../../environments/environment';
 export class AuthService {
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              ) { }
 
   signUp(User): Observable <any> {
     debugger
@@ -25,4 +26,11 @@ export class AuthService {
     debugger
     return this.http.post(`${environment.apiBack}/signin`, User)
   }
+
+  loggedIn() {
+    return !!localStorage.getItem('token');
+  }
+
 }
+
+

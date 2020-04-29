@@ -1,5 +1,7 @@
 import { NgModule }              from '@angular/core';
 import { RouterModule, Routes }  from '@angular/router';
+
+
 import { HomeComponent } from './pages/home/home.component';
 import { Error404Component } from './components/error404/error404.component';
 import { FormLoginComponent } from './components/form-login/form-login.component';
@@ -12,6 +14,9 @@ import { CategoryComponent } from './components/category/category.component';
 import { FormForgotComponent } from './components/form-forgot/form-forgot.component';
 import { ListModelComponent } from './components/listModel/listModel.component';
 
+
+import { AuthGuard } from './guards/auth.guard';
+
 const appRoutes: Routes = [
   {path: 'login', component: FormLoginComponent},
   {path: 'forgot', component: FormForgotComponent},
@@ -21,7 +26,7 @@ const appRoutes: Routes = [
   {path: 'category/_id', component: ListModelComponent},
   {path: 'upload', component: FormUploadDetailsComponent},
   {path: 'editUser', component: FormEditUserComponent},
-  {path: 'user/:userId', component: InfoUserComponent},
+  {path: 'user/:userId', component: InfoUserComponent, canActivate: [AuthGuard]},
   {path: '404', component: Error404Component},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', redirectTo: '404'}
