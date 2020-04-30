@@ -24,6 +24,7 @@ export class FormLoginComponent implements OnInit {
     });
   }
 
+
   login(){
     const User = Object.assign({}, this.formLogin.value);
     if (this.formLogin.valid) {
@@ -32,8 +33,9 @@ export class FormLoginComponent implements OnInit {
         (res) => {
           console.log(res);
           localStorage.setItem('token', res.token);
+          this.authService.changeLoggedIn(true);
           this.router.navigate(['/home']);
-          return res
+          return res;
           debugger
         },
         (err) => console.log(err),);

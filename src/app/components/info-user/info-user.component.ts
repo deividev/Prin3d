@@ -15,10 +15,13 @@ export class InfoUserComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
+
   }
   logout(){
+    debugger
     this.authService.logout();
     this.router.navigate(['/home'])
+    debugger
   }
 
 }

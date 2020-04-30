@@ -11,34 +11,33 @@ import { AuthService  } from './services/auth.service'
 })
 export class AppComponent {
   title = 'print3d';
-  routedName = "";
 
-  load: Boolean = true;
-  loadLogin: Boolean = false;
+
+  url: string;
+
 
   constructor (private router: Router,
-               private authServide: AuthService) {
+               private authService: AuthService) {
     router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
+      debugger
+      this.url = event.url;
       console.log(event.url);
-      if (event.url === '/login' || event.url === '/register') {
-        debugger
-        this.load = false;
-      }
-      if (this.authServide.loggedIn()) {
-        debugger
-        this.load = false;
-        this.loadLogin = true;
-      } else {
-        this.loadLogin = false;
-      }
     });
   }
   ngOnInit(): void {
   }
 
   login(){
-
   }
+
+  get isHeaderActive() {
+    return !(this.url === '/register' || this.url === '/login' ||  this.url === '/404');
+ }
+
+ get isHeaderLoginActive() {
+  return this.authService.loggedIn;
+ }
+
 }

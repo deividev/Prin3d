@@ -10,7 +10,6 @@ import { FormRegisterComponent } from './components/form-register/form-register.
 import { FormUploadDetailsComponent } from './components/form-upload-details/form-upload-details.component';
 import { FormEditUserComponent } from './components/form-edit-user/form-edit-user.component';
 import { InfoUserComponent } from './components/info-user/info-user.component';
-import { CategoryComponent } from './components/category/category.component';
 import { FormForgotComponent } from './components/form-forgot/form-forgot.component';
 import { ListModelComponent } from './components/listModel/listModel.component';
 
@@ -26,7 +25,7 @@ const appRoutes: Routes = [
   {path: 'category/_id', component: ListModelComponent},
   {path: 'upload', component: FormUploadDetailsComponent},
   {path: 'editUser', component: FormEditUserComponent},
-  {path: 'user/:userId', component: InfoUserComponent, canActivate: [AuthGuard]},
+  {path: 'user', component: InfoUserComponent, canActivate: [AuthGuard]},
   {path: '404', component: Error404Component},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', redirectTo: '404'}
@@ -34,7 +33,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   exports: [
     RouterModule

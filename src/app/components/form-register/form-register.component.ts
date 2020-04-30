@@ -1,6 +1,5 @@
-import { Component, OnInit, Output, EventEmitter, Input, OnChanges, SimpleChanges, } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl, FormControl } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router} from '@angular/router';
 
 
@@ -16,8 +15,8 @@ import { environment } from 'src/environments/environment';
 export class FormRegisterComponent implements OnInit {
 
 
-  private emailPattern: any =
-  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  emailPattern: any =
+  /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
 
   user: any;
   formRegister: FormGroup;
@@ -29,11 +28,11 @@ export class FormRegisterComponent implements OnInit {
 
   ngOnInit(): void {
       this.formRegister = new FormGroup({
-      name: new FormControl(''),
-      email: new FormControl(''),
-      username: new FormControl(''),
-      password: new FormControl(''),
-      passwordConfirm: new FormControl(''),
+      name: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      email: new FormControl('', [Validators.required, Validators.pattern(this.emailPattern)]),
+      username: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+      passwordConfirm: new FormControl('', [Validators.required, Validators.minLength(8)]),
     });
   }
 
@@ -41,25 +40,6 @@ export class FormRegisterComponent implements OnInit {
 
 
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (this.user) {
-      this.formRegister = this.formBuilder.group({
-        name: [ this.user.name, [Validators.required, Validators.minLength(4)]],
-        email: [ this.user.email, [Validators.required, Validators.pattern(this.emailPattern)]],
-        username: [ this.user.userName , [Validators.required, Validators.minLength(4)]],
-        password: [ this.user.password , [Validators.required, Validators.minLength(8)]],
-        passwordConfirm: [ this.user.passwordConfirm, [Validators.required, Validators.minLength(8)]],
-        });
-    } else {
-      this.formRegister = this.formBuilder.group({
-        name: [ '', [Validators.required, Validators.minLength(4)]],
-        email: [ '', [Validators.required, Validators.pattern(this.emailPattern)]],
-        username: [ '', [Validators.required, Validators.minLength(4)]],
-        password: [ '', [Validators.required, Validators.minLength(8)]],
-        passwordConfirm: [ '', [Validators.required, Validators.minLength(8)]],
-      });
-    }
-  }
 
   register() {
     const User = Object.assign({}, this.formRegister.value);

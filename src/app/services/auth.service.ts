@@ -16,8 +16,11 @@ import { environment } from '../../environments/environment';
 export class AuthService {
 
 
+  loggedIn: boolean;
+
   constructor(private http: HttpClient,
               private router: Router,
+
               ) { }
 
   signUp(User): Observable <any> {
@@ -30,8 +33,9 @@ export class AuthService {
     return this.http.post(`${environment.apiBack}/signin`, User)
   }
 
-  loggedIn() {
-    return !!localStorage.getItem('token');
+  changeLoggedIn(value) {
+    debugger
+    this.loggedIn = value;
   }
 
   getToken() {
@@ -40,6 +44,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('token');
+    this.loggedIn = false;
     debugger
   }
 
