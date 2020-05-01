@@ -16,7 +16,7 @@
       <!-- Name -->
       <div class="form__group">
         <label class="form__label" for="name">Name</label>
-        <input required class="form__control" type="text" formControlName="name" id="name" minlength="4">
+        <input autofocus required class="form__control" type="text" formControlName="name" id="name" minlength="4">
         <div *ngIf="formRegister.controls.name.touched " class="alert-danger">
           <div class="form-control-feedback" [hidden]="!formRegister.controls.name.errors?.required">
             Input required
@@ -66,7 +66,7 @@
         <div class="form__info">
           <label class="form__label" for="password">Password <span>(Min 8 characters)</span></label>
         </div>
-        <input required class="form__control" type="password" formControlName="password" id="password" minlength="8">
+        <input a required class="form__control" [type]="fieldTextType ? 'text' : 'password'" formControlName="password" id="password" minlength="8">
         <div *ngIf="formRegister.controls.password.touched" class="alert-danger">
           <div class="form-control-feedback" [hidden]="!formRegister.controls.password.errors?.required">
             Input required
