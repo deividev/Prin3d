@@ -21,6 +21,8 @@ export class FormRegisterComponent implements OnInit {
   user: any;
   formRegister: FormGroup;
 
+  fieldTextType: boolean;
+
 
   constructor(private formBuilder: FormBuilder,
               private authService : AuthService,
@@ -54,5 +56,9 @@ export class FormRegisterComponent implements OnInit {
         (err) => console.log(err),);
         this.formRegister.reset();
     }
+  }
+
+  toggleFieldTextType() {
+    this.fieldTextType = !this.fieldTextType;
   }
 }
