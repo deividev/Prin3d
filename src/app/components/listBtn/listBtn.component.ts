@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { CategoriesService  } from '../../services/categories.service'
+import { Model3dService } from 'src/app/services/model3d.service';
+import { Model3d } from 'src/app/models/model3d';
 
 @Component({
   selector: 'app-listBtn',
@@ -7,7 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListBtnComponent implements OnInit {
 
-  constructor() { }
+  @Input() listModels: any;
+
+
+  constructor(private categoriesService: CategoriesService,
+              ) {
+    this.categoriesService.getCategories().subscribe((result) => {
+
+    });
+
+   }
 
   ngOnInit(): void {
   }

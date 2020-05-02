@@ -11,8 +11,8 @@
   <div class="avatar__info">
     <h1>Deividev</h1>
     <div class="avatar__info--btn">
-      <a class="btn" href="editUser.html">Edit</a>
-        <a (click)="logout()" class="btn btn__icon">
+      <a class="btn btn__icon--success" href="editUser.html">Edit</a>
+        <a (click)="logout()" class=" btn__icon--success">
           <svg>
             <use xlink:href="../assets/svg/sprite.svg#exit"></use>
           </svg>
@@ -35,5 +35,7 @@
       </div>
   </div>
 </div>
+<app-listBtn ></app-listBtn>
+<app-listModel [listModels]="modelsUser"></app-listModel>
 <!-- ENTRY USER -->
 <!-- **** -->
