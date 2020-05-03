@@ -79,12 +79,13 @@
     justify-content: center;
     cursor: pointer;
     outline: none;
+    padding: 4px 14px;
     background: none;
     text-align: center;
     border-radius: 4px;
-    border: 1px solid $text-default;
+    fill: #fff;
+    stroke: $gray-200;
   }
-
   &__icon--info {
     border: none;
   }
@@ -93,7 +94,7 @@
     border: 1px solid $gray-300;
     color: $gray-300;
     transition: 0.2s linear;
-    margin: 10px 10px 10px 0px;
+    margin: 10px;
   }
 
   &__icon--success:hover {
@@ -105,17 +106,17 @@
     margin-right: 0px;
     border: 0;
 
-    svg {
-      width: 27px;
-      height: 27px;
-    }
+
   }
 
 }
 //------------
 //BUTTONS ICON
 //------------
-
+a:hover, button:hover  svg{
+  fill: #fff;
+  stroke: $second;
+}
 
 
 .btn__user {

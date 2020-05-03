@@ -5,7 +5,7 @@
 
 .user {
   display: flex;
-  flex-direction: row;
+  height: rem(280px);
   align-items: center;
   background-color: $third;
   margin: 20px 100px;
@@ -17,8 +17,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: rem(380px);
-  width: 30%;
+  padding-right: 200px;
 
 
 
