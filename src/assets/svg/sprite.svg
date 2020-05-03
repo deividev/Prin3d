@@ -53,7 +53,7 @@
   <title>Icon collection</title>
   <!-- Si necesita  <desc></desc> -->
   <path d="M3 3h18v18H3zm9 5v8m-4-4h8"
-    fill=""
+    fill="none"
     stroke=""
     stroke-width="2"
     stroke-linecap="round"
@@ -81,12 +81,12 @@
 
   <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 6.9 8 11.7z"
     fill="none"
-    stroke="#555"
+    stroke="#777"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
-  <circle cx="12" cy="10" r="3" stroke="#555" fill="none"/>
+  <circle cx="12" cy="10" r="3" stroke="#b4b4b4" fill="none"/>
 </symbol>
 
 <!-- EYE -->
@@ -105,7 +105,7 @@
     stroke-linecap="round"
     stroke-linejoin="round"
   />
-  <circle cx="12" cy="12" r="3" fill="#fff" stroke="#555"></circle>
+  <circle cx="12" cy="12" r="3" fill="none" stroke=""></circle>
 </symbol>
 
 <!-- CHECK-RIGHT -->
@@ -142,8 +142,8 @@
   <!-- Si necesita  <desc></desc> -->
 
   <path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"
-    fill="#fff"
-    stroke="#b4b4b4"
+    fill=""
+    stroke=""
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
