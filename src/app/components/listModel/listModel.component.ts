@@ -18,14 +18,16 @@ export class ListModelComponent implements OnInit {
   routeCategorie: any;
 
 
+  @Input() showTitle: boolean;
+  @Input() showNavigation: boolean;
+
+
 
 
 
 
   constructor(private categoriesService: CategoriesService) {
     this.categoriesService.getCategories().subscribe((result) => {
-      //Me traigo todas las categorias de la DB
-      // this.categoriesId = result.filter(result._id);
     });
 
 

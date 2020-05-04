@@ -9,8 +9,9 @@
     </form>
   </div>
   <div class="avatar__info">
-    <h1>Deividev</h1>
+
     <div class="avatar__info--btn">
+      <h1>Deividev</h1>
       <a class="btn btn__icon btn__icon--success" routerLink="/editUser" >Edit</a>
         <a (click)="logout()" class="btn btn__icon btn__icon--success">
           <svg>
@@ -19,22 +20,31 @@
         </a>
     </div>
       <div class="avatar__info--link">
-        <a class="btn__link">
+        <a class="btn__link btn__link--success">
           <svg>
             <use xlink:href="../assets/svg/sprite.svg#location"></use>
           </svg>
           Madrid
         </a>
-        <a class="btn__link" routerLink="https://www.youtube.com/watch?v=AbJ-y2vZgBs&feature=youtu.be">artstation.com/deividev</a>
-        <a class="btn__link" routerLink="" >@deividev</a>
+        <a class="btn__link" routerLink="https://www.youtube.com/watch?v=AbJ-y2vZgBs&feature=youtu.be">
+          <svg>
+            <use xlink:href="../assets/svg/sprite.svg#location"></use>
+          </svg>
+          artstation.com/deividev
+        </a>
+        <a class="btn__link" routerLink="">
+          <svg>
+            <use xlink:href="../assets/svg/sprite.svg#location"></use>
+          </svg>
+          @deividev
+        </a>
       </div>
-      <div class="avatar--social">
+      <div class="avatar__info--description">
       <p>Modelador 3d, programador amateur y amante de los videojuegos.wdawdawdawdawdawdawdawdawdawdawd</p>
       </div>
       <h5>Tags</h5>
   </div>
 </div>
-<app-listBtn ></app-listBtn>
-<app-listModel [listModels]="modelsUser"></app-listModel>
+<app-listModel [listModels]="modelsUser" [showNavigation]="true" [showTitle]="false"></app-listModel>
 <!-- ENTRY USER -->
 <!-- **** -->

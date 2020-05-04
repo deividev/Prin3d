@@ -5,10 +5,10 @@
 
 .user {
   display: flex;
-  height: rem(280px);
-  align-items: center;
+  align-items: flex-start;
   background-color: $third;
   margin: 20px 100px;
+  padding: 20px 0px;
 }
 
 
@@ -18,7 +18,6 @@
   align-items: center;
   flex-direction: column;
   padding-right: 100px;
-  margin-bottom: 20px;
 
 
 
@@ -45,24 +44,22 @@
 
   &__info--btn {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    padding-bottom: 10px;
     width: 70%;
   }
 
   &__info--link {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 70%;
+    flex-direction: column;
+   justify-content:  center;
+    padding-bottom: 10px;
   }
 
-  &--social{
+  &__info--description{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0px;
-    width: 100%;
+    padding-bottom: 10px;
 }
 
   &__img {

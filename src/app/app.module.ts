@@ -19,7 +19,6 @@ import { Error404Component } from './components/error404/error404.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Model3dComponent } from './components/model3d/model3d.component';
 import { ListModelComponent } from './components/listModel/listModel.component';
-import { ListBtnComponent } from './components/listBtn/listBtn.component';
 import { ModalCollectionComponent } from './components/modal-collection/modal-collection.component';
 import { InfoModel3dComponent } from './components/info-model3d/info-model3d.component';
 import { CategoryComponent } from './components/category/category.component';
@@ -37,7 +36,6 @@ import { TokeIntercerptorService } from './services/toke-intercerptor.service'
     FormRegisterComponent,
     FormForgotComponent,
     InfoUserComponent,
-    ListBtnComponent,
     HeaderLoginComponent,
     FormEditUserComponent,
     FormUploadDetailsComponent,
