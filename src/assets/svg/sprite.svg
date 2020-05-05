@@ -93,19 +93,15 @@
 <symbol id="eye" viewBox="0 0 24 24" width="30px" heigth="30px">
   <title>Icon eye</title>
   <!-- Si necesita  <desc></desc> -->
-
-
-
-
-   <!--*** ACUERDATE *** currentColor -->
+   <!--*** ACUERDATE *** currntColor -->
   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
-    fill="#fff"
-    stroke="#555"
+    fill=""
+    stroke=""
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
-  <circle cx="12" cy="12" r="3" fill="none" stroke=""></circle>
+  <circle cx="12" cy="12" r="3" fill="" stroke=""></circle>
 </symbol>
 
 <!-- CHECK-RIGHT -->

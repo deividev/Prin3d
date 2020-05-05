@@ -54,14 +54,10 @@
         <div class="form__label--files">
           <label for="file">Model 3d <i class="icon-upload"></i></label>
           <input  (change)="changeModel($event)" formControlName="model" name="model" id="model" type="file">
-          <!-- class="avatar__control--file" -->
-          <p>fsefesfsefse</p>
-
         </div>
         <div class="form__label--files">
           <label for="file">Images <i class="icon-upload"></i></label>
           <input name="image"  type="file" (change)="changeFile($event)" formControlName="img">
-          <p>Stormtrooper-glb</p>
         </div>
       </div>
     <button  class="btn btn__success" type="submit" (click)="upload($event)" >Upload</button>

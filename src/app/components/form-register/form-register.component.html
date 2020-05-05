@@ -7,6 +7,7 @@
       <h1>Factory 3d</h1>
     </div>
     <button class="btn btn--default" type="button">
+      Register with
       <svg>
         <use xlink:href="../assets/svg/sprite.svg#google"></use>
       </svg>
@@ -84,7 +85,7 @@
         <div class="form__item">
           <input required class="form__item--control" [type]="fieldTextType ? 'text' : 'password'" formControlName="passwordConfirm"
             id="passwordConfirm" minlength="8">
-          <button class="form__item--icon" (click)="toggleFieldTextType()" type="button">
+          <button class="form__item--icon btn__icon" (click)="toggleFieldTextType()" type="button">
             <svg>
               <use xlink:href="../assets/svg/sprite.svg#eye"></use>
             </svg>
