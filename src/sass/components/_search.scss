@@ -11,20 +11,26 @@
   border: 1px solid $gray-200;
   border-radius: 7px;
   color: $text-default;
-  background-color: #fff;
+  background-color: $third;
 
-  &__control:focus {
-    width: 100%;
-    background-color: $gray-100;
-    outline: 1px solid $gray-100;
+  &__control:focus  {
+    background-color: #fff;
+    border: 1px solid $gray-200;
+    outline: none;
+    border-radius: 7px;
   }
+
+  &__control:focus .search {
+    border: none;
+    outline: none;
+  }
+
 
   &__control {
     width: 100%;
     font-size: rem(16px);
     background-color: transparent;
     color: $text-default;
-    border-radius: 7px;
     border: 0;
     padding: 10px 5px 10px 40px;
     outline: none;
