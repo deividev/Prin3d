@@ -2,7 +2,6 @@
 <div class="container">
   <form action="upload" method="POST" enctype="multipart/form-data" [formGroup]="formUpload" class="form-upload">
     <h1>Upload 3d</h1>
-    <fieldset>
     <div class="form__row ">
       <div class="form__group">
         <label class="form__label" for="title">Title</label>
@@ -53,7 +52,7 @@
     <div class="form__row">
         <div class="form__label--files">
           <label for="file">Model 3d <i class="icon-upload"></i></label>
-          <input  (change)="changeModel($event)" formControlName="model" name="model" id="model" type="file">
+          <input  (change)="changeModel($event)" formControlName="model" name="image" id="model" type="file">
         </div>
         <div class="form__label--files">
           <label for="file">Images <i class="icon-upload"></i></label>
@@ -61,6 +60,5 @@
         </div>
       </div>
     <button  class="btn btn__success" type="submit" (click)="upload($event)" >Upload</button>
-  </fieldset>
   </form>
 </div>

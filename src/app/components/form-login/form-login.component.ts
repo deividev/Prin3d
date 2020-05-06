@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
@@ -14,13 +14,16 @@ export class FormLoginComponent implements OnInit {
 
   formLogin: FormGroup;
 
+  emailPattern: any =
+  /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
+
   constructor(private authService : AuthService,
               private router : Router) { }
 
   ngOnInit(): void {
     this.formLogin = new FormGroup({
-      email: new FormControl(''),
-      password: new FormControl(''),
+      email: new FormControl('', [Validators.required, Validators.pattern(this.emailPattern)]),
+      password: new FormControl('', [Validators.required, Validators.minLength(8)]),
     });
   }
 

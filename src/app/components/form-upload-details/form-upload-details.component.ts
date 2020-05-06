@@ -62,7 +62,7 @@ export class FormUploadDetailsComponent implements OnInit {
     const fdImg = new FormData();
     const fdModel = new FormData();
     fdImg.append('image', this.images);
-    fdModel.append('model', this.model);
+    fdModel.append('image', this.model);
     debugger
 
     this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe(
@@ -70,16 +70,16 @@ export class FormUploadDetailsComponent implements OnInit {
       (err) => console.log(err),
     );
     debugger
-    this.httpClient.post<any>(`${environment.apiBack}/upload/models`, fdModel).subscribe(
+    this.httpClient.post<any>(`${environment.apiBack}/upload`, fdModel).subscribe(
       (res) => console.log(res),
       (err) => console.log(err),
     );
     debugger
-    // this.httpClient.post<any>(`${environment.apiBack}/models`, upload).subscribe(
-    //   (res) => console.log(res),
-    //   (err) => console.log(err),
-    //  );
-    // debugger
+    this.httpClient.post<any>(`${environment.apiBack}/models`, upload).subscribe(
+      (res) => console.log(res),
+      (err) => console.log(err),
+     );
+    debugger
   }
 
 
