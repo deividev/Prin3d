@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import {environment} from '../../../environments/environment';
+
+
+import { Model3d } from '../../models/model3d';
 @Component({
   selector: 'app-form-upload-details',
   templateUrl: './form-upload-details.component.html',
@@ -58,11 +61,13 @@ export class FormUploadDetailsComponent implements OnInit {
   }
 
   upload(form){
-    const upload = Object.assign({}, this.formUpload);
+
     const fdImg = new FormData();
     const fdModel = new FormData();
     fdImg.append('image', this.images);
     fdModel.append('image', this.model);
+
+    const upload = Object.assign({}, this.formUpload);
     debugger
 
     this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe(

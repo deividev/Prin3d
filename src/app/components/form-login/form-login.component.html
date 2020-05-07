@@ -15,27 +15,29 @@
       <div class="form__group">
         <label class="form__label" for="email" >Email</label>
         <input class="form__control" type="email"  id="email" formControlName="email">
-        <div *ngIf="formLogin.controls.email.dirty" class="alert-danger">
+        <div *ngIf="formLogin.controls.email.touched || formLogin.controls.email.dirty" class="alert-danger">
           <div class="form-control-feedback" [hidden]="!formLogin.controls.email.errors?.required">
-            Campo obligatorio
+            Input required
           </div>
-          <div class="form-control-feedback" [hidden]="!formLogin.controls.email.errors?.email">
-            Email incorrecto
+          <div class="form-control-feedback"
+            [hidden]="!formLogin.controls.email.errors?.pattern">
+            Value has to be a valid email address.
           </div>
         </div>
       </div>
+
       <div class="form__group ">
         <div class="form__info">
           <label class="form__label" for="password" >Password</label>
           <a class="form__link" routerLink="/forgot">Forgot?</a>
         </div>
         <input class="form__control" type="text"  id="password" formControlName="password">
-        <div *ngIf="formLogin.controls.password.dirty" class="alert-danger">
+        <div *ngIf="formLogin.controls.password.touched" class="alert-danger">
           <div class="form-control-feedback" [hidden]="!formLogin.controls.password.errors?.required">
-            Campo obligatorio
+            Input required
           </div>
           <div class="form-control-feedback" [hidden]="!formLogin.controls.password.errors?.minlength">
-            Minimo 8 carácteres
+            Min 8 characters
           </div>
         </div>
       </div>
