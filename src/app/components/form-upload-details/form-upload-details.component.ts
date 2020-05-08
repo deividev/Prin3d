@@ -69,16 +69,16 @@ export class FormUploadDetailsComponent implements OnInit {
 
     const upload = Object.assign({}, this.formUpload);
     debugger
-
-    this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe(
-      (res) => console.log(res),
-      (err) => console.log(err),
-    );
-    debugger
-    this.httpClient.post<any>(`${environment.apiBack}/upload`, fdModel).subscribe(
-      (res) => console.log(res),
-      (err) => console.log(err),
-    );
+    // debugger
+    // this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe(
+    //   (res) => console.log(res),
+    //   (err) => console.log(err),
+    // );
+    // debugger
+    // this.httpClient.post<any>(`${environment.apiBack}/upload`, fdModel).subscribe(
+    //   (res) => console.log(res),
+    //   (err) => console.log(err),
+    // );
     debugger
     this.httpClient.post<any>(`${environment.apiBack}/models`, upload).subscribe(
       (res) => console.log(res),

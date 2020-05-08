@@ -14,6 +14,7 @@ export class CategoriesService {
   constructor(private http: HttpClient) { }
 
   getCategories(): Observable <any> {
+    debugger
     return this.http.get(`${environment.apiBack}/${this.resource}`)
   }
 }
