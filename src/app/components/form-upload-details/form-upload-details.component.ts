@@ -12,11 +12,15 @@ import { Model3d } from '../../models/model3d';
 })
 export class FormUploadDetailsComponent implements OnInit {
 
-  fileUpload = new FormData();
   formUpload : FormGroup;
   uploadModel: FormGroup;
   images: any;
   model: any;
+
+  image: File;
+  model3d: File;
+  imageSelected: string | ArrayBuffer;
+
 
   constructor(private httpClient : HttpClient) { }
 
@@ -31,7 +35,6 @@ export class FormUploadDetailsComponent implements OnInit {
       custom: new FormControl(''),
       license: new FormControl(''),
       tags: new FormControl(''),
-      file : new FormControl(''),
     });
   }
 
@@ -41,33 +44,35 @@ export class FormUploadDetailsComponent implements OnInit {
   // }
 
   // changeFile(event) {
-  //   this.fileUpload.append('file', event.target.files[0]);
-  //   // this.formUpload.controls['file'].setValue(event.target.files[0]);
+  //   if (event.target.files.length > 0) {
+  //     const file = event.target.files[0];
+  //     this.images = file;
+  //   }
+  //   // this.formUpload.cont rols['file'].setValue(event.target.files[0]);
   // }
+
   changeFile(event) {
     if (event.target.files.length > 0) {
-      const file = event.target.files[0];
-      this.images = file;
+      this.image = <File>event.target.files[0];
+      //Image preview
+      const reader = new FileReader();
+      reader.onload = e => this.imageSelected = reader.result;
+      reader.readAsDataURL(this.image);
     }
-    // this.formUpload.cont rols['file'].setValue(event.target.files[0]);
   }
 
-  changeModel(event) {
-    if (event.target.files.length > 0) {
-      const file = event.target.files[0];
-      this.model = file;
-    }
-    // this.formUpload.cont rols['file'].setValue(event.target.files[0]);
-  }
+  upload(event){
 
-  upload(form){
-
-    const fdImg = new FormData();
+    // const fdImg = new FormData();
     const fdModel = new FormData();
-    fdImg.append('image', this.images);
+    // fdImg.append('image', this.images);
     fdModel.append('image', this.model);
+    fdModel.append('form', this.model);
+    fdModel.append('model', this.model);
 
-    const upload = Object.assign({}, this.formUpload);
+    const formModel = new FormData()
+
+    // const upload = Object.assign({}, this.formUpload);
     debugger
     // debugger
     // this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe(
@@ -80,7 +85,7 @@ export class FormUploadDetailsComponent implements OnInit {
     //   (err) => console.log(err),
     // );
     debugger
-    this.httpClient.post<any>(`${environment.apiBack}/models`, upload).subscribe(
+    this.httpClient.post<any>(`${environment.apiBack}/models`, fdModel).subscribe(
       (res) => console.log(res),
       (err) => console.log(err),
      );
