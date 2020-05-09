@@ -9,13 +9,19 @@ import { environment } from '../../environments/environment';
 export class Model3dService {
 
   private resource: string = 'models';
-  constructor(private httpClient: HttpClient) { }
+  constructor(private http: HttpClient) { }
+
+  createModel(formUpload): Observable <any> {
+    debugger
+    return this.http.post(`${environment.apiBack}/models`, formUpload)
+  }
+
 
   getModels(): Observable <any> {
-    return this.httpClient.get(`${environment.apiBack}/${this.resource}`);
+    return this.http.get(`${environment.apiBack}/${this.resource}`);
   }
 
   getModelById(modelsId: string): Observable <any> {
-    return this.httpClient.get(`${environment.apiBack}/${this.resource}/${modelsId}`)
+    return this.http.get(`${environment.apiBack}/${this.resource}/${modelsId}`)
   }
 }

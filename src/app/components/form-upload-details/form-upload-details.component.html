@@ -52,7 +52,8 @@
     <div class="form__row">
         <div class="form__label--files">
           <label for="file">Model 3d <i class="icon-upload"></i></label>
-          <input  (change)="changeModel($event)" formControlName="model" name="image" id="model" type="file">
+          <input  (change)="changeModel($event)" formControlName="model" name="image" id="model" type="file" #modelInput>
+          <img [src]="model3dSelected || '../../../assets/images/no-image-found.png'" width="200" height="100" (click)="modelInput.click()">
         </div>
         <div class="form__label--files">
           <label for="file">Images <i class="icon-upload"></i></label>
@@ -60,6 +61,6 @@
           <img [src]="imageSelected || '../../../assets/images/no-image-found.png'" width="200" height="100" (click)="photoInput.click()">
         </div>
       </div>
-    <button  class="btn btn__success" type="submit" (click)="upload($event)" >Upload</button>
+    <button  class="btn btn__success" (click)="submit()" >Upload</button>
   </form>
 </div>

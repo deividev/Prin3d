@@ -4,7 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 
 
+
 import { Model3d } from '../../models/model3d';
+import { Model3dService } from 'src/app/services/model3d.service';
 @Component({
   selector: 'app-form-upload-details',
   templateUrl: './form-upload-details.component.html',
@@ -20,9 +22,10 @@ export class FormUploadDetailsComponent implements OnInit {
   image: File;
   model3d: File;
   imageSelected: string | ArrayBuffer;
+  model3dSelected: string | ArrayBuffer;
 
-
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient : HttpClient,
+              private model3dService: Model3dService) { }
 
   ngOnInit(): void {
     this.formUpload = new FormGroup({
@@ -61,35 +64,59 @@ export class FormUploadDetailsComponent implements OnInit {
     }
   }
 
-  upload(event){
+  changeModel(event) {
+    if (event.target.files.length > 0) {
+      this.model3d = <File>event.target.files[0];
+      debugger
+      //Model3d preview
+      const reader = new FileReader();
+      reader.onload = e => this.model3dSelected = reader.result;
+      reader.readAsDataURL(this.model3d);
+    }
+  }
 
+  upload(formUpload){
+    debugger
     // const fdImg = new FormData();
     const fdModel = new FormData();
     // fdImg.append('image', this.images);
-    fdModel.append('image', this.model);
-    fdModel.append('form', this.model);
+    fdModel.append('form', formUpload);
+    fdModel.append('img', this.image);
     fdModel.append('model', this.model);
 
     const formModel = new FormData()
 
-    // const upload = Object.assign({}, this.formUpload);
+    const upload = Object.assign({}, this.formUpload.value);
     debugger
     // debugger
     // this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe(
     //   (res) => console.log(res),
     //   (err) => console.log(err),
     // );
-    // debugger
-    // this.httpClient.post<any>(`${environment.apiBack}/upload`, fdModel).subscribe(
-    //   (res) => console.log(res),
-    //   (err) => console.log(err),
-    // );
+    debugger
+    this.httpClient.post<any>(`${environment.apiBack}/models`, upload).subscribe(
+      (res) => console.log(res),
+      (err) => console.log(err),
+    );
     debugger
     this.httpClient.post<any>(`${environment.apiBack}/models`, fdModel).subscribe(
       (res) => console.log(res),
       (err) => console.log(err),
      );
     debugger
+  }
+
+  submit() {
+    const formUpload = Object.assign({}, this.formUpload.value);
+    if (this.formUpload.valid) {
+        debugger
+        this.model3dService.createModel(formUpload).subscribe(
+        (res) => {
+          console.log(res);
+        },
+        (err) => console.log(err),);
+        this.formUpload.reset();
+    }
   }
 
 
