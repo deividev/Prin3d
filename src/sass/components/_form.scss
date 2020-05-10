@@ -141,6 +141,14 @@
     color: $text-default;
   }
 
+  &__control--file {
+    display: none;
+  }
+
+  &__control--image {
+
+  }
+
   &__control--icon {
     position: absolute;
     z-index: 20;

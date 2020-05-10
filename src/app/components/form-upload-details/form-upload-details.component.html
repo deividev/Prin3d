@@ -21,16 +21,16 @@
     </div>
     <div class="form__group form__group--area">
       <label class="form__label" for="bio" >Description</label>
-      <textarea class="form__control form__control--area" id="bio" cols="10" rows="5" formControlName="description"></textarea>
+      <textarea class="form__control form__control--area" id="bio"  rows="2" formControlName="description"></textarea>
     </div>
     <div class="form__row">
       <div class="form__group form__group--area">
         <label class="form__label" for="print" >Print settings</label>
-        <textarea class="form__control form__control--area" id="print" cols="10" rows="5" formControlName="settings"></textarea>
+        <textarea class="form__control form__control--area" id="print"  rows="2" formControlName="settings"></textarea>
       </div>
       <div class="form__group form__group--ml form__group--area">
         <label class="form__label" for="custom" >Custom section</label>
-        <textarea class="form__control form__control--area" id="custom" cols="10" rows="5" formControlName="custom"></textarea>
+        <textarea class="form__control form__control--area" id="custom"  rows="2" formControlName="custom"></textarea>
       </div>
     </div>
     <div class="form__row">
@@ -51,16 +51,23 @@
     </div>
     <div class="form__row">
         <div class="form__label--files">
-          <label for="file">Model 3d <i class="icon-upload"></i></label>
-          <input  (change)="changeModel($event)" formControlName="model" name="image" id="model" type="file" #modelInput>
-          <img [src]="model3dSelected || '../../../assets/images/no-image-found.png'" width="200" height="100" (click)="modelInput.click()">
+          <label class="form__label" for="file">Model 3d  (format .glb) <i class="icon-upload"></i></label>
+          <input class="form__control--file" (change)="changeModel($event)" formControlName="model" name="image" type="file" #modelInput>
+          <img class="form__control--image" [src]="model3dSelected || '../../../assets/images/No_file_available.png'" width="400" height="250" (click)="modelInput.click()">
+          <!-- <model-viewer class="model"
+          [src]="model3dSelected || '../../../assets/images/No_file_available.png'"
+          alt="A 3D model of an astronaut" auto-rotate camera-controls
+          (click)="modelInput.click()">
+          </model-viewer> -->
+
         </div>
         <div class="form__label--files">
-          <label for="file">Images <i class="icon-upload"></i></label>
-          <input name="image"  type="file" (change)="changeFile($event)" formControlName="img" #photoInput>
-          <img [src]="imageSelected || '../../../assets/images/no-image-found.png'" width="200" height="100" (click)="photoInput.click()">
+          <label class="form__label" for="file">Images <i class="icon-upload"></i></label>
+          <input class="form__control--file" (change)="changeFile($event)" formControlName="img" name="image"  type="file"   #photoInput>
+          <img class="form__control--image" [src]="imageSelected || '../../../assets/images/no-image-found.png'" width="400" height="250" (click)="photoInput.click()">
         </div>
       </div>
     <button  class="btn btn__success" (click)="submit()" >Upload</button>
   </form>
 </div>
+
