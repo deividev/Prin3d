@@ -39,7 +39,6 @@ export class FormLoginComponent implements OnInit {
           this.authService.changeLoggedIn(true);
           this.router.navigate(['/home']);
           return res;
-          debugger
         },
         (err) => console.log(err),);
         this.formLogin.reset();

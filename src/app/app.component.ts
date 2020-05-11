@@ -33,11 +33,22 @@ export class AppComponent {
   }
 
   get isHeaderActive() {
-    return !(this.url === '/register' || this.url === '/login' ||  this.url === '/404');
- }
 
- get isHeaderLoginActive() {
+    return !(this.url === '/register' || this.url === '/login');
+  }
+
+  get isHeaderLoginActive() {
+
   return this.authService.loggedIn;
- }
+  }
+
+  get isHeaderNoActive() {
+    if (this.url === '/404'){
+
+      return false;
+    }
+
+    return true;
+  }
 
 }

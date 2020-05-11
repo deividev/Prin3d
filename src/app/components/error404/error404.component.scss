@@ -1,0 +1,24 @@
+@import "../../../sass/global/variables";
+
+
+
+.container{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
+  padding: 20px;
+}
+
+.container__title {
+  font-size: rem(40px);
+  font-weight: 700;
+}
+
+.container__message {
+  font-size: rem(40px);
+  font-weight: 700;
+  padding: 50px 0px;
+}

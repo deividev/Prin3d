@@ -5,7 +5,7 @@
 <div *ngIf="isHeaderActive">
 <app-header-login *ngIf="isHeaderLoginActive;else headerLoggedIn"  routerLinkActive="active"></app-header-login>
 <ng-template #headerLoggedIn>
-  <app-header  routerLinkActive="active"></app-header>
+  <app-header *ngIf="isHeaderNoActive"  routerLinkActive="active"></app-header>
 </ng-template>
 </div>
 
