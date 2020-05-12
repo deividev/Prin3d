@@ -41,19 +41,6 @@ export class FormUploadDetailsComponent implements OnInit {
     });
   }
 
-  // upload(event){
-  //   this.fileUpload.append('form', JSON.stringify(this.formUpload.value));
-  //   this.httpClient.post(`${environment.apiBack}/users/images`, this.fileUpload).subscribe();
-  // }
-
-  // changeFile(event) {
-  //   if (event.target.files.length > 0) {
-  //     const file = event.target.files[0];
-  //     this.images = file;
-  //   }
-  //   // this.formUpload.cont rols['file'].setValue(event.target.files[0]);
-  // }
-
   changeFile(event) {
     if (event.target.files.length > 0) {
       this.image = <File>event.target.files[0];
@@ -75,36 +62,6 @@ export class FormUploadDetailsComponent implements OnInit {
     }
   }
 
-  // upload(formUpload){
-  //   debugger
-    // const fdImg = new FormData();
-  //   const fdModel = new FormData();
-    // fdImg.append('image', this.images);
-  //   fdModel.append('form', formUpload);
-  //   fdModel.append('img', this.image);
-  //   fdModel.append('model', this.model);
-
-  //   const formModel = new FormData()
-
-  //   const upload = Object.assign({}, this.formUpload.value);
-  //   debugger
-  //   // debugger
-  //   // this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe(
-  //   //   (res) => console.log(res),
-  //   //   (err) => console.log(err),
-  //   // );
-  //   debugger
-  //   this.httpClient.post<any>(`${environment.apiBack}/models`, upload).subscribe(
-  //     (res) => console.log(res),
-  //     (err) => console.log(err),
-  //   );
-  //   debugger
-  //   this.httpClient.post<any>(`${environment.apiBack}/models`, fdModel).subscribe(
-  //     (res) => console.log(res),
-  //     (err) => console.log(err),
-  //    );
-  //   debugger
-  // }
 
   submit() {
     const formUpload = Object.assign({}, this.formUpload.value);
@@ -112,9 +69,15 @@ export class FormUploadDetailsComponent implements OnInit {
     const fdImg = new FormData();
     fdImg.append('image', this.image);
     debugger
-    this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe(
-      (res) => console.log(res),
-      (err) => console.log(err),
+    this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe((res) => {
+        const imagePath = res;
+        debugger
+        console.log(imagePath);
+      },
+      (err) => {
+        debugger
+        console.log(err)
+      }
     );
     debugger
     if (this.formUpload.valid) {
