@@ -27,5 +27,6 @@ export class HeaderComponent implements OnInit {
       console.error(error);
     });
   }
+
 }
 
