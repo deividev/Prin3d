@@ -26,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AuthGuard } from '../app/guards/auth.guard';
 import { TokeIntercerptorService } from './services/toke-intercerptor.service';
-import { SearchComponent } from './components/search/search.component'
+import { SearchComponent } from './components/search/search.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { SearchComponent } from './components/search/search.component'
     InfoModel3dComponent,
     CategoryComponent,
     SearchComponent,
+    FooterComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
