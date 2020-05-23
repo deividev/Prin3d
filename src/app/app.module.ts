@@ -25,7 +25,8 @@ import { CategoryComponent } from './components/category/category.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AuthGuard } from '../app/guards/auth.guard';
-import { TokeIntercerptorService } from './services/toke-intercerptor.service'
+import { TokeIntercerptorService } from './services/toke-intercerptor.service';
+import { SearchComponent } from './components/search/search.component'
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { TokeIntercerptorService } from './services/toke-intercerptor.service'
     ModalCollectionComponent,
     InfoModel3dComponent,
     CategoryComponent,
+    SearchComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
