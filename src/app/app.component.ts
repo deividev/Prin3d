@@ -46,8 +46,4 @@ export class AppComponent {
     return true;
   }
 
-  get isSearchNoActive():boolean {
-    return !(this.url === '/home');
-  }
-
 }

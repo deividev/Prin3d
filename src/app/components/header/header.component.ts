@@ -28,5 +28,9 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  get isSearchNoActive():boolean {
+    return !(true);
+  }
+
 }
 

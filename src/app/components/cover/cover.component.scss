@@ -1,0 +1,31 @@
+/*** ENTRYHOME  ***/
+
+@import "../../../sass/global/variables";
+@import "../../../sass/mixins/mixins";
+
+.cover {
+  display: flex;
+  justify-content: flex-start;
+  height: rem(600px);
+  padding: 10px;
+  background: url(../../../assets/images/background-cover3.jpg) no-repeat center;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 100px;
+    padding: 10px;
+  }
+
+  &__title {
+
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: #fff;
+  }
+}
