@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CategoriesService } from 'src/app/services/categories.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header-login',
@@ -11,7 +12,8 @@ export class HeaderLoginComponent implements OnInit {
 
   @Input() categories: any;
 
-  constructor(private categoriesService: CategoriesService,) { }
+  constructor(private categoriesService: CategoriesService,
+              private authService: AuthService) { }
 
   ngOnInit(): void {
     this.categoriesService.getCategories().subscribe((result) => {
@@ -21,4 +23,7 @@ export class HeaderLoginComponent implements OnInit {
     });
   }
 
+  get searchNoActive():boolean {
+    return !this.authService.loggedIn ;
+    }
 }

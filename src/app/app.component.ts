@@ -32,7 +32,7 @@ export class AppComponent {
   }
 
   get isHeaderActive():boolean {
-    return !(this.url === '/register' || this.url === '/login' || this.url === '/forgot');
+    return !(this.url === '/register' || this.url === '/login' || this.url === '/footer');
   }
 
   get isHeaderLoginActive():boolean {

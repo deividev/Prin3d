@@ -6,7 +6,7 @@
     <h1 class="logo-title">Factory 3d</h1>
   </a>
   <div class="container-search">
-    <app-search></app-search>
+    <app-search *ngIf="searchNoActive"></app-search>
   </div>
   <div class="container-flex">
     <a class="btn btn__primary" routerLink="/upload">Upload</a>
@@ -18,12 +18,8 @@
       </svg>
     </button>
     <a class="avatar--sm" routerLink="/user">Dd</a>
-
-
-
   </div>
 </header>
-
 <!-- HEADER -->
 <!-- **** -->
 
