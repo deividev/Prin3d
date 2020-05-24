@@ -9,7 +9,7 @@
   <div id="categorie" class="category__container" routerLinkActive="active">
     <a *ngFor="let item of listModels" routerLink="/model/:id" class="card" href="">
 
-      <img class=" card__model" [src]="item.img" alt="">
+      <img class=" card__image" [src]="item.img" alt="">
       <div class="card__content">
         <div class="card__title">
           <h5>{{item.title}}</h5>

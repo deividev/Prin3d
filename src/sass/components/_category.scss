@@ -40,7 +40,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
     grid-template-rows: auto;
     grid-gap: 40px;
   }
@@ -52,16 +52,17 @@
 
 
 .card {
+  width: rem(330px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: 0.3s linear;
   margin: 12px;
   border: 1px solid $gray-100;
   border-radius: 7px;
   background-color: #fff;
   box-shadow: 0 0 2rem -1rem rgba(0,0,0,0.5);
   overflow: hidden;
+  transition: 0.3s linear;
 
 
   &__content {
@@ -81,8 +82,10 @@
     justify-content: flex-end;
   }
 
-  &__model {
+  &__image {
     width: 100%;
+    height: rem(250px);
+    padding-bottom: 5px;
     // border-radius: 15px 15px 0px 0px;
   }
 
@@ -91,16 +94,13 @@
   }
 
   &__title {
+    padding-right: 5px;
 
 
     p, h4 {
       color: $gray-300;
       padding-top: 6px;
       margin-right: 10px;
-    }
-
-    p {
-
     }
   }
 
