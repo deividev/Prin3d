@@ -1,6 +1,6 @@
 
 <div class="container">
-  <form action="models" method="POST" enctype="multipart/form-data" [formGroup]="formUpload" class="form-upload">
+  <form action="upload" method="POST" enctype="multipart/form-data" [formGroup]="formUpload" class="form-upload">
     <h1>Upload 3d</h1>
     <div class="form__row ">
       <div class="form__group">
@@ -63,7 +63,7 @@
         </div>
         <div class="form__label--files">
           <label class="form__label" for="file">Images <i class="icon-upload"></i></label>
-          <input class="form__control--file" (change)="changeFile($event)" formControlName="img" name="image"  type="file"   #photoInput>
+          <input class="form__control--file" (change)="changeFile($event)" formControlName="image" name="image"  type="file"   #photoInput>
           <img class="form__control--image" [src]="imageSelected || '../../../assets/images/no-image-found.png'" width="400" height="250" (click)="photoInput.click()">
         </div>
       </div>

@@ -3,19 +3,10 @@
 <header class="header" routerLinkActive="active">
   <a class="logo" aria-label="Factory print3d" routerLink="/home">
     <img  src="../assets/images/logo.png" alt="" width="40px" height="43px">
+    <h1 class="logo-title">Factory 3d</h1>
   </a>
   <div class="container-search">
-  <form  action="...">
-    <div class="search" id="search">
-        <label class="search__label" for="search" aria-label="search"></label>
-        <input class="search__control" id="search" type="search">
-        <button type="button" class="btn__icon search__control--icon">
-          <svg>
-            <use xlink:href="../assets/svg/sprite.svg#search"></use>
-          </svg>
-        </button>
-    </div>
-  </form>
+    <app-search *ngIf="searchNoActive"></app-search>
   </div>
   <div class="container-flex">
     <a class="btn btn__primary" routerLink="/upload">Upload</a>
@@ -27,12 +18,8 @@
       </svg>
     </button>
     <a class="avatar--sm" routerLink="/user">Dd</a>
-
-
-
   </div>
 </header>
-
 <!-- HEADER -->
 <!-- **** -->
 

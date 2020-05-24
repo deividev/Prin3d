@@ -1,0 +1,19 @@
+
+@import "../../../sass/global/variables";
+@import "../../../sass/mixins/mixins";
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: $gray-400;
+  height: 80px;
+  padding: 10px 50px;
+}
+
+.logo-footer {
+  color: #fff;
+  font-size: rem(27px);
+  text-transform: uppercase;
+  padding: 0px 10px;
+}

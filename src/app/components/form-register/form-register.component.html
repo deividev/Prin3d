@@ -1,4 +1,4 @@
-<div class="login" routerLinkActive="active">
+<div class="container-form" routerLinkActive="active">
   <form class="form" [formGroup]="formRegister" (ngSubmit)="register()">
     <div class="logo">
       <a class="logo" routerLink="/home">
@@ -65,7 +65,7 @@
     <div class="form__row">
       <div class="form__group ">
         <div class="form__info">
-          <label class="form__label" for="password">Password <span>(Min 8 characters)</span></label>
+          <label class="form__label" for="password">Password <span>(Min 8)</span></label>
         </div>
         <input a required class="form__control" [type]="fieldTextType ? 'text' : 'password'" formControlName="password" id="password" minlength="8">
         <div *ngIf="formRegister.controls.password.touched" class="alert-danger">
@@ -105,5 +105,4 @@
     </div>
     <button class="btn btn__primary" type="submit" [disabled]="!formRegister.valid">Register</button>
   </form>
-  <div class="background"></div>
 </div>

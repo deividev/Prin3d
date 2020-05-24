@@ -17,7 +17,7 @@ export class AppComponent {
 
 
   constructor (private router: Router,
-               private authService: AuthService) {
+              private authService: AuthService) {
     router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
@@ -31,22 +31,18 @@ export class AppComponent {
   login(){
   }
 
-  get isHeaderActive() {
-
-    return !(this.url === '/register' || this.url === '/login');
+  get isHeaderActive():boolean {
+    return !(this.url === '/register' || this.url === '/login' || this.url === '/footer');
   }
 
-  get isHeaderLoginActive() {
-
+  get isHeaderLoginActive():boolean {
   return this.authService.loggedIn;
   }
 
-  get isHeaderNoActive() {
+  get isHeaderNoActive():boolean {
     if (this.url === '/404'){
-
       return false;
     }
-
     return true;
   }
 

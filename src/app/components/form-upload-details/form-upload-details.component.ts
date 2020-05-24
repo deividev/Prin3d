@@ -31,7 +31,7 @@ export class FormUploadDetailsComponent implements OnInit {
     this.formUpload = new FormGroup({
       title: new FormControl(''),
       categories: new FormControl(''),
-      img: new FormControl(''),
+      image: new FormControl(''),
       model: new FormControl(''),
       description: new FormControl(''),
       settings: new FormControl(''),
@@ -66,23 +66,29 @@ export class FormUploadDetailsComponent implements OnInit {
   submit() {
     const formUpload = Object.assign({}, this.formUpload.value);
 
-    const fdImg = new FormData();
-    fdImg.append('image', this.image);
-    debugger
-    this.httpClient.post<any>(`${environment.apiBack}/upload`, fdImg).subscribe((res) => {
-        const imagePath = res;
-        debugger
-        console.log(imagePath);
+    const form = new FormData();
+    form.append('title', this.formUpload.value.title);
+    form.append('categories', this.formUpload.value.categories);
+    form.append('image', this.image);
+    form.append('model', this.formUpload.value.model);
+    form.append('description', this.formUpload.value.description);
+    form.append('settings', this.formUpload.value.settings);
+    form.append('custom', this.formUpload.value.custom);
+    form.append('license', this.formUpload.value.license);
+    form.append('tags', this.formUpload.value.tags);
+
+    this.httpClient.post<any>(`${environment.apiBack}/upload`, form).subscribe((res) => {
+      console.log(res);
+      debugger
       },
       (err) => {
-        debugger
+
         console.log(err)
       }
     );
-    debugger
     if (this.formUpload.valid) {
-        debugger
-        this.model3dService.createModel(formUpload).subscribe(
+
+        this.model3dService.createModel(form).subscribe(
         (res) => {
           console.log(res);
         },
