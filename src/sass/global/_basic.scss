@@ -4,6 +4,7 @@
 
 body {
   color: $gray-400;
+  padding-bottom: 5px;
   background-color: $third;
   font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
@@ -17,26 +18,31 @@ h1 {
   font-size: rem(40px);
   font-weight: 700;
   color: $gray-400;
+  padding-bottom: 5px;
 }
 
 h2 {
   font-size: rem(30px);
   color: $gray-400;
+  padding-bottom: 5px;
 }
 
 h3 {
   font-size: rem(26px);
   color: $gray-400;
+  padding-bottom: 5px;
 }
 
 h4 {
   font-size: rem(22px);
   color: $gray-400;
+  padding-bottom: 5px;
 }
 
 h5 {
   font-size: rem(20px);
   color: $gray-400;
+  padding-bottom: 5px;
 }
 
 .light {
