@@ -11,9 +11,9 @@ export class Model3dService {
   private resource: string = 'models';
   constructor(private http: HttpClient) { }
 
-  createModel(formUpload): Observable <any> {
+  createModel(form): Observable <any> {
     debugger
-    return this.http.post(`${environment.apiBack}/models`, formUpload)
+    return this.http.post(`${environment.apiBack}/upload`, form)
   }
 
 
