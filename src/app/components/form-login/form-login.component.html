@@ -1,4 +1,4 @@
-<div class="login" routerLinkActive="active">
+<div class="container-form" routerLinkActive="active">
   <form class="form" [formGroup]="formLogin" (ngSubmit)="login()">
     <div class="logo">
       <a routerLink="/home">
@@ -25,7 +25,6 @@
           </div>
         </div>
       </div>
-
       <div class="form__group ">
         <div class="form__info">
           <label class="form__label" for="password" >Password</label>
@@ -49,5 +48,4 @@
       </div>
       <button class="btn btn__primary" type="submit" [disabled]="!formLogin.valid">Login</button>
     </form>
-  <div class="background"></div>
 </div>
