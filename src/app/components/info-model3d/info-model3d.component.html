@@ -1,4 +1,7 @@
 
 
+<div *ngFor ="let item of modelUrl">
 
-<model-viewer *ngIf="isVisible3d" [ngClass]="isVisible3d ? 'modelShow' : 'model'"  class="model" src="../../assets/images/dart-model.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls ></model-viewer>
+<model-viewer *ngIf="isVisible3d" [ngClass]="isVisible3d ? 'modelShow' : 'model'"  class="model" [src]="item.model" alt="A 3D model of an astronaut" auto-rotate camera-controls ></model-viewer>
+
+</div>

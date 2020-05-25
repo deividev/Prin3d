@@ -1,11 +1,7 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { InfoModel3dComponent } from '../info-model3d/info-model3d.component';
-import { DEFAULTS } from 'ts-node';
 import { Model3dService } from 'src/app/services/model3d.service';
-import { switchMap } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
-import { Model3d } from 'src/app/models/model3d';
-import { Observable, empty } from 'rxjs';
 
 @Component({
   selector: 'app-info-model',
@@ -31,7 +27,6 @@ export class InfoModelComponent implements OnInit {
         this.infoModel = [res];
         console.log(res);
         return this.infoModel || [];
-
       })
     })
 
