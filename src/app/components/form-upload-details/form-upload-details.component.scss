@@ -1,4 +1,4 @@
-
+@import "../../../sass/mixins/mixins";
 @import "../../../sass/global/variables";
 
 .form-upload {
@@ -24,4 +24,20 @@ fieldset {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+
+.modelShow {
+  width: 90%;
+  margin-right: 10px;
+}
+
+
+.form__control--image {
+  display: block;
+  width: 100%;
+  height: rem(400px);
+  border: 1px solid $gray-200;
+  background-color: $gray-100;
+  transition: all 0.1s linear;
 }

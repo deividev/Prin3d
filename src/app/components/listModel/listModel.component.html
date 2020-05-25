@@ -7,7 +7,7 @@
   </nav>
   <h2 *ngIf="showTitle"  class="category__title">{{title}}</h2>
   <div id="categorie" class="category__container" routerLinkActive="active">
-    <a *ngFor="let item of listModels" routerLink="/model/:id" class="card" href="">
+    <a *ngFor="let item of listModels" routerLink="/model/{{item._id}}" class="card" href="">
 
       <img class=" card__image" [src]="item.img" alt="">
       <div class="card__content">

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { InfoModel3dComponent } from '../info-model3d/info-model3d.component';
 import { DEFAULTS } from 'ts-node';
 
@@ -13,7 +13,7 @@ export class InfoModelComponent implements OnInit {
 
   @ViewChild(InfoModel3dComponent) InfoModel3d: InfoModel3dComponent;
 
-
+  @Input() infoModel: any;
 
   constructor() { }
 
