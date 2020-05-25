@@ -21,7 +21,8 @@ export class Model3dService {
     return this.http.get(`${environment.apiBack}/${this.resource}`);
   }
 
-  getModelById(modelsId: string): Observable <any> {
-    return this.http.get(`${environment.apiBack}/${this.resource}/${modelsId}`)
+  getModelById(id): Observable <any> {
+    debugger
+    return this.http.get(`${environment.apiBack}/model/${id}`)
   }
 }

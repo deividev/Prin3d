@@ -1,9 +1,9 @@
 <div class="container__info--model">
 
   <!-- CARD MODEL -->
-  <div class="container-model">
-    <div class="card-model">
-      <h2>Stormtrooper</h2>
+  <div *ngFor="let item of infoModel" class="container-model">
+    <div  class="card-model">
+      <h2>{{item.title}}</h2>
           <div class="container-flex">
 
               <img class="avatar--info" src="" alt="">
