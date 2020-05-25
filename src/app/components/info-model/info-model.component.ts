@@ -18,9 +18,7 @@ export class InfoModelComponent implements OnInit {
 
   @ViewChild(InfoModel3dComponent) InfoModel3d: InfoModel3dComponent;
 
-
-  model$: Observable<Model3d>;
-  @Input() infoModel: any;
+  @Input() infoModel: any = [];
 
   constructor(private model3dService: Model3dService,
               private activatedRoute: ActivatedRoute) { }
@@ -29,10 +27,12 @@ export class InfoModelComponent implements OnInit {
     debugger
     this.activatedRoute.params.subscribe((params) => {
       console.log(params.modelId);
-      this.infoModel = this.model3dService.getModelById(params.modelId).pipe(
-        this.infoModel = this.infoModel.operators.modelId
-      )
-      return this.infoModel ;
+      this.model3dService.getModelById(params.modelId).subscribe((res: Response) => {
+        this.infoModel = [res];
+        console.log(res);
+        return this.infoModel || [];
+
+      })
     })
 
   }

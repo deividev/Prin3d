@@ -1,21 +1,21 @@
 <div class="container__info--model">
 
   <!-- CARD MODEL -->
-  <div *ngFor="let item of infoModel" class="container-model">
+  <div *ngFor ="let item of infoModel" class="container-model">
     <div  class="card-model">
       <h2>{{item.title}}</h2>
           <div class="container-flex">
 
               <img class="avatar--info" src="" alt="">
               <a  href="">Deividev</a>
-              <p> March 23, 2020</p>
+              <p> {{item.created_at}}</p>
             <div class="container-flex">
 
             </div>
           </div>
       <div class="container-row">
         <div class="card-slider">
-          <img *ngIf="isVisible" [ngClass]="isVisible ? 'card__gallery' : 'card__galleryClose'" class="card__gallery" src="../assets/images/stormtrooper-helmet.jpg" alt="">
+          <img *ngIf="isVisible" [ngClass]="isVisible ? 'card__gallery' : 'card__galleryClose'" class="card__gallery" [src]="item.img" alt="">
           <button type="button" class="btn__icon control__slider--left">
             <svg >
               <use xlink:href="../assets/svg/sprite.svg#left"></use>
@@ -46,13 +46,13 @@
       </div>
       <div class="container-flex">
         <button class="btn btn__icon btn__icon--success">
-          120
+          {{item.likes}}
           <svg >
             <use xlink:href="../assets/svg/sprite.svg#like"></use>
           </svg>
         </button>
         <button class="btn btn__icon btn__icon--success">
-          1455
+          {{item.downloads}}
           <svg >
             <use xlink:href="../assets/svg/sprite.svg#download"></use>
           </svg>
@@ -65,22 +65,15 @@
     </div>
     <div class="container__details">
       <h5>Description:</h5>
-      <p>Star Wars helmet with a stand so that it can be left on a shelf as decoration.
-      </p>
+      <p>{{item.description}}</p>
     </div>
     <div class="container__details">
       <h5>Print settings:</h5>
-      <p>Print brand: Anycubic.</p>
-      <p>Printer: Anycubic i3-Mega.</p>
-      <p>Rafts: No.</p>
-      <p>Supports: No.</p>
-      <p>Resolution: 1.</p>
-
+      <p>{{item.settings}}</p>
     </div>
     <div class="container__details">
       <h5>Custom section:</h5>
-      <p>Materials needed:
-          Abs 1.75mm
+      <p>{{item.custom}}
       </p>
     </div>
     <div class="container__details">
@@ -89,8 +82,7 @@
     <hr>
     <div class="container__tags">
       <h5>Tags:</h5>
-      <a href="">Star wars</a>
-      <a href="">Helmet</a>
+      <a href="">{{item.tags}}</a>
     </div>
 </div>
 
