@@ -51,8 +51,8 @@
     </div>
     <div class="form__row">
         <div class="form__label--files">
-          <label class="form__label" for="file">Model 3d  (format .glb) <i class="icon-upload"></i></label>
-          <input class="form__control--file" (change)="changeModel($event)" formControlName="model" name="image" type="file" #modelInput>
+          <label class="form__label" for="file">Model 3d (format .glb) <i class="icon-upload"></i></label>
+          <input class="form__control--file" (change)="changeModel($event)" formControlName="model" name="model" type="file" #modelInput>
           <!-- <img class="form__control--image" [src]="model3dSelected || '../../../assets/images/No_file_available.png'" width="400" height="250" (click)="modelInput.click()"> -->
           <model-viewer class="model"
           [src]="model3dSelected "

@@ -65,12 +65,13 @@ export class FormUploadDetailsComponent implements OnInit {
 
   submit() {
     const formUpload = Object.assign({}, this.formUpload.value);
+    debugger
 
     const form = new FormData();
     form.append('title', this.formUpload.value.title);
     form.append('categories', this.formUpload.value.categories);
     form.append('image', this.image);
-    form.append('model', this.formUpload.value.model);
+    form.append('model', this.model3d);
     form.append('description', this.formUpload.value.description);
     form.append('settings', this.formUpload.value.settings);
     form.append('custom', this.formUpload.value.custom);
