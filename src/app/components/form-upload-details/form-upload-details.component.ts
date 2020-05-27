@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 
 
-
-import { Model3d } from '../../models/model3d';
 import { Model3dService } from 'src/app/services/model3d.service';
+import { CategoriesService } from 'src/app/services/categories.service';
 @Component({
   selector: 'app-form-upload-details',
   templateUrl: './form-upload-details.component.html',
@@ -15,7 +14,6 @@ import { Model3dService } from 'src/app/services/model3d.service';
 export class FormUploadDetailsComponent implements OnInit {
 
   formUpload : FormGroup;
-  uploadModel: FormGroup;
   images: any;
   model: any;
 
@@ -23,14 +21,22 @@ export class FormUploadDetailsComponent implements OnInit {
   model3d: File;
   imageSelected: string | ArrayBuffer;
   model3dSelected: string | ArrayBuffer;
+  categories: ArrayBuffer;
 
   constructor(private httpClient : HttpClient,
-              private model3dService: Model3dService) { }
+              private model3dService: Model3dService,
+              private categoriesService: CategoriesService) { }
 
   ngOnInit(): void {
+    this.categoriesService.getCategories().subscribe((result) => {
+      this.categories = result;
+    }, error => {
+      console.error(error);
+    });
+
     this.formUpload = new FormGroup({
       title: new FormControl(''),
-      categories: new FormControl(''),
+      categories: new FormControl('', [Validators.required, Validators.minLength(4)]),
       image: new FormControl(''),
       model: new FormControl(''),
       description: new FormControl(''),
@@ -61,7 +67,6 @@ export class FormUploadDetailsComponent implements OnInit {
       reader.readAsDataURL(this.model3d);
     }
   }
-
 
   submit() {
     const formUpload = Object.assign({}, this.formUpload.value);

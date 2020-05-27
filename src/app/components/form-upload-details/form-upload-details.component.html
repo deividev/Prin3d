@@ -10,12 +10,7 @@
       <div class="form__group form__group--ml">
         <label class="form__label" for="categories">Categories</label>
         <select class="form__control" name="categories" id="categories" formControlName="categories">
-          <option value="">Fan art</option>
-          <option value="">Toy and games</option>
-          <option value="">Gadgets</option>
-          <option value="">Utility</option>
-          <option value="">Education</option>
-          <option value="">Others</option>
+          <option *ngFor="let category of categories" [value]="category._id">{{category.title}}</option>
         </select>
       </div>
     </div>
