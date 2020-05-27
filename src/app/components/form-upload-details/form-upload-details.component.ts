@@ -90,15 +90,6 @@ export class FormUploadDetailsComponent implements OnInit {
     form.append('license', this.formUpload.value.license);
     form.append('tags', this.formUpload.value.tags);
 
-    // this.httpClient.post<any>(`${environment.apiBack}/upload`, form).subscribe((res) => {
-    //   console.log(res);
-    //   debugger
-    //   },
-    //   (err) => {
-
-    //     console.log(err)
-    //   }
-    // );
     if (this.formUpload.valid) {
 
         this.model3dService.createModel(form).subscribe(
