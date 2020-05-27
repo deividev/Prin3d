@@ -22,6 +22,7 @@ export class FormUploadDetailsComponent implements OnInit {
   imageSelected: string | ArrayBuffer;
   model3dSelected: string | ArrayBuffer;
   categories: ArrayBuffer;
+  licenses: ArrayBuffer;
 
   constructor(private httpClient : HttpClient,
               private model3dService: Model3dService,
@@ -30,6 +31,12 @@ export class FormUploadDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.categoriesService.getCategories().subscribe((result) => {
       this.categories = result;
+    }, error => {
+      console.error(error);
+    });
+
+    this.model3dService.getLicenses().subscribe((result) => {
+      this.licenses = result;
     }, error => {
       console.error(error);
     });

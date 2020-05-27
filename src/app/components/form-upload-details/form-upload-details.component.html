@@ -32,9 +32,7 @@
       <div class="form__group">
         <label class="form__label" for="license" >License</label>
         <select class="form__control" name="categories" id="license">
-          <option value="">CC</option>
-          <option value="">CC</option>
-          <option value="">CC</option>
+          <option *ngFor="let license of licenses" [value]="license._id">{{license.title}}</option>
         </select>
       </div>
       <div></div>

@@ -12,7 +12,6 @@ export class Model3dService {
   constructor(private http: HttpClient) { }
 
   createModel(form): Observable <any> {
-    debugger
     return this.http.post(`${environment.apiBack}/upload`, form)
   }
 
@@ -22,7 +21,10 @@ export class Model3dService {
   }
 
   getModelById(id): Observable <any> {
-    debugger
     return this.http.get(`${environment.apiBack}/model/${id}`)
+  }
+
+  getLicenses(): Observable <any> {
+    return this.http.get(`${environment.apiBack}/licenses`)
   }
 }
