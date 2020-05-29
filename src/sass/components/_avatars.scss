@@ -51,7 +51,7 @@
   &__info--link {
     display: flex;
     flex-direction: column;
-   justify-content:  center;
+    justify-content:  center;
     padding-bottom: 10px;
   }
 
@@ -68,6 +68,10 @@
     border-radius: 50%;
     border: 2px solid $text-default;
     background-color: $third;
+  }
+
+  &__username {
+    text-transform: uppercase;
   }
 
   &__label[for="file"] {

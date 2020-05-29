@@ -6,6 +6,7 @@ import { AuthService  } from '../../services/auth.service'
 import { Model3d } from 'src/app/models/model3d';
 import { Model3dService } from 'src/app/services/model3d.service';
 import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-info-user',
@@ -14,7 +15,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class InfoUserComponent implements OnInit {
 
-@Input() infoUser= {};
+@Input() public infoUser: User;
 
 
   public modelsUser: Array<Model3d> = [];
@@ -32,7 +33,11 @@ export class InfoUserComponent implements OnInit {
   ngOnInit(): void {
     debugger
     const id = localStorage.getItem('user')
-    this.infoUser = this.userService.getLoguedUser(id);
+    this.userService.getLoguedUser(id).subscribe((res) => {
+      debugger
+      this.infoUser = res;
+      console.log(this.infoUser);
+    });
   }
   logout(){
     debugger

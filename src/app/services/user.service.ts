@@ -17,9 +17,6 @@ export class UserService {
   }
 
   getLoguedUser(id) {
-    return this.httpClient.get(`${environment.apiBack}/user`).subscribe((res) => {
-      debugger
-      return res
-    });
+    return this.httpClient.get(`${environment.apiBack}/user/${id}`)
   }
 }

@@ -1,8 +1,8 @@
 <!-- **** -->
 <!-- ENTRY USER -->
-<div class="user">
+<div *ngIf="infoUser" class="user">
   <div class="avatar">
-    <img class="avatar__img" src="../assets/images/Logo Deivid Dev .png"  alt="">
+    <img class="avatar__img" [src]="infoUser.img"  alt="">
     <form class="" action="...">
         <label class="avatar__label" for="file">Change image</label>
         <input class="avatar__control--file" id="file" type="file">
@@ -11,7 +11,7 @@
   <div class="avatar__info">
 
     <div class="avatar__info--btn">
-      <h1>Deividev</h1>
+      <h1 class="avatar__username">{{infoUser.username}}</h1>
       <a class="btn btn__icon btn__icon--success" routerLink="/editUser" >Edit</a>
         <a (click)="logout()" class="btn btn__icon btn__icon--success">
           <svg>
@@ -21,28 +21,21 @@
     </div>
       <div class="avatar__info--link">
         <a class="btn__link btn__link--success">
-          <svg>
-            <use xlink:href="../assets/svg/sprite.svg#location"></use>
-          </svg>
-          Madrid
+          {{infoUser.location}}
         </a>
         <a class="btn__link" routerLink="https://www.youtube.com/watch?v=AbJ-y2vZgBs&feature=youtu.be">
-          <svg>
-            <use xlink:href="../assets/svg/sprite.svg#location"></use>
-          </svg>
-          artstation.com/deividev
+          {{infoUser.instragram}}
         </a>
         <a class="btn__link" routerLink="">
           <svg>
             <use xlink:href="../assets/svg/sprite.svg#location"></use>
           </svg>
-          @deividev
+          {{infoUser.email}}
         </a>
       </div>
       <div class="avatar__info--description">
-      <p>I'm a 3d modeler, amateur programmer and video game lover.</p>
+      <p>{{infoUser.bio}}</p>
       </div>
-      <h5>Tags</h5>
   </div>
 </div>
 <app-listModel [listModels]="modelsUser" [showNavigation]="true" [showTitle]="false"></app-listModel>
