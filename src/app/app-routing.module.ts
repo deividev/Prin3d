@@ -26,7 +26,7 @@ const appRoutes: Routes = [
   {path: 'category/:id', component: CategoriesComponent},
   {path: 'upload', component: FormUploadDetailsComponent},
   {path: 'editUser', component: FormEditUserComponent},
-  {path: 'user', component: InfoUserComponent, canActivate: [AuthGuard]},
+  {path: ':username', component: InfoUserComponent, canActivate: [AuthGuard]},
 
   {path: '404', component: Error404Component},
   {path: '', redirectTo: 'home', pathMatch: 'full'},

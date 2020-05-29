@@ -6,6 +6,7 @@ import {environment} from '../../../environments/environment';
 
 import { Model3dService } from 'src/app/services/model3d.service';
 import { CategoriesService } from 'src/app/services/categories.service';
+import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-form-upload-details',
   templateUrl: './form-upload-details.component.html',
@@ -26,7 +27,8 @@ export class FormUploadDetailsComponent implements OnInit {
 
   constructor(private httpClient : HttpClient,
               private model3dService: Model3dService,
-              private categoriesService: CategoriesService) { }
+              private categoriesService: CategoriesService,
+              private userService: UserService) { }
 
   ngOnInit(): void {
     this.categoriesService.getCategories().subscribe((result) => {
@@ -42,6 +44,7 @@ export class FormUploadDetailsComponent implements OnInit {
     });
 
     this.formUpload = new FormGroup({
+      userId: new FormControl(''),
       title: new FormControl(''),
       categories: new FormControl('', [Validators.required, Validators.minLength(4)]),
       image: new FormControl(''),
@@ -78,8 +81,9 @@ export class FormUploadDetailsComponent implements OnInit {
   submit() {
     const formUpload = Object.assign({}, this.formUpload.value);
     debugger
-
+    const userName = localStorage.getItem('user');
     const form = new FormData();
+    form.append('userId', userName);
     form.append('title', this.formUpload.value.title);
     form.append('categories', this.formUpload.value.categories);
     form.append('image', this.image);

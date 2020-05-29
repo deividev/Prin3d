@@ -16,6 +16,10 @@ export class UserService {
     return this.httpClient.get(`${environment.apiUrl}/${this.resource}/${userId}`);
   }
 
-  getUserByIdMock(userId: string) {
+  getLoguedUser(id) {
+    return this.httpClient.get(`${environment.apiBack}/user`).subscribe((res) => {
+      debugger
+      return res
+    });
   }
 }

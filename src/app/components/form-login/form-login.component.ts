@@ -14,6 +14,7 @@ export class FormLoginComponent implements OnInit {
 
   formLogin: FormGroup;
 
+
   emailPattern: any =
   /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
 
@@ -21,6 +22,7 @@ export class FormLoginComponent implements OnInit {
               private router : Router) { }
 
   ngOnInit(): void {
+
     this.formLogin = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.pattern(this.emailPattern)]),
       password: new FormControl('', [Validators.required, Validators.minLength(8)]),
@@ -36,6 +38,8 @@ export class FormLoginComponent implements OnInit {
         (res) => {
           console.log(res);
           localStorage.setItem('token', res.token);
+          localStorage.setItem('user', res.user._id);
+          localStorage.setItem('username', res.user.username);
           this.authService.changeLoggedIn(true);
           this.router.navigate(['/home']);
           return res;

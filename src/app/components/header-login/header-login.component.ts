@@ -9,6 +9,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HeaderLoginComponent implements OnInit {
 
+  username;
+  userId;
 
   @Input() categories: any;
 
@@ -16,6 +18,9 @@ export class HeaderLoginComponent implements OnInit {
               private authService: AuthService) { }
 
   ngOnInit(): void {
+    debugger
+    this.username = localStorage.getItem('username');
+    this.userId = localStorage.getItem('user');
     this.categoriesService.getCategories().subscribe((result) => {
       this.categories = result;
     }, error => {
