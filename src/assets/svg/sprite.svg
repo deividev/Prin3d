@@ -30,6 +30,20 @@
   />
 </symbol>
 
+
+<!-- USER-IMG -->
+
+<symbol width="80" height="80" viewBox="0 0 24 24"
+fill="none"
+stroke="#000000"
+stroke-width="1"
+stroke-linecap="round"
+stroke-linejoin="round"
+id="userImg">
+<path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/>
+<circle cx="12" cy="10" r="3"/><circle cx="12" cy="12" r="10"/>
+</symbol>
+
 <!-- SEARCH -->
 
 <symbol id="search" viewBox="0 0 24 24" width="30px" heigth="30px">

@@ -17,8 +17,10 @@ export class InfoUserComponent implements OnInit {
 
 @Input() public infoUser: User;
 
+image: File;
+imageSelected: string | ArrayBuffer;
 
-  public modelsUser: Array<Model3d> = [];
+public modelsUser: Array<Model3d> = [];
 
   constructor(private authService: AuthService,
               private userService: UserService,
@@ -44,6 +46,18 @@ export class InfoUserComponent implements OnInit {
     this.authService.logout();
     this.router.navigate(['/home'])
     debugger
+  }
+
+  changeFile(event) {
+    debugger
+    if (event.target.files.length > 0) {
+      debugger
+      this.image = <File>event.target.files[0];
+      //Image preview
+      const reader = new FileReader();
+      reader.onload = e => this.imageSelected = reader.result;
+      reader.readAsDataURL(this.image);
+    }
   }
 
 }

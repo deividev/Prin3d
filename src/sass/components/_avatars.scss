@@ -63,10 +63,11 @@
 }
 
   &__img {
-    width: rem(150px);
-    height: rem(150px);
+    display: flex;
+    justify-content: center;
+    width: rem(100px);
+    height: rem(100px);
     border-radius: 50%;
-    border: 2px solid $text-default;
     background-color: $third;
   }
 

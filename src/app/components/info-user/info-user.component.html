@@ -2,10 +2,11 @@
 <!-- ENTRY USER -->
 <div *ngIf="infoUser" class="user">
   <div class="avatar">
-    <img class="avatar__img" [src]="infoUser.img"  alt="">
     <form class="" action="...">
-        <label class="avatar__label" for="file">Change image</label>
-        <input class="avatar__control--file" id="file" type="file">
+      <label class="avatar__label" for="file" (click)="photoInput.click()">Change image</label>
+      <input class="avatar__control--file" (change)="changeFile($event)"  name="image"  type="file"   #photoInput>
+      <img class="avatar__img" [src]="imageSelected || '/assets/images/userImg.png'"
+      (click)="photoInput.click()">
     </form>
   </div>
   <div class="avatar__info">
