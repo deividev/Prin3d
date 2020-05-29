@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,13 @@ import { environment } from '../../environments/environment';
 export class Model3dService {
 
   private resource: string = 'models';
-  constructor(private http: HttpClient) { }
+
+
+
+
+
+  constructor(private http: HttpClient,
+              private activedRouter: ActivatedRoute,) { }
 
   createModel(form): Observable <any> {
     return this.http.post(`${environment.apiBack}/upload`, form)
@@ -27,4 +34,9 @@ export class Model3dService {
   getLicenses(): Observable <any> {
     return this.http.get(`${environment.apiBack}/licenses`)
   }
+
+  getModelsCategory() {
+    return this.http.get(`${environment.apiBack}/${this.resource}`)
+  }
+
 }

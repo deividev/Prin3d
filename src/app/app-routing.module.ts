@@ -11,10 +11,11 @@ import { FormUploadDetailsComponent } from './components/form-upload-details/for
 import { FormEditUserComponent } from './components/form-edit-user/form-edit-user.component';
 import { InfoUserComponent } from './components/info-user/info-user.component';
 import { FormForgotComponent } from './components/form-forgot/form-forgot.component';
-import { ListModelComponent } from './components/listModel/listModel.component';
+
 
 
 import { AuthGuard } from './guards/auth.guard';
+import { CategoriesComponent } from './pages/categories/categories.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: FormLoginComponent},
@@ -22,7 +23,7 @@ const appRoutes: Routes = [
   {path: 'register', component: FormRegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'model/:modelId', component: InfoModelComponent},
-  {path: 'category/_id', component: ListModelComponent},
+  {path: 'category/:id', component: CategoriesComponent},
   {path: 'upload', component: FormUploadDetailsComponent},
   {path: 'editUser', component: FormEditUserComponent},
   {path: 'user', component: InfoUserComponent, canActivate: [AuthGuard]},
