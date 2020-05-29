@@ -36,4 +36,8 @@ export class InfoModelComponent implements OnInit {
     this.isVisible = !this.isVisible;
   }
 
+  uploadModel(id) {
+
+  }
+
 }

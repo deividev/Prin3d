@@ -51,12 +51,14 @@
             <use xlink:href="../assets/svg/sprite.svg#like"></use>
           </svg>
         </button>
-        <button class="btn btn__icon btn__icon--success">
-          {{item.downloads}}
-          <svg >
-            <use xlink:href="../assets/svg/sprite.svg#download"></use>
-          </svg>
-        </button>
+        <form method="GET" [action]="'http://localhost:3000/uploads/images/dart-model.glb'">
+          <button type="submit" class="btn btn__icon btn__icon--success">
+            {{item.downloads}}
+            <svg >
+              <use xlink:href="../assets/svg/sprite.svg#download"></use>
+            </svg>
+          </button>
+      </form>
       </div>
     </div>
     <hr>
@@ -77,7 +79,7 @@
       </p>
     </div>
     <div class="container__details">
-      <h5>License: {{item.license.title}}</h5>
+      <h5>License: {{item.license}}</h5>
     </div>
     <hr>
     <div class="container__tags">
