@@ -18,7 +18,6 @@ export class HeaderLoginComponent implements OnInit {
               private authService: AuthService) { }
 
   ngOnInit(): void {
-    debugger
     this.username = localStorage.getItem('username');
     this.userId = localStorage.getItem('user');
     this.categoriesService.getCategories().subscribe((result) => {

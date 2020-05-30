@@ -29,9 +29,7 @@ export class ListModelComponent implements OnInit {
   constructor(private categoriesService: CategoriesService) {
     this.categoriesService.getCategories().subscribe((result) => {
     });
-
-
-   }
+}
 
   ngOnInit(): void {
   }

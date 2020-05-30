@@ -24,18 +24,15 @@ export class AuthService {
               ) { }
 
   signUp(User): Observable <any> {
-    debugger
     return this.http.post(`${environment.apiBack}/signup`, User)
   }
 
   signIn(User): Observable <any> {
-    debugger
     return this.http.post(`${environment.apiBack}/signin`, User)
   }
 
   changeLoggedIn(value) {
-    debugger
-    this.loggedIn = value;
+    this.loggedIn = true;
   }
 
   getToken() {
@@ -46,7 +43,6 @@ export class AuthService {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     this.loggedIn = false;
-    debugger
   }
 
 }

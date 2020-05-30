@@ -32,7 +32,7 @@
       <div class="form__group">
         <label class="form__label" for="license" >License</label>
         <select class="form__control" name="categories" id="license" formControlName="license">
-          <option *ngFor="let license of licenses" [value]="license._id">{{license.title}}</option>
+          <option *ngFor="let license of licenses" [value]="license.title">{{license.title}}</option>
         </select>
       </div>
       <div></div>
@@ -63,4 +63,3 @@
     <button  class="btn btn__success" (click)="submit()" >Upload</button>
   </form>
 </div>
-

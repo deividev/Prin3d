@@ -9,6 +9,7 @@ import { environment } from '../../environments/environment';
 })
 export class UserService {
   private resource: string = 'users';
+
   constructor(private httpClient: HttpClient) { }
 
 
@@ -18,5 +19,9 @@ export class UserService {
 
   getLoguedUser(id) {
     return this.httpClient.get(`${environment.apiBack}/user/${id}`)
+  }
+
+  updateUser() {
+    return this.httpClient.get(`${environment.apiBack}/user/update/`)
   }
 }

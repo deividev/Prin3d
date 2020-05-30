@@ -54,6 +54,7 @@ public modelsUser: Array<Model3d> = [];
       debugger
       this.image = <File>event.target.files[0];
       //Image preview
+      // this.userService.updateUser(id)
       const reader = new FileReader();
       reader.onload = e => this.imageSelected = reader.result;
       reader.readAsDataURL(this.image);

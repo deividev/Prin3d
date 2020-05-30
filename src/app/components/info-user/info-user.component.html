@@ -1,14 +1,12 @@
 <!-- **** -->
 <!-- ENTRY USER -->
 <div *ngIf="infoUser" class="user">
-  <div class="avatar">
-    <form class="" action="...">
-      <label class="avatar__label" for="file" (click)="photoInput.click()">Change image</label>
+
+    <form class="avatar" action="...">
       <input class="avatar__control--file" (change)="changeFile($event)"  name="image"  type="file"   #photoInput>
-      <img class="avatar__img" [src]="imageSelected || '/assets/images/userImg.png'"
-      (click)="photoInput.click()">
+      <img class="avatar__img" [src]="imageSelected || '/assets/images/userImg.png'"(click)="photoInput.click()">
+      <label class="avatar__label" for="file" (click)="photoInput.click()">Change image</label>
     </form>
-  </div>
   <div class="avatar__info">
 
     <div class="avatar__info--btn">
@@ -28,9 +26,6 @@
           {{infoUser.instragram}}
         </a>
         <a class="btn__link" routerLink="">
-          <svg>
-            <use xlink:href="../assets/svg/sprite.svg#location"></use>
-          </svg>
           {{infoUser.email}}
         </a>
       </div>
@@ -42,3 +37,7 @@
 <app-listModel [listModels]="modelsUser" [showNavigation]="true" [showTitle]="false"></app-listModel>
 <!-- ENTRY USER -->
 <!-- **** -->
+
+<!-- <svg>
+  <use xlink:href="../assets/svg/sprite.svg#location"></use>
+</svg> -->

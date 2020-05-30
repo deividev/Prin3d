@@ -20,10 +20,10 @@ export class InfoModelComponent implements OnInit {
               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    debugger
     this.activatedRoute.params.subscribe((params) => {
       console.log(params.modelId);
       this.model3dService.getModelById(params.modelId).subscribe((res: Response) => {
+        debugger
         this.infoModel = [res];
         console.log(res);
         return this.infoModel || [];

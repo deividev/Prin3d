@@ -44,6 +44,7 @@ export class FormUploadDetailsComponent implements OnInit {
     });
 
     this.formUpload = new FormGroup({
+      userName: new FormControl(''),
       userId: new FormControl(''),
       title: new FormControl(''),
       categories: new FormControl('', [Validators.required, Validators.minLength(4)]),
@@ -70,7 +71,6 @@ export class FormUploadDetailsComponent implements OnInit {
   changeModel(event) {
     if (event.target.files.length > 0) {
       this.model3d = <File>event.target.files[0];
-      debugger
       //Model3d preview
       const reader = new FileReader();
       reader.onload = e => this.model3dSelected = reader.result;
@@ -80,10 +80,11 @@ export class FormUploadDetailsComponent implements OnInit {
 
   submit() {
     const formUpload = Object.assign({}, this.formUpload.value);
-    debugger
-    const userName = localStorage.getItem('user');
+    const userId = localStorage.getItem('user');
+    const userName = localStorage.getItem('username');
     const form = new FormData();
-    form.append('userId', userName);
+    form.append('userId', userId);
+    form.append('userName', userName);
     form.append('title', this.formUpload.value.title);
     form.append('categories', this.formUpload.value.categories);
     form.append('image', this.image);
