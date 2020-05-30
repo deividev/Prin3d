@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./info-model.component.scss']
 })
 export class InfoModelComponent implements OnInit {
+  date: number = Date.now();
 
   isVisible = true;
 
@@ -22,8 +23,9 @@ export class InfoModelComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       console.log(params.modelId);
-      this.model3dService.getModelById(params.modelId).subscribe((res: Response) => {
+      this.model3dService.getModelById(params.modelId).subscribe((res) => {
         debugger
+        this.date = res.created_at
         this.infoModel = [res];
         console.log(res);
         return this.infoModel || [];
@@ -36,8 +38,15 @@ export class InfoModelComponent implements OnInit {
     this.isVisible = !this.isVisible;
   }
 
-  uploadModel(id) {
+  plusLike(infoModel) {
+    debugger
+    ++ infoModel[0].likes;
+    this.model3dService.updateModel(infoModel);
+  }
 
+  download(infoModel) {
+    const download = infoModel.model;
+    this.model3dService.downloadModel(infoModel);
   }
 
 }

@@ -8,7 +8,7 @@
 
               <img class="avatar--info" src="" alt="">
               <a  routerLink="/{{item.userName}}">{{item.userName}}</a>
-              <p> {{item.created_at}}</p>
+              <p> {{item.created_at | date:'fullDate'}}</p>
             <div class="container-flex">
 
             </div>
@@ -45,14 +45,14 @@
         </button>
       </div>
       <div class="container-flex">
-        <button class="btn btn__icon btn__icon--success">
+        <button (click)="plusLike(infoModel)" class="btn btn__icon btn__icon--success">
           {{item.likes}}
           <svg >
             <use xlink:href="../assets/svg/sprite.svg#like"></use>
           </svg>
         </button>
         <form method="GET" [action]="'http://localhost:3000/uploads/images/dart-model.glb'">
-          <button type="submit" class="btn btn__icon btn__icon--success">
+          <button (click)="download(infoModel)" type="submit" class="btn btn__icon btn__icon--success">
             {{item.downloads}}
             <svg >
               <use xlink:href="../assets/svg/sprite.svg#download"></use>
