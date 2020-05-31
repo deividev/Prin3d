@@ -51,14 +51,12 @@
             <use xlink:href="../assets/svg/sprite.svg#like"></use>
           </svg>
         </button>
-        <form method="GET" [action]="'http://localhost:3000/uploads/images/dart-model.glb'">
-          <button (click)="download(infoModel)" type="submit" class="btn btn__icon btn__icon--success">
+          <a [routerLink]="downloadModel" (click)="download()"  class="btn btn__icon btn__icon--success" [download]="downloadModel">
             {{item.downloads}}
-            <svg >
+            <svg>
               <use xlink:href="../assets/svg/sprite.svg#download"></use>
             </svg>
-          </button>
-      </form>
+          </a>
       </div>
     </div>
     <hr>

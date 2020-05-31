@@ -27,8 +27,9 @@ export class Model3dService {
     return this.http.put(`${environment.apiBack}/models/${id}`, infoModel)
   }
 
-  downloadModel(model): Observable <any> {
-    return this.http.post(`${model.model}`, model)
+  downloadModel(id): Observable <any> {
+    debugger
+    return this.http.get(`${environment.apiBack}/download/${id}`)
   }
 
 

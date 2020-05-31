@@ -13,6 +13,8 @@ export class InfoModelComponent implements OnInit {
 
   isVisible = true;
 
+  downloadModel;
+
   @ViewChild(InfoModel3dComponent) InfoModel3d: InfoModel3dComponent;
 
   @Input() infoModel: any = [];
@@ -50,9 +52,15 @@ export class InfoModelComponent implements OnInit {
     })
   }
 
-  download(infoModel) {
-    const download = infoModel.model;
-    this.model3dService.downloadModel(infoModel);
+  download() {
+    this.activatedRoute.params.subscribe((params) => {
+      const id = params.modelId;
+      this.model3dService.downloadModel(id).subscribe((res) =>{
+        debugger
+      this.downloadModel = res
+      console.log(res);
+      })
+    })
   }
 
 }
