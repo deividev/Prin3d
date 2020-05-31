@@ -39,9 +39,15 @@ export class InfoModelComponent implements OnInit {
   }
 
   plusLike(infoModel) {
-    debugger
-    ++ infoModel[0].likes;
-    this.model3dService.updateModel(infoModel);
+    this.activatedRoute.params.subscribe((params) => {
+      debugger
+      const id = params.modelId;
+      ++ infoModel[0].likes;
+      this.model3dService.updateModel(infoModel, id).subscribe((res) => {
+        debugger
+        console.log(res);
+      });
+    })
   }
 
   download(infoModel) {

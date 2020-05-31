@@ -96,6 +96,7 @@ export class FormUploadDetailsComponent implements OnInit {
     form.append('tags', this.formUpload.value.tags);
 
     if (this.formUpload.valid) {
+      debugger
 
         this.model3dService.createModel(form).subscribe(
         (res) => {

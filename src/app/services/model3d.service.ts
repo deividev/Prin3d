@@ -22,10 +22,9 @@ export class Model3dService {
     return this.http.post(`${environment.apiBack}/upload`, form)
   }
 
-  updateModel(infoModel): Observable <any> {
+  updateModel(infoModel, id): Observable <any> {
     debugger
-    const id = this.activedRouter.snapshot.params.id;
-    return this.http.put(`${environment.apiBack}/${this.resource}/${infoModel[0]._id}`, infoModel)
+    return this.http.put(`${environment.apiBack}/models/${id}`, infoModel)
   }
 
   downloadModel(model): Observable <any> {
