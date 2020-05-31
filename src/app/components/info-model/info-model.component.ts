@@ -57,7 +57,7 @@ export class InfoModelComponent implements OnInit {
       const id = params.modelId;
       this.model3dService.downloadModel(id).subscribe((res) =>{
         debugger
-      this.downloadModel = res
+        this.downloadModel = res
       console.log(res);
       })
     })

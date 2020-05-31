@@ -51,7 +51,7 @@
             <use xlink:href="../assets/svg/sprite.svg#like"></use>
           </svg>
         </button>
-          <a [routerLink]="downloadModel" (click)="download()"  class="btn btn__icon btn__icon--success" [download]="downloadModel">
+          <a [href]="item.model" (click)="download()"  class="btn btn__icon btn__icon--success">
             {{item.downloads}}
             <svg>
               <use xlink:href="../assets/svg/sprite.svg#download"></use>
