@@ -52,14 +52,20 @@ export class InfoModelComponent implements OnInit {
     })
   }
 
-  download() {
+  download(infoModel) {
     this.activatedRoute.params.subscribe((params) => {
       const id = params.modelId;
+      ++ infoModel[0].downloads;
+        this.model3dService.updateModel(infoModel, id).subscribe((res) => {
+          debugger
+          console.log(res);
+      });
       this.model3dService.downloadModel(id).subscribe((res) =>{
         debugger
         this.downloadModel = res
-      console.log(res);
+        console.log(res);
       })
+
     })
   }
 
