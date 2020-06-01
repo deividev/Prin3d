@@ -14,6 +14,8 @@ export class CategoriesComponent implements OnInit {
   showCategory: boolean = false;
 
   public listCategory:Array<Model3d> = [];
+  public categoryTitle:string;
+
 
   @Input() listModelsId: any;
   constructor(
@@ -27,16 +29,30 @@ export class CategoriesComponent implements OnInit {
       this.model3dServices.getModels().subscribe((res) => {
         debugger
         const paramsId = this.activedRouter.snapshot.params.id;
-        this.listCategory = this.getFilteredById(res, paramsId)
+        this.listCategory = this.getFilteredModelsById(res, paramsId)
         console.log(this.listCategory);
+        this.categoriesService.getCategories().subscribe((res) => {
+          debugger
+          const category = this.getFilteredCategoriesById(res, paramsId)
+          this.categoryTitle = category[0].title
+          console.log(this.categoryTitle);
+
+        })
       })
     })
   }
 
-  getFilteredById(res, id) {
-    debugger
+  getFilteredModelsById(res, id) {
     return res.filter(function(e) {
       return e.categories == id;
+    });
+  }
+
+  getFilteredCategoriesById(res, id) {
+    debugger
+    return res.filter(function(e) {
+      debugger
+      return e._id == id;
     });
   }
 

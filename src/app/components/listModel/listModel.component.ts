@@ -13,6 +13,8 @@ export class ListModelComponent implements OnInit {
 
   @Input() listModels: any;
   @Input() title: string;
+  @Input() description: string;
+
 
   categoriesId: any;
   routeCategorie: any;
