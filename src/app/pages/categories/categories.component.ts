@@ -13,23 +13,31 @@ export class CategoriesComponent implements OnInit {
 
   showCategory: boolean = false;
 
-  public listCategory:Array<Model3d>;
+  public listCategory:Array<Model3d> = [];
+
+  @Input() listModelsId: any;
   constructor(
               private activedRouter: ActivatedRoute,
               private model3dServices: Model3dService,
               private categoriesService: CategoriesService) { }
 
   ngOnInit(): void {
-    this.model3dServices.getModelsCategory().subscribe((res) => {
+    this.activedRouter.params.subscribe((res) => {
       debugger
-      const paramsId = this.activedRouter.snapshot.params.id;
-      Object.keys(res).forEach(e=>{
-        if(res[e].categories == paramsId){
-          this.listCategory.push(res[e]);
-          console.log(this.listCategory);
-        }
-      });
+      this.model3dServices.getModels().subscribe((res) => {
+        debugger
+        const paramsId = this.activedRouter.snapshot.params.id;
+        this.listCategory = this.getFilteredById(res, paramsId)
+        console.log(this.listCategory);
+      })
     })
+  }
+
+  getFilteredById(res, id) {
+    debugger
+    return res.filter(function(e) {
+      return e.categories == id;
+    });
   }
 
 
