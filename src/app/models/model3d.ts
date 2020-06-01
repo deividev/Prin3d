@@ -13,6 +13,7 @@ export interface Model3d {
   license?: string;
   tags?: string;
   createDate: Date;
+  comments?: ArrayBuffer;
 }
 
 

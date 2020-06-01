@@ -22,8 +22,9 @@ export class FormUploadDetailsComponent implements OnInit {
   model3d: File;
   imageSelected: string | ArrayBuffer;
   model3dSelected: string | ArrayBuffer;
+  comments: any = [];
   categories: ArrayBuffer;
-  licenses: ArrayBuffer;
+  licenses: string | ArrayBuffer;
 
   constructor(private httpClient : HttpClient,
               private model3dService: Model3dService,
@@ -55,6 +56,7 @@ export class FormUploadDetailsComponent implements OnInit {
       custom: new FormControl(''),
       license: new FormControl(''),
       tags: new FormControl(''),
+      comments: new FormControl(''),
     });
   }
 
@@ -94,6 +96,7 @@ export class FormUploadDetailsComponent implements OnInit {
     form.append('custom', this.formUpload.value.custom);
     form.append('license', this.formUpload.value.license);
     form.append('tags', this.formUpload.value.tags);
+    form.append('comments', this.comments);
 
     if (this.formUpload.valid) {
       debugger
