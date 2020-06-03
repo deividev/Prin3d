@@ -124,7 +124,7 @@ id="userImg">
   <!-- Si necesita  <desc></desc> -->
 
   <path d="M9 18l6-6-6-6"
-    fill="none"
+    fill=""
     stroke=""
     stroke-width="5"
     stroke-linecap="round"
