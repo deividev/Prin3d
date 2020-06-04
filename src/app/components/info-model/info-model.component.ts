@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { InfoModel3dComponent } from '../info-model3d/info-model3d.component';
 import { Model3dService } from 'src/app/services/model3d.service';
 import { ActivatedRoute } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-info-model',
@@ -19,17 +21,21 @@ export class InfoModelComponent implements OnInit {
 
   @Input() infoModel: any = [];
 
+  formComments : FormGroup;
+  comments = [];
+
   constructor(private model3dService: Model3dService,
               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.formComments = new FormGroup({
+      comment: new FormControl(''),
+    });
     this.activatedRoute.params.subscribe((params) => {
-      console.log(params.modelId);
       this.model3dService.getModelById(params.modelId).subscribe((res) => {
         debugger
         this.date = res.created_at
         this.infoModel = [res];
-        console.log(res);
         return this.infoModel || [];
       })
     })
@@ -65,8 +71,17 @@ export class InfoModelComponent implements OnInit {
         this.downloadModel = res
         console.log(res);
       })
-
     })
+  }
+
+  submitComments() {
+    debugger
+    this.infoModel[0].comments.push(this.formComments.value)
+    // this.infoModel =  Object.assign({}, this.formComments.value, this.infoModel)
+    this.model3dService.updateModel(this.infoModel, this.infoModel[0].userId).subscribe((res) => {
+      debugger
+      console.log(res);
+    });
   }
 
 }

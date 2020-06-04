@@ -88,20 +88,19 @@
 
   <!-- COMMENTS -->
 
-      <form class="form-comments" action="">
+      <form [formGroup]="formComments" class="form-comments" action="">
         <p class="category__title">Comment</p>
         <p> May 1, 2020</p>
         <label for="comment" aria-label="comment"></label>
-        <textarea class="form__control form__control--area" id="custom" cols="10" rows="5" ></textarea>
-        <button class="btn btn__success">Comment</button>
+        <textarea formControlName="comment" class="form__control form__control--area" id="custom" cols="10" rows="5" ></textarea>
+        <button (click)="submitComments()" type="submit" class="btn btn__success">Comment</button>
       </form>
-      <div class="comment">
+      <div *ngFor="let comment of infoModel.comment" class="comment">
         <div>
           <a class="avatar--info" href="">Dd</a>
-          <p>Deividev</p>
+          <p>{{comment.username}}</p>
         </div>
-        <p>Hola me gustaria saber si podrias pasarme detalles mas especificos sobre las opciones
-          la hora de imprimir el casco.
+        <p>{{comment.comment}}
         </p>
       </div>
   </div>
@@ -109,7 +108,7 @@
 
 
   <!-- SUGGESTIONS -->
-    <div class="card__suggestion">
+    <!-- <div class="card__suggestion">
       <h4 class="card__suggestion--title">Others of interest</h4>
       <a  class="card" href="">
         <img class=" card__model" width="200" height="250" src="../assets/images/Box-tarjetas SD.jpeg" alt="">
@@ -186,7 +185,7 @@
           </div>
         </div>
       </a>
-    </div>
+    </div> -->
 
   <!-- SUGGESTIONS -->
 </div>
