@@ -33,7 +33,6 @@ export class InfoModelComponent implements OnInit {
     });
     this.activatedRoute.params.subscribe((params) => {
       this.model3dService.getModelById(params.modelId).subscribe((res) => {
-        debugger
         this.date = res.created_at
         this.infoModel = [res];
         return this.infoModel || [];
@@ -48,11 +47,9 @@ export class InfoModelComponent implements OnInit {
 
   plusLike(infoModel) {
     this.activatedRoute.params.subscribe((params) => {
-      debugger
       const id = params.modelId;
       ++ infoModel[0].likes;
       this.model3dService.updateModel(infoModel, id).subscribe((res) => {
-        debugger
         console.log(res);
       });
     })
@@ -63,11 +60,9 @@ export class InfoModelComponent implements OnInit {
       const id = params.modelId;
       ++ infoModel[0].downloads;
         this.model3dService.updateModel(infoModel, id).subscribe((res) => {
-          debugger
           console.log(res);
       });
       this.model3dService.downloadModel(id).subscribe((res) =>{
-        debugger
         this.downloadModel = res
         console.log(res);
       })
@@ -75,13 +70,10 @@ export class InfoModelComponent implements OnInit {
   }
 
   submitComments() {
-    debugger
     this.infoModel[0].comments.push(this.formComments.value)
     // this.infoModel =  Object.assign({}, this.formComments.value, this.infoModel)
     this.model3dService.updateModel(this.infoModel, this.infoModel[0].userId).subscribe((res) => {
-      debugger
       console.log(res);
     });
   }
-
 }

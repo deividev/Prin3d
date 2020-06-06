@@ -31,13 +31,8 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit(): void {
     this.model3dService.getModels().subscribe((result) => {
-      debugger
-      //Ordena el resultado de los mas votados de mayor a menor y coge los 8 primeros;
       this.featuredModels = result.sort((a, b) => b.likes - a.likes).slice(0, 4);
-      //Ordena el resultado de los ultimos 8 que se han subido a la base de datos;
       this.newModels = result.sort((a, b)  => b.createDate - a.createDate).slice(0, 15);
-      //
-      // this.fanArtModels = result.map(x => x._id == "5e823f50cbca55661229c388");
     });
   }
 

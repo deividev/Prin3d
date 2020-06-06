@@ -27,7 +27,6 @@ public modelsUser: Array<Model3d> = [];
               private router: Router,
               private model3dService: Model3dService) {
                 this.model3dService.getModels().subscribe((res) => {
-                  debugger
                   const id = localStorage.getItem('user')
                   this.modelsUser = this.getFilteredModelsById(res, id)
                   console.log(this.modelsUser);
@@ -37,22 +36,18 @@ public modelsUser: Array<Model3d> = [];
   ngOnInit(): void {
     const id = localStorage.getItem('user')
     this.userService.getLoguedUser(id).subscribe((res) => {
-      debugger
       this.infoUser = res;
       console.log(this.infoUser);
     });
   }
   logout(){
-    debugger
     this.authService.logout();
     this.router.navigate(['/home'])
-    debugger
   }
 
   changeFile(event) {
-    debugger
+
     if (event.target.files.length > 0) {
-      debugger
       this.image = <File>event.target.files[0];
       //Image preview
       // this.userService.updateUser(id)

@@ -99,8 +99,6 @@ export class FormUploadDetailsComponent implements OnInit {
     form.append('comments', this.comments);
 
     if (this.formUpload.valid) {
-      debugger
-
         this.model3dService.createModel(form).subscribe(
         (res) => {
           console.log(res);

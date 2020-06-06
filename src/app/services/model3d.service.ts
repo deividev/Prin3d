@@ -23,12 +23,10 @@ export class Model3dService {
   }
 
   updateModel(infoModel, id): Observable <any> {
-    debugger
     return this.http.put(`${environment.apiBack}/models/${id}`, infoModel)
   }
 
   downloadModel(id): Observable <any> {
-    debugger
     return this.http.get(`${environment.apiBack}/download/${id}`)
   }
 

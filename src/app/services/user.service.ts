@@ -22,7 +22,6 @@ export class UserService {
   }
 
   updateUser(id, infoUser) {
-    debugger
     return this.httpClient.get(`${environment.apiBack}/user/update/${id}`, infoUser)
   }
 }

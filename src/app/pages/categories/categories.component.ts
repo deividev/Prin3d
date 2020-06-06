@@ -25,18 +25,14 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.activedRouter.params.subscribe((res) => {
-      debugger
       this.model3dServices.getModels().subscribe((res) => {
-        debugger
         const paramsId = this.activedRouter.snapshot.params.id;
         this.listCategory = this.getFilteredModelsById(res, paramsId)
         console.log(this.listCategory);
         this.categoriesService.getCategories().subscribe((res) => {
-          debugger
           const category = this.getFilteredCategoriesById(res, paramsId)
           this.categoryTitle = category[0].title
           console.log(this.categoryTitle);
-
         })
       })
     })
@@ -49,9 +45,7 @@ export class CategoriesComponent implements OnInit {
   }
 
   getFilteredCategoriesById(res, id) {
-    debugger
     return res.filter(function(e) {
-      debugger
       return e._id == id;
     });
   }

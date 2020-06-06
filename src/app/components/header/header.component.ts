@@ -16,13 +16,10 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private categoriesService: CategoriesService,
-  ) {
-
-   }
+  ) {}
 
   ngOnInit() {
     this.categoriesService.getCategories().subscribe((res) => {
-      debugger
       this.categories = res;
     }, error => {
       console.error(error);

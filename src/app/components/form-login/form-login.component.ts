@@ -33,7 +33,6 @@ export class FormLoginComponent implements OnInit {
   login(){
     const User = Object.assign({}, this.formLogin.value);
     if (this.formLogin.valid) {
-        debugger
         this.authService.signIn(User).subscribe(
         (res) => {
           console.log(res);

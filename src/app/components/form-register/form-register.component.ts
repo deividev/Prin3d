@@ -46,7 +46,6 @@ export class FormRegisterComponent implements OnInit {
   register() {
     const User = Object.assign({}, this.formRegister.value);
     if (this.formRegister.valid) {
-        debugger
         this.authService.signUp(User).subscribe(
         (res) => {
           console.log(res);
