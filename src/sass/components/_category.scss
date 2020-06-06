@@ -125,5 +125,53 @@
 
 }
 
+//desktop styles
+@media screen and (min-width: 1024px) {
+  .category {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0px 20px;
+
+
+    &__head {
+      height: rem(280px);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__btn {
+      color: $gray-300;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-bottom: 2px solid $gray-300;
+      margin: 40px 100px 40px 100px;
+    }
+
+    &__title {
+      color: $gray-300;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-bottom: 2px solid $gray-300;
+      margin: 40px 0px;
+    }
+
+    &__line {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+      grid-template-rows: auto;
+      grid-gap: 40px;
+    }
+  }
+}
+
 
 
