@@ -1,49 +1,46 @@
-import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { Component } from "@angular/core";
+import { Router, NavigationEnd } from "@angular/router";
+import { filter } from "rxjs/operators";
 
-import { AuthService  } from './services/auth.service'
+import { AuthService } from "./services/auth.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  title = 'print3d';
-
+  title = "print3d";
 
   url: string;
 
-
-  constructor (private router: Router,
-              private authService: AuthService) {
-    router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
-      this.url = event.url;
-      console.log(event.url);
-    });
+  constructor(private router: Router, private authService: AuthService) {
+    router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.url = event.url;
+        console.log(event.url);
+      });
   }
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  login(){
-  }
+  login() {}
 
-  get isHeaderActive():boolean {
-    return !(this.url === '/register' || this.url === '/login' || this.url === '/footer');
-  }
-
-  get isHeaderLoginActive():boolean {
-  return this.authService.loggedIn;
+  get isHeaderActive(): boolean {
+    return !(
+      this.url === "/register" ||
+      this.url === "/login"
+    );
   }
 
-  get isHeaderNoActive():boolean {
-    if (this.url === '/404'){
+  get isHeaderLoginActive(): boolean {
+    return this.authService.isLogged
+  }
+
+  get isHeaderNoActive(): boolean {
+    if (this.url === "/404") {
       return false;
     }
     return true;
   }
-
 }

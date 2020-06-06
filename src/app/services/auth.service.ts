@@ -1,34 +1,35 @@
-import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import { Injectable, Inject } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
-import { Router  } from '@angular/router'
-import { Observable } from 'rxjs';
+import { Router } from "@angular/router";
+import { Observable } from "rxjs";
+import { LOCAL_STORAGE, StorageService } from 'ngx-webstorage-service';
 
 
-
-import { User } from '../models/user';
-
-import { environment } from '../../environments/environment';
+import { environment } from "../../environments/environment";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class AuthService {
-
-
   loggedIn: boolean;
 
-  constructor(private http: HttpClient,
-              private router: Router,
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    @Inject(LOCAL_STORAGE) private storage: StorageService
+    ) { }
 
-              ) { }
-
-  signUp(User): Observable <any> {
-    return this.http.post(`${environment.apiBack}/signup`, User)
+  get isLogged() {
+    return this.storage.has('token');
   }
 
-  signIn(User): Observable <any> {
-    return this.http.post(`${environment.apiBack}/signin`, User)
+  signUp(User): Observable<any> {
+    return this.http.post(`${environment.apiBack}/signup`, User);
+  }
+
+  signIn(User): Observable<any> {
+    return this.http.post(`${environment.apiBack}/signin`, User);
   }
 
   changeLoggedIn(value) {
@@ -36,15 +37,12 @@ export class AuthService {
   }
 
   getToken() {
-    return localStorage.getItem('token');
+    return localStorage.getItem("token");
   }
 
   logout() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
     this.loggedIn = false;
   }
-
 }
-
-
