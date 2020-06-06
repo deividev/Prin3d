@@ -26,14 +26,15 @@ public modelsUser: Array<Model3d> = [];
               private userService: UserService,
               private router: Router,
               private model3dService: Model3dService) {
-                this.model3dService.getModels().subscribe((result) => {
-                  //Ordena el resultado de los mas votados de mayor a menor y coge los 8 primeros;
-                  this.modelsUser = result.sort((a, b) => b.likes - a.likes).slice(0, 4);
+                this.model3dService.getModels().subscribe((res) => {
+                  debugger
+                  const id = localStorage.getItem('user')
+                  this.modelsUser = this.getFilteredModelsById(res, id)
+                  console.log(this.modelsUser);
                 });
               }
 
   ngOnInit(): void {
-    debugger
     const id = localStorage.getItem('user')
     this.userService.getLoguedUser(id).subscribe((res) => {
       debugger
@@ -61,4 +62,10 @@ public modelsUser: Array<Model3d> = [];
     }
   }
 
+
+  getFilteredModelsById(res, id) {
+    return res.filter(function(e) {
+      return e.userId == id;
+    })
+  }
 }
