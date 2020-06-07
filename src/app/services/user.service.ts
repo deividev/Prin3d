@@ -14,7 +14,7 @@ export class UserService {
 
 
   getUserById(userId: string): Observable<User> {
-    return this.httpClient.get(`${environment.apiUrl}/${this.resource}/${userId}`);
+    return this.httpClient.get(`${environment.apiBack}/${this.resource}/${userId}`);
   }
 
   getLoguedUser(id) {
