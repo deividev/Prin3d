@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   apiUrl: 'https://5e6602fb2aea440016afb739.mockapi.io',
-  apiBack: 'http://localhost:3000/api',
+  // 'http://localhost:3000/api'
+  apiBack: 'https://factory3d-api.herokuapp.com/api'
 };
 
 /*

@@ -1,4 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
+assets/images/Print3d/
+assets/Modelos3d/
 assets/css/
 .vscode*/
 node_modules
