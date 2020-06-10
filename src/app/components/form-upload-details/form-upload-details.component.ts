@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import {environment} from '../../../environments/environment';
+
+
+import { AngularFireStorage } from '@angular/fire/storage';
 
 
 import { Model3dService } from 'src/app/services/model3d.service';
@@ -18,6 +20,7 @@ export class FormUploadDetailsComponent implements OnInit {
   images: any;
   model: any;
 
+
   image: File;
   model3d: File;
   imageSelected: string | ArrayBuffer;
@@ -29,7 +32,8 @@ export class FormUploadDetailsComponent implements OnInit {
   constructor(private httpClient : HttpClient,
               private model3dService: Model3dService,
               private categoriesService: CategoriesService,
-              private userService: UserService) { }
+              private userService: UserService,
+              private storageAngular: AngularFireStorage) { }
 
   ngOnInit(): void {
     this.categoriesService.getCategories().subscribe((result) => {
@@ -77,6 +81,18 @@ export class FormUploadDetailsComponent implements OnInit {
       const reader = new FileReader();
       reader.onload = e => this.model3dSelected = reader.result;
       reader.readAsDataURL(this.model3d);
+    }
+  }
+
+  async uploadFile(file, id): Promise<any>  {
+    if(file && file.length) {
+      try {
+        debugger
+        const task = await this.storageAngular.ref('images').child(id).put(file[0])
+        return this.storageAngular.ref(`images/${id}`).getDownloadURL().toPromise();
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
 

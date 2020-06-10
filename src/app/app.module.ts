@@ -29,6 +29,9 @@ import { TokeIntercerptorService } from './services/toke-intercerptor.service';
 import { SearchComponent } from './components/search/search.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CategoriesComponent } from './pages/categories/categories.component'
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire';
+import * as firebase from 'firebase';
 
 @NgModule({
   declarations: [
@@ -62,6 +65,8 @@ import { CategoriesComponent } from './pages/categories/categories.component'
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp(firebase),
   ],
   providers: [
     AuthGuard,
