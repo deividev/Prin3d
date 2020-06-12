@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // 'http://localhost:3000/api'
-  apiBack: 'https://factory3d-api.herokuapp.com/api'
+  apiBack: 'http://104.248.82.197/'
 };
 
 /*
