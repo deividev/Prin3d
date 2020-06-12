@@ -1,114 +1,135 @@
 <div class="container__info--model">
-
   <!-- CARD MODEL -->
-  <div *ngFor ="let item of infoModel" class="container-model">
-    <div  class="card-model">
-      <h2>{{item.title}}</h2>
-          <div class="container-flex">
-
-              <img class="avatar--info" [src]="item.img" alt="">
-              <a  routerLink="/{{item.userName}}">{{item.userName}}</a>
-              <p> {{item.created_at | date:'fullDate'}}</p>
-            <div class="container-flex">
-
-            </div>
-          </div>
+  <div *ngFor="let item of infoModel" class="container-model">
+    <div class="card-model">
+      <h2>{{ item.title }}</h2>
+      <div class="container-flex">
+        <img class="avatar--info" [src]="environment.back + item.img" alt="" />
+        <a routerLink="/{{ item.userName }}">{{ item.userName }}</a>
+        <p>{{ item.created_at | date: "fullDate" }}</p>
+        <div class="container-flex"></div>
+      </div>
       <div class="container-row">
         <div class="card-slider">
-          <img *ngIf="isVisible" [ngClass]="isVisible ? 'card__gallery' : 'card__galleryClose'" class="card__gallery" [src]="item.img" alt="">
+          <img
+            *ngIf="isVisible"
+            [ngClass]="isVisible ? 'card__gallery' : 'card__galleryClose'"
+            class="card__gallery"
+            [src]="item.img"
+            alt=""
+          />
           <button type="button" class="btn__icon control__slider--left">
-            <svg >
+            <svg>
               <use xlink:href="../assets/svg/sprite.svg#left"></use>
             </svg>
           </button>
           <button type="button" class="btn__icon control__slider--right">
-            <svg >
+            <svg>
               <use xlink:href="../assets/svg/sprite.svg#right"></use>
             </svg>
           </button>
-          <button (click)="changeComponent()" id="changeView" type="button" class="btn__3d">
+          <button
+            (click)="changeComponent()"
+            id="changeView"
+            type="button"
+            class="btn__3d"
+          >
             3D
           </button>
           <!-- MODEL VIEWER -->
           <app-info-model3d></app-info-model3d>
         </div>
-    </div>
-    <!-- BUTTONS -->
-    <div class="tools">
-      <div class="container-flex">
-
-        <button type="button" class="btn  btn__icon btn__icon--success">
-          Collection
-          <svg>
-            <use xlink:href="../assets/svg/sprite.svg#collection"></use>
-          </svg>
-        </button>
       </div>
-      <div class="container-flex">
-        <button (click)="plusLike(infoModel)" class="btn btn__icon btn__icon--success">
-          {{item.likes}}
-          <svg >
-            <use xlink:href="../assets/svg/sprite.svg#like"></use>
-          </svg>
-        </button>
-          <a [href]="item.model" (click)="download(infoModel)"  class="btn btn__icon btn__icon--success">
-            {{item.downloads}}
+      <!-- BUTTONS -->
+      <div class="tools">
+        <div class="container-flex">
+          <button type="button" class="btn btn__icon btn__icon--success">
+            Collection
+            <svg>
+              <use xlink:href="../assets/svg/sprite.svg#collection"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="container-flex">
+          <button
+            (click)="plusLike(infoModel)"
+            class="btn btn__icon btn__icon--success"
+          >
+            {{ item.likes }}
+            <svg>
+              <use xlink:href="../assets/svg/sprite.svg#like"></use>
+            </svg>
+          </button>
+          <a
+            [href]="item.model"
+            (click)="download(infoModel)"
+            class="btn btn__icon btn__icon--success"
+          >
+            {{ item.downloads }}
             <svg>
               <use xlink:href="../assets/svg/sprite.svg#download"></use>
             </svg>
           </a>
-      </div>
-    </div>
-    <hr>
-    <div class="container__details">
-      <h5>Category: <p>Fan art</p> </h5>
-    </div>
-    <div class="container__details">
-      <h5>Description:</h5>
-      <p>{{item.description}}</p>
-    </div>
-    <div class="container__details">
-      <h5>Print settings:</h5>
-      <p>{{item.settings}}</p>
-    </div>
-    <div class="container__details">
-      <h5>Custom section:</h5>
-      <p>{{item.custom}}
-      </p>
-    </div>
-    <div class="container__details">
-      <h5>License: {{item.license}}</h5>
-    </div>
-    <hr>
-    <div class="container__tags">
-      <h5>Tags:</h5>
-      <a href="">{{item.tags}}</a>
-    </div>
-</div>
-
-  <!-- COMMENTS -->
-
-      <form [formGroup]="formComments" class="form-comments" action="">
-        <p class="category__title">Comment</p>
-        <p> May 1, 2020</p>
-        <label for="comment" aria-label="comment"></label>
-        <textarea formControlName="comment" class="form__control form__control--area" id="custom" cols="10" rows="5" ></textarea>
-        <button (click)="submitComments()" type="submit" class="btn btn__success">Comment</button>
-      </form>
-      <div *ngFor="let comment of infoModel.comment" class="comment">
-        <div>
-          <a class="avatar--info" href="">Dd</a>
-          <p>{{comment.username}}</p>
         </div>
-        <p>{{comment.comment}}
-        </p>
       </div>
+      <hr />
+      <div class="container__details">
+        <h5>
+          Category:
+          <p>Fan art</p>
+        </h5>
+      </div>
+      <div class="container__details">
+        <h5>Description:</h5>
+        <p>{{ item.description }}</p>
+      </div>
+      <div class="container__details">
+        <h5>Print settings:</h5>
+        <p>{{ item.settings }}</p>
+      </div>
+      <div class="container__details">
+        <h5>Custom section:</h5>
+        <p>{{ item.custom }}</p>
+      </div>
+      <div class="container__details">
+        <h5>License: {{ item.license }}</h5>
+      </div>
+      <hr />
+      <div class="container__tags">
+        <h5>Tags:</h5>
+        <a href="">{{ item.tags }}</a>
+      </div>
+    </div>
+
+    <!-- COMMENTS -->
+
+    <form [formGroup]="formComments" class="form-comments" action="">
+      <p class="category__title">Comment</p>
+      <p>May 1, 2020</p>
+      <label for="comment" aria-label="comment"></label>
+      <textarea
+        formControlName="comment"
+        class="form__control form__control--area"
+        id="custom"
+        cols="10"
+        rows="5"
+      ></textarea>
+      <button (click)="submitComments()" type="submit" class="btn btn__success">
+        Comment
+      </button>
+    </form>
+    <div *ngFor="let comment of infoModel.comment" class="comment">
+      <div>
+        <a class="avatar--info" href="">Dd</a>
+        <p>{{ comment.username }}</p>
+      </div>
+      <p>{{ comment.comment }}</p>
+    </div>
   </div>
   <!-- COMMENTS -->
 
-
   <!-- SUGGESTIONS -->
-    <!-- <div class="card__suggestion">
+  <!-- <div class="card__suggestion">
       <h4 class="card__suggestion--title">Others of interest</h4>
       <a  class="card" href="">
         <img class=" card__model" width="200" height="250" src="../assets/images/Box-tarjetas SD.jpeg" alt="">

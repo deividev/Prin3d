@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   // 'http://localhost:3000/api'
   apiBack: "http://161.35.144.162:3000/api",
+  back: "http://161.35.144.162:3000",
 };
 
 /*
