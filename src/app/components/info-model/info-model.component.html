@@ -4,7 +4,11 @@
     <div class="card-model">
       <h2>{{ item.title }}</h2>
       <div class="container-flex">
-        <img class="avatar--info" [src]="environment.back + item.img" alt="" />
+        <img
+          class="avatar--info"
+          [src]="'http://161.35.144.162:3000' + item.img"
+          alt=""
+        />
         <a routerLink="/{{ item.userName }}">{{ item.userName }}</a>
         <p>{{ item.created_at | date: "fullDate" }}</p>
         <div class="container-flex"></div>
