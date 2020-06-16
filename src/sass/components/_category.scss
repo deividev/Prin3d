@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 0px 10px;
+  margin: 0px 40px;
 
 
   &__head {
@@ -42,7 +42,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
     grid-template-rows: auto;
-    grid-gap: 40px;
+    grid-gap: 20px;
+    padding: 0px 110px;
   }
 }
 
@@ -52,11 +53,10 @@
 
 
 .card {
-  width: rem(330px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 12px;
   border: 1px solid $gray-100;
   border-radius: 7px;
   background-color: #fff;
@@ -122,18 +122,11 @@
 
 //tablet styles
 @media screen and (min-width: 767px) {
-
-}
-
-
-
-//desktop styles
-@media screen and (min-width: 1024px) {
   .category {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0px 100px;
+    margin: 0px 40px;
 
 
     &__head {
@@ -158,7 +151,7 @@
       text-transform: uppercase;
       font-weight: 700;
       border-bottom: 2px solid $gray-300;
-      margin: 40px 0px;
+      margin: 25px 0px;
     }
 
     &__line {
@@ -170,7 +163,201 @@
       display: grid;
       grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
       grid-template-rows: auto;
-      grid-gap: 40px;
+      grid-gap: 15px;
+      padding: 0px 7px;
+    }
+  }
+
+  //------
+  // IMG MODEL 3D
+  //------
+
+
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid $gray-100;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: 0 0 2rem -1rem rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition: 0.3s linear;
+
+
+    &__content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 7px;
+    }
+    //  BTN ICONS
+    //-----------
+
+    &__hover {
+      display: inline-block;
+      justify-content: flex-end;
+    }
+
+    &__image {
+      width: 100%;
+      height: rem(250px);
+    }
+
+    &:hover {
+      transform: scale(0.95);
+    }
+
+    &__title {
+      padding-right: 5px;
+
+      p, h4 {
+        color: $gray-300;
+        padding-top: 6px;
+        margin-right: 10px;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      position: absolute;
+      z-index: 50;
+      right: 0;
+      transition: 0.2s linear;
+      text-align: center;
+    }
+
+    &__btn--info {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+
+
+//desktop styles
+@media screen and (min-width: 1024px) {
+  .category {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0px 40px;
+
+
+    &__head {
+      height: rem(280px);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__btn {
+      color: $gray-300;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-bottom: 2px solid $gray-300;
+      margin: 40px 100px 40px 100px;
+    }
+
+    &__title {
+      color: $gray-300;
+      text-transform: uppercase;
+      font-weight: 700;
+      border-bottom: 2px solid $gray-300;
+      margin: 25px 0px;
+    }
+
+    &__line {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+      grid-template-rows: auto;
+      grid-gap: 25px;
+      padding: 0px 20px;
+    }
+  }
+
+  //------
+  // IMG MODEL 3D
+  //------
+
+
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid $gray-100;
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: 0 0 2rem -1rem rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition: 0.3s linear;
+
+
+    &__content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 7px;
+    }
+    //  BTN ICONS
+    //-----------
+
+    &__hover {
+      display: inline-block;
+      justify-content: flex-end;
+    }
+
+    &__image {
+      width: 100%;
+      height: rem(250px);
+    }
+
+    &:hover {
+      transform: scale(0.95);
+    }
+
+    &__title {
+      padding-right: 5px;
+
+      p, h4 {
+        color: $gray-300;
+        padding-top: 6px;
+        margin-right: 10px;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      position: absolute;
+      z-index: 50;
+      right: 0;
+      transition: 0.2s linear;
+      text-align: center;
+    }
+
+    &__btn--info {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
