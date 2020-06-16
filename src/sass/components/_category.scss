@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 0px 100px;
+  margin: 0px 10px;
 
 
   &__head {
@@ -30,7 +30,7 @@
     text-transform: uppercase;
     font-weight: 700;
     border-bottom: 2px solid $gray-300;
-    margin: 40px 0px;
+    margin: 25px 0px;
   }
 
   &__line {
@@ -72,7 +72,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding: 10px 16px;
+    padding: 7px;
   }
   //  BTN ICONS
   //-----------
@@ -85,8 +85,6 @@
   &__image {
     width: 100%;
     height: rem(250px);
-    padding-bottom: 5px;
-    // border-radius: 15px 15px 0px 0px;
   }
 
   &:hover {
@@ -95,7 +93,6 @@
 
   &__title {
     padding-right: 5px;
-
 
     p, h4 {
       color: $gray-300;
@@ -113,17 +110,22 @@
     right: 0;
     transition: 0.2s linear;
     text-align: center;
-    margin: 0px 10px;
-    // background-color: rgba($color: #000000, $alpha: 0.1);
   }
 
   &__btn--info {
     display: flex;
     flex-direction: column;
-
   }
+}
+
+
+
+//tablet styles
+@media screen and (min-width: 767px) {
 
 }
+
+
 
 //desktop styles
 @media screen and (min-width: 1024px) {
@@ -131,7 +133,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 0px 20px;
+    margin: 0px 100px;
 
 
     &__head {

@@ -6,9 +6,8 @@
 .cover {
   display: flex;
   justify-content: flex-start;
-  height: rem(600px);
-  padding: 10px;
-  background: url("../../../assets/images/background-cover4.jpg") no-repeat center;
+  height: rem(350px);
+  background: url("../../../assets/images/background-cover-mobile.png") no-repeat center;
   background-size: cover;
 
   &__container {
@@ -20,11 +19,80 @@
   }
 
   &__title {
-
     margin-bottom: 10px;
+
+    h1 {
+      font-size:  1.5rem;
+    }
+
   }
 
   &__text {
+    font-size: 1rem;
     color: #fff;
   }
+}
+
+
+
+//tablet styles
+@media screen and (min-width: 767px) {
+  .cover {
+    display: flex;
+    justify-content: flex-start;
+    height: 30rem;
+    padding: 10px;
+    background: url("../../../assets/images/background-cover4.jpg") no-repeat center;
+    background-size: cover;
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px 100px;
+    }
+
+    &__title {
+
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      color: #fff;
+    }
+  }
+
+}
+
+
+
+//desktop styles
+@media screen and (min-width: 1024px) {
+  .cover {
+    display: flex;
+    justify-content: flex-start;
+    height: rem(600px);
+    padding: 10px;
+    background: url("../../../assets/images/background-cover4.jpg") no-repeat center;
+    background-size: cover;
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px 100px;
+    }
+
+    &__title {
+
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      color: #fff;
+    }
+  }
+
 }

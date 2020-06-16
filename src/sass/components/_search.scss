@@ -32,7 +32,7 @@
     background-color: transparent;
     color: $text-default;
     border: 0;
-    padding: 10px 5px 10px 40px;
+    padding: 5px 5px 5px 40px;
     outline: none;
     transition: 0.2s linear;
   }
@@ -56,3 +56,121 @@
 
 
 
+
+//tablet styles
+@media screen and (min-width: 767px) {
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    font-size: rem(16px);
+    border: 1px solid $gray-200;
+    border-radius: 7px;
+    color: $text-default;
+    background-color: $third;
+
+    &__control:focus  {
+      background-color: #fff;
+      border: 1px solid $gray-400;
+      outline: none;
+      border-radius: 7px;
+    }
+
+    &__control:focus .search {
+      border: none;
+      outline: none;
+    }
+
+
+    &__control {
+      width: 100%;
+      font-size: rem(16px);
+      background-color: transparent;
+      color: $text-default;
+      border: 0;
+      padding: 10px 5px 10px 40px;
+      outline: none;
+      transition: 0.2s linear;
+    }
+
+    &__label {
+      position: absolute;
+      top: -10;
+    }
+
+    &__control--icon {
+      position: absolute;
+      z-index: 20;
+      left: 0;
+      padding: 5px;
+      border: 0;
+      cursor: pointer;
+      outline: none;
+      background: none;
+    }
+  }
+
+}
+
+
+
+
+
+//desktop styles
+@media screen and (min-width: 1024px) {
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    font-size: rem(16px);
+    border: 1px solid $gray-200;
+    border-radius: 7px;
+    color: $text-default;
+    background-color: $third;
+
+    &__control:focus  {
+      background-color: #fff;
+      border: 1px solid $gray-400;
+      outline: none;
+      border-radius: 7px;
+    }
+
+    &__control:focus .search {
+      border: none;
+      outline: none;
+    }
+
+
+    &__control {
+      width: 100%;
+      font-size: rem(16px);
+      background-color: transparent;
+      color: $text-default;
+      border: 0;
+      padding: 10px 5px 10px 40px;
+      outline: none;
+      transition: 0.2s linear;
+    }
+
+    &__label {
+      position: absolute;
+      top: -10;
+    }
+
+    &__control--icon {
+      position: absolute;
+      z-index: 20;
+      left: 0;
+      padding: 5px;
+      border: 0;
+      cursor: pointer;
+      outline: none;
+      background: none;
+    }
+  }
+
+}
