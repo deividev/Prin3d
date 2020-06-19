@@ -13,6 +13,7 @@ export class HeaderLoginComponent implements OnInit {
   userId;
 
   @Input() categories: any;
+  isMenuOpen: boolean = false;
 
   constructor(private categoriesService: CategoriesService,
               private authService: AuthService) { }
@@ -29,5 +30,9 @@ export class HeaderLoginComponent implements OnInit {
 
   get searchNoActive():boolean {
     return !this.authService.loggedIn ;
+    }
+
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
     }
 }

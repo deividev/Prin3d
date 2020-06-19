@@ -38,11 +38,18 @@
     align-items: center;
   }
 
+  &__categories-toggle {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__link {
     padding: 10px;
     font-size: rem(18px);
     text-transform: uppercase;
     color: #fff;
+    background-color: transparent;
+    border: 0;
     cursor: pointer;
     transition: 0.25s linear;
   }
@@ -51,6 +58,7 @@
     color: $third;
     background-color: $gray-300;
     border-radius: 4px;
+    stroke: none;
   }
 }
 
