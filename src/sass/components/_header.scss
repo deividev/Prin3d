@@ -2,10 +2,14 @@
 /*------------*/
 .header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
+
+
+  @media screen and (max-width: 768px) {
+    justify-content: start;
+  }
 }
 
 
@@ -15,26 +19,21 @@
   width: 50%;
 }
 
-
-
-
-
-
 /*** NAVBAR ***/
 
 .navbar {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
   padding: 0px 7px;
   background-color: $gray-400;
-
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
 
 
   &__categories {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -52,6 +51,7 @@
     border: 0;
     cursor: pointer;
     transition: 0.25s linear;
+    display: inline-block;
   }
 
   &__link:hover {

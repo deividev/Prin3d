@@ -4,31 +4,9 @@
 .container-flex {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .navbar {
-
-  &-popup {
-    width: rem(269px);
-    height: rem(90px);
-    position: absolute;
-    top: 38px;
-    left: 11px;
-    border: 1px solid $gray-400;
-    color: $gray-400;
-    background-color: #fff;
-    font-size: rem(13px);
-    display: none;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &--show {
-      display: block;
-    }
-  }
 
   &__icon {
     width: rem(25px);

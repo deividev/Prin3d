@@ -110,9 +110,22 @@ textarea {
   align-items: center;
   margin: 10px 0px;
 
-  &-title {
+  & img {
+    @media screen and (max-width: 768px) {
+      width: rem(30px);
+      height: rem(30px);
+      margin: 0px 10px;
+    }
+  }
+
+  &__title {
     font-size: rem(27px);
     text-transform: uppercase;
+
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 }
 

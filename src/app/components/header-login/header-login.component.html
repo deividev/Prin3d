@@ -3,7 +3,6 @@
 <header class="header" routerLinkActive="active">
   <a class="logo" aria-label="Factory print3d" routerLink="/home">
     <img  src="../assets/images/logo.png" alt="" width="40px" height="43px">
-    <h1 class="logo-title">Factory 3d</h1>
   </a>
   <div class="container-search">
     <app-search *ngIf="searchNoActive"></app-search>
@@ -29,27 +28,9 @@
 <a class="navbar__link" routerLink="/home">Home</a>
 
 
-<button class="navbar__link" (click)="toggleMenu()">
-  <svg class="navbar__icon navbar__icon--lines">
-    <use xlink:href="../assets/svg/sprite.svg#menu-lines" />
-  </svg>
-</button>
-
-<div class="navbar__popup" [class.navbar__popup--show]="isMenuOpen">
-  <nav class="navbar__popup-navbar" [class.navbar__popup-navbar--show]="isMenuOpen">
-    <button (click)="toggleMenu()" class="navbar__close">&times;</button>
-    <div class="navbar__categories-toggle">
-      <a *ngFor="let item of categories" class="navbar__link" routerLink="/category/{{item._id}}">{{item.title}}</a>
-    </div>
-  </nav>
-</div>
-
-
-
-
-<!-- <div class="navbar__categories">
+<div class="navbar__categories">
   <a *ngFor="let item of categories" class="navbar__link" routerLink="/category/{{item._id}}">{{item.title}}</a>
-</div> -->
+</div>
 </nav>
 <!-- NAV -->
 
